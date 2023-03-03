@@ -1,0 +1,301 @@
+{
+  "main": {
+    "id": "17ccc5bc60ee583f",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbcae290790d1168",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "430680c148ba885c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "638f9511587f8c47",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.15"
+              }
+            }
+          },
+          {
+            "id": "83236f18efa3e236",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Softwares.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "053a9c6972d69a47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Houdini/Houdini.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "878f820b1b01f194",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Softwares.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "534f67567f30d350",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Maya/Maya.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f667af9ab2ae872d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Maya/Maya.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "72fa90f86e0ca1ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Render Engines/Render Engines.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f02e17f067cb1393",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Render Engines/Redshift/Redshift.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "525d834e38a03435",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Softwares.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ac1bbfd5843b4971",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Development/Development.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2c45b7883c09a7f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Render Engines/Render Engines.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 11
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ecacd08dbad90639",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac6332f59ee9d67c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e35767395a1e4ac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "acf40700f7978562",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#/render",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "13c481305ca23e67",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4a5eae3267a05594",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d497129a2e8bff9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8a4953a75d37de17",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Softwares/Render Engines/Render Engines.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1eca0483c4efa707",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Softwares/Render Engines/Render Engines.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ab2da2d846c56527",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ad680668885c40e2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Softwares/Render Engines/Render Engines.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2c45b7883c09a7f7",
+  "lastOpenFiles": [
+    "Development/Python/Python.md",
+    "Softwares/Render Engines/Render Engines.md",
+    "Development/Development.md",
+    "Softwares/Softwares.md",
+    "Development/Python",
+    "Development",
+    "Softwares/Render Engines/Redshift/Redshift.md",
+    "Softwares/Render Engines/Arnold/Arnold.md",
+    "Softwares/Maya/Maya.md",
+    "Softwares/Render Engines",
+    "Softwares/Render Engines/Redshift",
+    "Softwares/Render Engines/Arnold",
+    "Softwares/Nuke/Nuke.md",
+    "Softwares/Maya",
+    "Softwares/Nuke",
+    "Softwares/Houdini/Packages.md",
+    "Softwares/Houdini/Scanned Directories.md",
+    "().md",
+    "Softwares/Houdini/Houdini.md",
+    "Softwares/Houdini/Untitled",
+    "Softwares/Houdini",
+    "Softwares"
+  ]
+}
