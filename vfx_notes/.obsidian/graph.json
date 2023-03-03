@@ -5,8 +5,51 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#/python",
+      "color": {
+        "a": 1,
+        "rgb": 16764186
+      }
+    },
+    {
+      "query": "tag:#/houdini",
+      "color": {
+        "a": 1,
+        "rgb": 16732954
+      }
+    },
+    {
+      "query": "tag:#/maya",
+      "color": {
+        "a": 1,
+        "rgb": 5420768
+      }
+    },
+    {
+      "query": "tag:#/nuke",
+      "color": {
+        "a": 1,
+        "rgb": 13079040
+      }
+    },
+    {
+      "query": "tag:#/redshift",
+      "color": {
+        "a": 1,
+        "rgb": 14352384
+      }
+    },
+    {
+      "query": "tag:#/arnold",
+      "color": {
+        "a": 1,
+        "rgb": 3704063
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +60,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224436,
-  "close": true
+  "scale": 0.7132754626224438,
+  "close": false
 }
