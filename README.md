@@ -1,3 +1,9 @@
+<p align="left">
+  <img src="https://img.shields.io/badge/-Obsidian-403a83?style=for-the-badge&logo=obsidian" alt="Obsidian"/></a>
+</p>
+
+
+
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <br />
