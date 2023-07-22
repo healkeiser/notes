@@ -11,11 +11,76 @@
             "id": "430680c148ba885c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Development/Python/Python.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "82be60e647a42870",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Development/Python/Multiple versions on Windows.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8fd07faa93fe7545",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Softwares/Houdini/Scanned Directories.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "48f564fad790ade1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Environment/macOS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9fb7158d86684434",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Environment/Windows.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a621f1c369f43db5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Environment/Windows.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Development/Python/Multiple versions on Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Development/Python/Multiple versions on Windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +185,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Development/Python/Multiple versions on Windows.md"
+              }
             }
           }
         ]
@@ -138,10 +207,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "430680c148ba885c",
+  "active": "82be60e647a42870",
   "lastOpenFiles": [
     "Development/Python/Python.md",
     "Development/Development.md",
+    "Development/Python/Multiple versions on Windows.md",
+    "Environment/Windows.md",
+    "Softwares/Houdini/Scanned Directories.md",
+    "Environment/Environment.md",
+    "Environment/macOS.md",
+    "Environment/Linux.md",
+    "Environment",
     "Softwares/Render Engines/Render Engines.md",
     "Softwares/Softwares.md",
     "Development/Python",
@@ -156,11 +232,9 @@
     "Softwares/Maya",
     "Softwares/Nuke",
     "Softwares/Houdini/Packages.md",
-    "Softwares/Houdini/Scanned Directories.md",
     "().md",
     "Softwares/Houdini/Houdini.md",
     "Softwares/Houdini/Untitled",
-    "Softwares/Houdini",
-    "Softwares"
+    "Softwares/Houdini"
   ]
 }

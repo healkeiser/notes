@@ -48,6 +48,13 @@
         "a": 1,
         "rgb": 3704063
       }
+    },
+    {
+      "query": "tag:#/environment",
+      "color": {
+        "a": 1,
+        "rgb": 2471464
+      }
     }
   ],
   "collapse-display": true,
@@ -57,9 +64,9 @@
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 20,
+  "repelStrength": 12.1875,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.7132754626224438,
+  "linkDistance": 30,
+  "scale": 1.000000000000008,
   "close": false
 }
