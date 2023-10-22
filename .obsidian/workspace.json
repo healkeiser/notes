@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vfx_notes/Softwares/Houdini/Scanned Directories.md",
-                "mode": "source",
+                "file": "vfx_notes/Development/Python/Multiple versions on Windows.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vfx_notes/Softwares/Houdini/Scanned Directories.md",
+                "file": "vfx_notes/Development/Python/Multiple versions on Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vfx_notes/Softwares/Houdini/Scanned Directories.md",
+                "file": "vfx_notes/Development/Python/Multiple versions on Windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vfx_notes/Softwares/Houdini/Scanned Directories.md"
+                "file": "vfx_notes/Development/Python/Multiple versions on Windows.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "0635796d03d75d89",
   "lastOpenFiles": [
+    "vfx_notes/Softwares/Houdini/Scanned Directories.md",
     "vfx_notes/Softwares/Houdini/Houdini.md",
     "vfx_notes/Softwares/Houdini/Packages.md",
-    "vfx_notes/Softwares/Houdini/Scanned Directories.md",
     "vfx_notes/Development/Python/Python.md"
   ]
 }

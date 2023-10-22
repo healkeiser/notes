@@ -1,8 +1,8 @@
-#/softwares 
+#/software 
 
 ## About
 
-All tips and information about various softwares.
+All tips and information about various software.
 
 ## Summary
 

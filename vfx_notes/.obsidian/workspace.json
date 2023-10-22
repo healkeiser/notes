@@ -4,77 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "cbcae290790d1168",
+        "id": "1324fdc8ade0afbb",
         "type": "tabs",
         "children": [
           {
-            "id": "430680c148ba885c",
+            "id": "8bf3559fc4ad7794",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Development/Python/Python.md",
-                "mode": "source",
+                "file": "Softwares/Houdini/Define a geometry node (SOP) using Python.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "82be60e647a42870",
+            "id": "4f4a404702e46c07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Development/Python/Multiple versions on Windows.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8fd07faa93fe7545",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Softwares/Houdini/Scanned Directories.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "48f564fad790ade1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Environment/macOS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9fb7158d86684434",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Environment/Windows.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a621f1c369f43db5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Environment/Windows.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -109,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#/render",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,6 +75,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "97687c3460433b92",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -189,6 +149,16 @@
                 "file": "Development/Python/Multiple versions on Windows.md"
               }
             }
+          },
+          {
+            "id": "1183eeb129fa391a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ]
       }
@@ -207,34 +177,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82be60e647a42870",
+  "active": "4f4a404702e46c07",
   "lastOpenFiles": [
-    "Development/Python/Python.md",
-    "Development/Development.md",
+    "Softwares/Houdini/Houdini.md",
+    "Softwares/Houdini/Scanned Directories.md",
+    "Softwares/Houdini/Packages.md",
+    "Softwares/Houdini/Making of an Alias in Houdini.md",
+    "Softwares/Houdini/Define a geometry node (SOP) using Python.md",
     "Development/Python/Multiple versions on Windows.md",
     "Environment/Windows.md",
-    "Softwares/Houdini/Scanned Directories.md",
-    "Environment/Environment.md",
     "Environment/macOS.md",
     "Environment/Linux.md",
-    "Environment",
+    "Environment/Environment.md",
+    "Development/Development.md",
+    "Development/Python/Python.md",
+    "_attachments/Images/environment_windows_001.png",
+    "2023-09-09.md",
+    "Untitled.canvas",
+    "_attachments/Images/terminal_python_003.png",
+    "_attachments/Images/terminal_python_001.png",
+    "_attachments/Images",
+    "_attachments/Images/terminal_python_002.png",
+    "_attachments",
+    "Pasted image 20230909132200.png",
+    "Softwares/Software.md",
     "Softwares/Render Engines/Render Engines.md",
-    "Softwares/Softwares.md",
-    "Development/Python",
-    "Development",
     "Softwares/Render Engines/Redshift/Redshift.md",
     "Softwares/Render Engines/Arnold/Arnold.md",
+    "Softwares/Nuke/Nuke.md",
     "Softwares/Maya/Maya.md",
+    "Environment",
+    "Development/Python",
+    "Development",
     "Softwares/Render Engines",
     "Softwares/Render Engines/Redshift",
     "Softwares/Render Engines/Arnold",
-    "Softwares/Nuke/Nuke.md",
     "Softwares/Maya",
     "Softwares/Nuke",
-    "Softwares/Houdini/Packages.md",
-    "().md",
-    "Softwares/Houdini/Houdini.md",
-    "Softwares/Houdini/Untitled",
-    "Softwares/Houdini"
+    "().md"
   ]
 }
