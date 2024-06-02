@@ -33,3 +33,9 @@
 <!-- ABOUT -->
 ## About
 Personal collection of notes, tips and miscellaneous information.
+
+
+
+<!-- STATIC WEBSITE -->
+## Static Website
+You can access the notes just [there](https://healkeiser.github.io/notes/).
