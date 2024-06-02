@@ -32,4 +32,4 @@
 
 <!-- ABOUT -->
 ## About
-Personal collection of notes, tips and miscellaneous information about VFX stuff.
+Personal collection of notes, tips and miscellaneous information.
