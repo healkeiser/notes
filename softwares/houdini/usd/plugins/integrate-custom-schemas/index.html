@@ -818,7 +818,7 @@
         ):
        </p>
        <div class="highlight">
-        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> 
+        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">create_prims</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
 </code></pre>
        </div>
@@ -1042,13 +1042,10 @@
          $HOUDINI_PATH
         </code>
         following this naming convention:
--
         <code>
          SCENEGRAPH_primtype_&lt;custom schema class&gt;.svg
         </code>
-       </p>
-       <p>
-        To be displayed inside the Houdini
+        , to be displayed inside the Houdini
         <strong>
          Scene Graph Tree
         </strong>
