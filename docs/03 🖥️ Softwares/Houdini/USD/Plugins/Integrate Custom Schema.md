@@ -25,7 +25,7 @@ It contains a couple of important elements:
 - The **Create Primitives** menu, which allows you to control how and where the primitive will be created (if in **Create** mode)
 
 > [!warning]
-> The **Primitive Path** parm internal name should be `primpattern`, so it can run the callback set on **Initialize Parameters**.
+> The **Primitive Path** parm internal name should be `primpattern`, so the callback set on **Initialize Parameters** can run.
 
 ## Custom Node (HDA)
 
@@ -103,21 +103,25 @@ In order for the **Edit Properties from Node** node to work, we need to bring th
 
 They will be automatically read by the **Edit Properties from Node** node!
 
-## Add an Alias
+## Add an **Edit** Alias
 
-On most of the native nodes, you’ll get two options: the node, and the node **edit**.
+On most of the native nodes creating a primitive, you’ll get two options: the node, and the node **edit**. Here's what gets displayed when pressing `TAB` inside the **Network View** to drop a **Render Settings** node:
 
 ![[../../../../_attachments/TLcLb9mGWC.png]]
 
-Under the hood, this is a simple tool alias, which sets the **Action** menu to **Edit**, and runs `loputils.setAllControlParameters(node, 'none')` to set all USD parameters to None.
+You have the option to use a regular **Render Settings**, or a **Render Settings Edit**. Under the hood, this is a simple tool alias, which sets the **Action** menu to **Edit**, and sets all USD parameters to `none`, effectively **bypassing** any values that could have been added on the node parameters.
 
-Here’s how it’s done for **Render Settings**:
+Here’s how it’s done for **Render Settings** (navigate to **Render Settings** > **Type Properties** > **Interactive** > **Shelf Tools**)
+
+Inside the **Options** tab:
 
 ![[../../../../_attachments/houdini_0w1hgRxb5M.png]]
 
+And inside the **Script** tab:
+
 ![[../../../../_attachments/houdini_ODFY580WFB.png]]
 
-On our custom HDA, we can click on **Create New** and copy-paste the values of **Render Settings** in the **Options** tab.
+On our custom HDA **Type Properties** window, inside the **Interactive** > **Shelf Tools** tab, we can click on **Create New** and navigate to the **Options** tab. Copy-paste the values of the **Render Settings** > **Type Properties** > **Interactive** > **Shelf Tools** > **Options** tab.
 
 For the **Script** tab, we need some adjustments:
 
@@ -130,13 +134,20 @@ node.parm('primpattern').lock(False)
 loputils.setAllControlParameters(node, 'none')
 ```
 
-As you can see, we need to split the name: `$HDA_NAME` will return `jf::jfcontextinfo`, and `:` is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the `edit_1` part to it.
+As you can see, we need to split the name: `$HDA_NAME` will return `fxquinox::contextinfo`, and `:` is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the `edit_1` part to it. 
+
+> [!note]
+> This is only applicable if your HDA has an **author**, **branch** or **version** namespace.
+
+This is what you should end up with inside the **Options** tab:
 
 ![[../../../../_attachments/houdini_Y3xCYIrgLk.png]]
 
+And inside the **Script** tab:
+
 ![[../../../../_attachments/houdini_Lk1cldxtXE.png]]
 
-You can now try to drop the node, and should be welcomed by your HDA and its Edit variant:
+You can now try to press `TAB` inside your **Network View** to drop the node, and should be welcomed by your HDA and its Edit variant:
 
 ![[../../../../_attachments/bhslDwCmk8.png]]
 
