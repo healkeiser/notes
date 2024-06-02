@@ -524,6 +524,9 @@
         you want to create.
        </p>
        <div class="highlight">
+        <span class="filename">
+         schema.usda
+        </span>
         <pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#usda 1.0</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">(</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">subLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -610,6 +613,9 @@
         I made this batch script to run it on Windows:
        </p>
        <div class="highlight">
+        <span class="filename">
+         .run_usdGenSchema.bat
+        </span>
         <pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>@echo<span class="w"> </span>off
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
 <a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>REM<span class="w"> </span>Set<span class="w"> </span>paths<span class="w"> </span>to<span class="w"> </span>Houdini<span class="w"> </span>programs,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>USD<span class="w"> </span>file
@@ -672,9 +678,9 @@
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>└── 📁 usdFxquinox/
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    ├── 📁 resources/
 <a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    │   └── 📄 schema.usda
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    ├── 📄 generatedSchema.usda  🟢
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>    └── 📄 plugInfo.json         🟢
-</code></pre>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll">    ├── 📄 generatedSchema.usda    🟢
+</span><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll">    └── 📄 plugInfo.json           🟢
+</span></code></pre>
        </div>
        <p>
         You’ll need to modify the
@@ -688,12 +694,15 @@
         string replacements:
        </p>
        <div class="highlight">
+        <span class="filename">
+         plugInfo.json
+        </span>
         <pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">...</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">"LibraryPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_LIBRARY_PATH@"</span><span class="p">,</span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdFxquinox"</span><span class="p">,</span>
-<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nt">"ResourcePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_RESOURCE_PATH@"</span><span class="p">,</span>
-<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nt">"Root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_ROOT@"</span><span class="p">,</span>
-<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource"</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll"><span class="w">    </span><span class="nt">"LibraryPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_LIBRARY_PATH@"</span><span class="p">,</span>
+</span><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdFxquinox"</span><span class="p">,</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll"><span class="w">    </span><span class="nt">"ResourcePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_RESOURCE_PATH@"</span><span class="p">,</span>
+</span><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll"><span class="w">    </span><span class="nt">"Root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@PLUG_INFO_ROOT@"</span><span class="p">,</span>
+</span><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource"</span>
 <a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="err">...</span>
 </code></pre>
        </div>
@@ -701,12 +710,15 @@
         To:
        </p>
        <div class="highlight">
+        <span class="filename">
+         plugInfo.json
+        </span>
         <pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="err">...</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nt">"LibraryPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdFxquinox"</span><span class="p">,</span>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="nt">"ResourcePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span>
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="nt">"Root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span>
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource"</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="hll"><span class="w">    </span><span class="nt">"LibraryPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+</span><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdFxquinox"</span><span class="p">,</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="hll"><span class="w">    </span><span class="nt">"ResourcePath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span>
+</span><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="hll"><span class="w">    </span><span class="nt">"Root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span>
+</span><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource"</span>
 <a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="err">...</span>
 </code></pre>
        </div>
