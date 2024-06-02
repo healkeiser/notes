@@ -15,7 +15,7 @@
   <h3 align="center">Notes</h3>
 
   <p align="center">
-    Notes for VFX
+    Personal collection of notes, tips and miscellaneous information
     <br />
     <br />
     <br />
