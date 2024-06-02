@@ -25,13 +25,14 @@ It contains a couple of important elements:
 - The **Create Primitives** menu, which allows you to control how and where the primitive will be created (if in **Create** mode)
 
 > [!warning] 
-> The **Primitive Path** parm internal name should be `primpattern`, so it can run the `__import__('loputils').initializeParameters(kwargs['node'], kwargs['script_value'])` callback set on **Initialize Parameters**.
+> The **Primitive Path** parm internal name should be `primpattern`, so it can run the callback set on **Initialize Parameters**.
 
 ## Custom Node (HDA)
 
 In order to emulate all those, we can create an HDA with the following structure:
 
-> [!note] **Primitive Path** is a locked parameter: You might want to add an **OnCreated** callback to lock it (or make invisible) in order to force artists to only use pipeline defined primitive paths.
+> [!tip]- Lock Primitive Path
+>  Here, **Primitive Path** is a locked parameter: you might want to add an **OnCreated** callback to lock it (or simply make the parm invisible) in order to force artists to only use pipeline defined primitive paths.
 
 ![[../../../../_attachments/zHNp9aWjDm.png]]
 
@@ -136,4 +137,13 @@ You can now try to drop the node, and should be welcomed by your HDA and its Edi
 
 ![[../../../../_attachments/bhslDwCmk8.png]]
 
-That’s about it!
+## Custom Icon
+
+You can add an icon in the `$HOUDINI_PATH` following this naming convention:
+
+  - `SCENEGRAPH_primtype_<custom schema class>.svg`
+  - E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
+
+To be displayed inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive:
+
+![](../../../../_attachments/3Nd4p8emvV.png)

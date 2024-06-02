@@ -202,11 +202,3 @@ The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGIN
 set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox;%PXR_PLUGINPATH_NAME%
 ```
 
-## Custom Icon
-
-You can add an icon in the `$HOUDINI_PATH` following this naming convention:
-
-  - `SCENEGRAPH_primtype_<custom schema class>.svg`
-  - E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
-
-To be displayed inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive.
