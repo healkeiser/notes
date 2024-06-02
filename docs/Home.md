@@ -14,8 +14,8 @@ sticker: lucide//home
 
 <div id="top"></div>
 <div align="center">
-  <a href="https://github.com/healkeiser/vfx_notes">
-    <img src="docs/_attachments/vfx_notes_logo.svg" alt="VFX Notes" width="128" >
+  <a href="https://github.com/healkeiser/notes">
+    <img src="docs/_attachments/notes_logo.svg" alt="VFX Notes" width="128" >
   </a>
   <p align="center">
     <br/>

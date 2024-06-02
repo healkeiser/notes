@@ -8,8 +8,8 @@
 site_name: VFX Notes
 site_author: Valentin Beaumont
 copyright: Copyright &copy; 2021 - 2024 Valentin Beaumont
-repo_url: https://github.com/healkeiser/vfx_notes
-repo_name: healkeiser/vfx_notes
+repo_url: https://github.com/healkeiser/notes
+repo_name: healkeiser/notes
 edit_uri: edit/main/docs/
 
 ###### Custom ##################################################################
@@ -22,8 +22,8 @@ extra_css:
 theme:
   name: material
   language: en
-  favicon: _attachments/vfx_notes_logo.svg
-  logo: _attachments/vfx_notes_logo.svg
+  favicon: _attachments/notes_logo.svg
+  logo: _attachments/notes_logo.svg
   icon:
     repo: material/github
   features:
@@ -102,7 +102,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
-      repository: healkeiser/vfx_notes
+      repository: healkeiser/notes
       branch: main
       # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
   - pub-debugger:
