@@ -96,7 +96,7 @@ This node is also linked to the **Frame Range Sampling** menu, **Primitive Path*
 > [!note]
 > You can simply drag and drop the **Edit Properties from Node** node onto the **Type Properties** window of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
 
-## Create USD Attributes
+## Promote USD Attributes
 
 In order for the **Edit Properties from Node** node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA **Type Properties**, and inside the **Parameters** tab navigate to the **From USD** tab. You can now filter the schema you want and add all its attributes to your parameters.
 
