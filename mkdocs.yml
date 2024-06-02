@@ -105,6 +105,7 @@ plugins:
       repository: healkeiser/notes
       branch: main
       # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
+  - glightbox
   - pub-debugger:
       console_log:
         enabled: false
