@@ -740,11 +740,19 @@
          <strong>
           info
          </strong>
-         ) directly onto the node. In specific this instance, we don’t want to allow the creation of multiple
+         ) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple
          <strong>
-          Fxqionox Context Info
+          Fxquinox Context Info
          </strong>
-         primitives, so it’s set on error, which will effectively set the HDA in an error-state and fail its cooking.
+         primitives, so it’s set on
+         <strong>
+          error
+         </strong>
+         , which will effectively set the HDA in an error-state and fail its cooking.
+         <strong>
+          Render Settings
+         </strong>
+         just throws a warning.
         </p>
        </div>
        <h3 id="primitive">
@@ -753,7 +761,11 @@
         </a>
        </h3>
        <p>
-        This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive type (if applicable) and primitive specifier.
+        This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive
+        <strong>
+         type
+        </strong>
+        (if applicable) and primitive specifier.
        </p>
        <p>
         To apply your custom schema, select
@@ -824,6 +836,9 @@
        </p>
        <div class="admonition quote">
         <p class="admonition-title">
+         Quote
+        </p>
+        <p>
          Instead of adding spare parameters to this node, you must direct it to another node from which it reads parameters that correspond to attributes on prims in the scene graph tree. When you edit these parameters on the other node, this node authors equivalent changes to the equivalent USD attributes.
         </p>
        </div>
@@ -836,6 +851,10 @@
          Frame Range Sampling
         </strong>
         menu,
+        <strong>
+         Primitive Path
+        </strong>
+        parm,
         <strong>
          Action
         </strong>
@@ -854,7 +873,11 @@
          <strong>
           Edit Properties from Node
          </strong>
-         node onto the Type Properties of your HDA to automatically promote
+         node onto the
+         <strong>
+          Type Properties
+         </strong>
+         window of your HDA to automatically promote
          <strong>
           all
          </strong>
