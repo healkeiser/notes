@@ -25,6 +25,20 @@
   <script>
    __md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}
   </script>
+  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/>
+  <style>
+   html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+  </style>
+  <script src="../../../../../assets/javascripts/glightbox.min.js">
+  </script>
  </head>
  <body data-md-color-accent="blue" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
   <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -507,14 +521,20 @@
         primitive node:
        </p>
        <p>
-        <img alt="DViGtQ2cWB.png" loading="lazy" src="../../../../../_attachments/DViGtQ2cWB.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/DViGtQ2cWB.png/">
+         <img alt="DViGtQ2cWB.png" loading="lazy" src="../../../../../_attachments/DViGtQ2cWB.png"/>
+        </a>
        </p>
        <p>
         It contains a couple of important elements:
        </p>
        <ul>
         <li>
-         A frame range sampling (useful to get rid of time dependencies)
+         A
+         <strong>
+          Frame Range Sampling
+         </strong>
+         menu (useful to get rid of time dependencies)
         </li>
         <li>
          The
@@ -536,7 +556,7 @@
          <strong>
           Initialize Parameters
          </strong>
-         init menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in
+         menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in
          <strong>
           Edit
          </strong>
@@ -573,10 +593,14 @@
         </p>
        </div>
        <p>
-        <img alt="zHNp9aWjDm.png" loading="lazy" src="../../../../../_attachments/zHNp9aWjDm.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/zHNp9aWjDm.png/">
+         <img alt="zHNp9aWjDm.png" loading="lazy" src="../../../../../_attachments/zHNp9aWjDm.png"/>
+        </a>
        </p>
        <p>
-        <img alt="houdini_X60V05qBjV.png" loading="lazy" src="../../../../../_attachments/houdini_X60V05qBjV.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_X60V05qBjV.png/">
+         <img alt="houdini_X60V05qBjV.png" loading="lazy" src="../../../../../_attachments/houdini_X60V05qBjV.png"/>
+        </a>
        </p>
        <h2 id="internal-nodes">
         Internal Nodes
@@ -602,7 +626,7 @@
 </code></pre>
        </div>
        <p>
-        And will return this error to the user:
+        It will return this error to the user:
        </p>
        <blockquote>
         <p>
@@ -622,18 +646,7 @@
         </p>
        </blockquote>
        <p>
-        Where
-        <code>
-         hda_label
-        </code>
-        is a spare parameter with the value
-        <code>
-         Fxquinox Context Info
-        </code>
-        .
-       </p>
-       <p>
-        The error gets displayed only if another primitive
+        if another primitive
         <strong>
          with the same path
         </strong>
@@ -650,6 +663,21 @@
         </strong>
         .
        </p>
+       <details class="tip">
+        <summary>
+         HDA Label
+        </summary>
+        <p>
+         <code>
+          hda_label
+         </code>
+         is a spare parameter created on the Error node with the value
+         <code>
+          Fxquinox Context Info
+         </code>
+         . This is added so you can quickly change it and use this HDA as a template.
+        </p>
+       </details>
        <div class="admonition note">
         <p class="admonition-title">
          You can set the message verbosity (
@@ -719,7 +747,15 @@
         <strong>
          Activation
         </strong>
-        parameter (You can create it through Right-click &gt; LOP Action &gt; Create Activation Parameter):
+        parameter (You can create it through a node Right-click &gt;
+        <strong>
+         LOP Action
+        </strong>
+        &gt;
+        <strong>
+         Create Activation Parameter
+        </strong>
+        ):
        </p>
        <div class="highlight">
         <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> 
@@ -744,31 +780,36 @@
         </p>
        </div>
        <p>
-        That allows us to add the properties on the HDA itself: they will always be read from this parent HDA and added accordingly.
+        That allows us to add the properties on the HDA itself: they will always be read from it and added accordingly.
        </p>
        <p>
         This node is also linked to the
         <strong>
-         frame range sampling
+         Frame Range Sampling
         </strong>
-        ,
+        menu,
         <strong>
          Action
         </strong>
-        menu, the
+        menu, and the
         <strong>
          Initialize Parameters
         </strong>
-        init menu. It’s the one that allows us to switch from
-        <strong>
-         Create
-        </strong>
-        to
-        <strong>
-         Edit
-        </strong>
-        just like a native node!
+        menu. It’s the one that allows our HDA to behave just like a native node.
        </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         You can simply drag and drop the
+         <strong>
+          Edit Properties from Node
+         </strong>
+         node onto the Type Properties of your HDA to automatically promote
+         <strong>
+          all
+         </strong>
+         its parameters onto your HDA, then simply delete the ones you don't need.
+        </p>
+       </div>
        <h2 id="create-usd-attributes">
         Create USD Attributes
        </h2>
@@ -783,16 +824,18 @@
         </strong>
         , and inside the
         <strong>
-         Parameters tab
+         Parameters
         </strong>
-        navigate to the
+        tab navigate to the
         <strong>
          From USD
         </strong>
         tab. You can now filter the schema you want and add all its attributes to your parameters.
        </p>
        <p>
-        <img alt="ZksJ49B28q.png" loading="lazy" src="../../../../../_attachments/ZksJ49B28q.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/ZksJ49B28q.png/">
+         <img alt="ZksJ49B28q.png" loading="lazy" src="../../../../../_attachments/ZksJ49B28q.png"/>
+        </a>
        </p>
        <p>
         They will be automatically read by the
@@ -805,10 +848,16 @@
         Add an Alias
        </h2>
        <p>
-        On most of the native nodes, you’ll get two options: the node, and the node edit.
+        On most of the native nodes, you’ll get two options: the node, and the node
+        <strong>
+         edit
+        </strong>
+        .
        </p>
        <p>
-        <img alt="TLcLb9mGWC.png" loading="lazy" src="../../../../../_attachments/TLcLb9mGWC.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/TLcLb9mGWC.png/">
+         <img alt="TLcLb9mGWC.png" loading="lazy" src="../../../../../_attachments/TLcLb9mGWC.png"/>
+        </a>
        </p>
        <p>
         Under the hood, this is a simple tool alias, which sets the
@@ -833,10 +882,14 @@
         :
        </p>
        <p>
-        <img alt="houdini_0w1hgRxb5M.png" loading="lazy" src="../../../../../_attachments/houdini_0w1hgRxb5M.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_0w1hgRxb5M.png/">
+         <img alt="houdini_0w1hgRxb5M.png" loading="lazy" src="../../../../../_attachments/houdini_0w1hgRxb5M.png"/>
+        </a>
        </p>
        <p>
-        <img alt="houdini_ODFY580WFB.png" loading="lazy" src="../../../../../_attachments/houdini_ODFY580WFB.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_ODFY580WFB.png/">
+         <img alt="houdini_ODFY580WFB.png" loading="lazy" src="../../../../../_attachments/houdini_ODFY580WFB.png"/>
+        </a>
        </p>
        <p>
         On our custom HDA, we can click on
@@ -851,7 +904,10 @@
         <strong>
          Options
         </strong>
-        tab. For the
+        tab.
+       </p>
+       <p>
+        For the
         <strong>
          Script
         </strong>
@@ -886,16 +942,22 @@
         part to it.
        </p>
        <p>
-        <img alt="houdini_Y3xCYIrgLk.png" loading="lazy" src="../../../../../_attachments/houdini_Y3xCYIrgLk.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Y3xCYIrgLk.png/">
+         <img alt="houdini_Y3xCYIrgLk.png" loading="lazy" src="../../../../../_attachments/houdini_Y3xCYIrgLk.png"/>
+        </a>
        </p>
        <p>
-        <img alt="houdini_Lk1cldxtXE.png" loading="lazy" src="../../../../../_attachments/houdini_Lk1cldxtXE.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Lk1cldxtXE.png/">
+         <img alt="houdini_Lk1cldxtXE.png" loading="lazy" src="../../../../../_attachments/houdini_Lk1cldxtXE.png"/>
+        </a>
        </p>
        <p>
         You can now try to drop the node, and should be welcomed by your HDA and its Edit variant:
        </p>
        <p>
-        <img alt="bhslDwCmk8.png" loading="lazy" src="../../../../../_attachments/bhslDwCmk8.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/bhslDwCmk8.png/">
+         <img alt="bhslDwCmk8.png" loading="lazy" src="../../../../../_attachments/bhslDwCmk8.png"/>
+        </a>
        </p>
        <p>
         That’s about it!
@@ -998,6 +1060,10 @@
    {"base": "../../../../..", "features": ["announce.dismiss", "navigation.expand", "navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.tooltips", "content.tabs.link", "content.action.edit", "content.action.view", "content.code.copy", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}
   </script>
   <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js">
+  </script>
+  <script id="init-glightbox">
+   const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
   </script>
  </body>
 </html>
