@@ -8,8 +8,8 @@ publish: true
 _How-to create a USD custom schema._
 
 > [!quote] Important Links
-> - [https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html](https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html)
-> - [https://openusd.org/release/tut_generating_new_schema.html](https://openusd.org/release/tut_generating_new_schema.html)
+> - [USD Survival Guide - Schemas](https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html)
+> - [USD - Generating New Schema Classes](https://openusd.org/release/tut_generating_new_schema.html)
 
 > [!note]
 > You can find the **usdFxquinox** plugin on [GitHub](https://github.com/healkeiser/fxquinox/tree/main/plugins/usd/usdFxquinox).
@@ -150,7 +150,14 @@ pause
 > Think about changing your `HOUDINI_VERSION` and `USD_PLUGIN_NAME` accordingly.
 
 > [!warning]
-> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the resources folder!
+> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder:
+> ``` 
+> .
+> └── 📁 usdFxquinox/
+>     ├── 📁 resources/
+> 	│     └── 📄 schema.usda
+> 	└── 📄 .run_usdGenSchema.bat  🟢
+> ```
 
 Let the tool run. Once it’s done, you should have 2 new files:
 
