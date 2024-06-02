@@ -42,7 +42,7 @@ In order to emulate all those, we can create an HDA with the following structure
 
 #### [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html)
 
-The error node contains the following code on the **Report this Error** parm:
+The [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html) node contains the following code on the **Report this Error** parm:
 
 ``` python title="Error > enable"
 node = hou.pwd()
@@ -67,15 +67,20 @@ if another primitive **with the same path** is found, and you’re about to over
 > `hda_label` is a spare parameter created on the Error node with the value `Fxquinox Context Info`. This is added so you can quickly change it and use this HDA as a template.
 
 > [!note]
-> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking. **Render Settings** just throws a warning.
+> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking. 
+> 
+> For example, **Render Settings** just throws a warning when you're overriding an existing primitive.
+
+> [!warning]
+> Don't forget to add the error node path inside your HDA **Type Properties** > **Node**  > **Message Nodes** so the error gets displayed directly onto the HDA.
 
 #### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
 
-This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive **type** (if applicable) and primitive specifier.
+This is the node that creates the primitive itself. On this node you’ll choose the **primitive type**, **primitive kind**, **parent primitive type** (if applicable) and **primitive specifier**.
 
 To apply your custom schema, select **Primitive Type** to your schema class. In this instance, **FxquinoxContextInfo**.
 
-This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the **Edit Properties from Node**. Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through a node Right-click > **LOP Action** > **Create Activation Parameter**):
+This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html). Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through a node Right-click > **LOP Action** > **Create Activation Parameter**):
 
 ``` python title="Primitive > lop_activation"
 create_prims = hou.pwd().parent().parm("createprims").eval()
@@ -94,15 +99,15 @@ That allows us to add the properties on the HDA itself: they will always be read
 This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node.
 
 > [!note]
-> You can simply drag and drop the **Edit Properties from Node** node onto the **Type Properties** window of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
+> You can simply drag and drop the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node onto the **Type Properties** window of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
 
 ## Promote USD Attributes
 
-In order for the **Edit Properties from Node** node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA **Type Properties**, and inside the **Parameters** tab navigate to the **From USD** tab. You can now filter the schema you want and add all its attributes to your parameters.
+In order for the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA **Type Properties**, and inside the **Parameters** tab navigate to the **From USD** tab. You can now filter the schema you want and add all its attributes to your parameters.
 
 ![[../../../../_attachments/ZksJ49B28q.png]]
 
-They will be automatically read by the **Edit Properties from Node** node!
+They will be automatically read by the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node!
 
 ## Add an **Edit** Alias
 
@@ -157,6 +162,4 @@ You can now try to press `TAB` inside your **Network View** to drop the node, an
 You can add an icon in the `$HOUDINI_PATH` following this naming convention: `SCENEGRAPH_primtype_<custom schema class>.svg`, to be displayed inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive:
 
 ![](../../../../_attachments/3Nd4p8emvV.png)
-
-> [!example]- Icon Name
-> `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
+In this case, the icon is `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`.
