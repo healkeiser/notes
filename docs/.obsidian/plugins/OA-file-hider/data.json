@@ -1,0 +1,9 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "overrides",
+    "stylesheets",
+    "_attachments",
+    "_templates"
+  ]
+}
