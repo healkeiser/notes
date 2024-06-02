@@ -22,8 +22,8 @@ extra_css:
 theme:
   name: material
   language: en
-  favicon: _attachments/notes_logo.svg
-  logo: _attachments/notes_logo.svg
+  favicon: _attachments/notes_logo_dark.svg
+  logo: _attachments/notes_logo_dark.svg
   icon:
     repo: material/github
   features:

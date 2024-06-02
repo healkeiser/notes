@@ -23,8 +23,8 @@ Let’s start by creating a directory and a `schema.usda` file:
 ```
 .
 └── 📁 usdFxquinox/
-    ├── 📁 resources/
-	│   └── 📄 schema.usda
+    └── 📁 resources/
+	    └── 📄 schema.usda
 ```
 
 Which corresponds to:
@@ -32,8 +32,8 @@ Which corresponds to:
 ```
 .
 └── 📁 <plugin name>/
-    ├── 📁 resources/
-	│   └── 📄 schema.usda
+    └── 📁 resources/
+	    └── 📄 schema.usda
 ```
 
 ## Edit `schema.usda`
@@ -150,14 +150,7 @@ pause
 > Think about changing your `HOUDINI_VERSION` and `USD_PLUGIN_NAME` accordingly.
 
 > [!warning]
-> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder:
-> ``` 
-> .
-> └── 📁 usdFxquinox/
->     ├── 📁 resources/
-> 	│     └── 📄 schema.usda
-> 	└── 📄 .run_usdGenSchema.bat  🟢
-> ```
+> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder: `usdFxquinox/.run_usdGenSchema.bat`
 
 Let the tool run. Once it’s done, you should have 2 new files:
 
@@ -209,6 +202,11 @@ The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGIN
 set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox;%PXR_PLUGINPATH_NAME%
 ```
 
-## Custom Icons
+## Custom Icon
 
-You can add an icon in the `$HOUDINI_PATH` following this naming convention: `SCENEGRAPH_primtype_<custom schema class>.svg`, E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`  to be applied inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive. 
+You can add an icon in the `$HOUDINI_PATH` following this naming convention:
+
+  - `SCENEGRAPH_primtype_<custom schema class>.svg`
+  - E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
+
+To be displayed inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive.

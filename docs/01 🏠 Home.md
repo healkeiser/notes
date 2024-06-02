@@ -15,7 +15,7 @@ sticker: lucide//home
 <div id="top"></div>
 <div align="center">
   <a href="https://github.com/healkeiser/notes">
-    <img src="docs/_attachments/notes_logo.svg" alt="Notes" width="128" >
+    <img src="docs/_attachments/notes_logo_dark.svg" alt="Notes" width="128" >
   </a>
   <p align="center">
     <br/>
