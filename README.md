@@ -24,7 +24,6 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 <!--ts-->
-- [Table of Contents](#table-of-contents)
 - [About](#about)
 - [Static Website](#static-website)
 <!--te-->
