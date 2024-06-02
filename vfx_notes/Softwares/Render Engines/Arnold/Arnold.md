@@ -1,5 +1,0 @@
-#/arnold #/render 
-
-## About
-
-## Summary

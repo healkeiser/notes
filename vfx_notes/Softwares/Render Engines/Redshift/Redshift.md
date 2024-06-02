@@ -1,5 +1,0 @@
-#/redshift #/render 
-
-## About
-
-## Summary

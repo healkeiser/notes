@@ -1,0 +1,118 @@
+# Base for MkDocs.
+
+# Author: Valentin Beaumont
+# Mail: valentin.onze@gmail.com
+
+###### CODE ####################################################################
+
+site_name: VFX Notes
+site_author: Valentin Beaumont
+copyright: Copyright &copy; 2021 - 2024 Valentin Beaumont
+repo_url: https://github.com/healkeiser/vfx_notes
+repo_name: healkeiser/vfx_notes
+edit_uri: edit/main/docs/
+
+###### Custom ##################################################################
+
+extra_css:
+  - stylesheets/extra.css
+
+###### Theme ###################################################################
+
+theme:
+  name: material
+  language: en
+  favicon: images/obisidian_logo.svg
+  logo: images/obisidian_logo.svg
+  icon:
+    repo: material/github
+  features:
+    - announce.dismiss
+    - navigation.expand
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.footer # Prev/Next page
+    - navigation.tracking # Anchor tracking
+    - navigation.top # Back to top
+    - navigation.sections # Useful for an overview
+    - navigation.indexes # Needed for an overview
+    - navigation.instant
+    - navigation.instant.progress
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.tooltips
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - toc.follow
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+###### Markdown extensions #####################################################
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.b64
+  - pymdownx.smartsymbols
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  # - git-authors
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  # - git-committers:
+  #     repository: healkeiser/vfx_notes
+  #     branch: main
+  #     # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
+  - pub-debugger:
+      console_log:
+        enabled: false
+  - pub-blog
+  - pub-obsidian
+  - pub-social
+  - pub-meta:
+      dir_meta_file: README.md
+  - pub-minifier
+###### Navigation ##############################################################
+
