@@ -65,7 +65,8 @@ if another primitive **with the same path** is found, and you’re about to over
 > [!tip]- HDA Label
 > `hda_label` is a spare parameter created on the Error node with the value `Fxquinox Context Info`. This is added so you can quickly change it and use this HDA as a template.
 
-> [!note] You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In specific this instance, we don’t want to allow the creation of multiple **Fxqionox Context Info** primitives, so it’s set on error, which will effectively set the HDA in an error-state and fail its cooking.
+> [!note] 
+> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In specific this instance, we don’t want to allow the creation of multiple **Fxqionox Context Info** primitives, so it’s set on error, which will effectively set the HDA in an error-state and fail its cooking.
 
 ### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
 
@@ -90,7 +91,8 @@ That allows us to add the properties on the HDA itself: they will always be read
 
 This node is also linked to the **Frame Range Sampling** menu, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node.
 
-> [!note] You can simply drag and drop the **Edit Properties from Node** node onto the Type Properties of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
+> [!note] 
+> You can simply drag and drop the **Edit Properties from Node** node onto the Type Properties of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
 
 ## Create USD Attributes
 
