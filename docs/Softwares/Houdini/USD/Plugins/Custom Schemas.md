@@ -4,11 +4,10 @@ icon: material/toy-brick
 slug: custom-schemas
 publish: true
 ---
+
 _How-to create a USD custom schema._
 
-Important links:
-
-> [!quote] Important Links 
+> [!quote] Important Links
 > - [https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html](https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html)
 > - [https://openusd.org/release/tut_generating_new_schema.html](https://openusd.org/release/tut_generating_new_schema.html)
 
@@ -165,10 +164,10 @@ You’ll need to modify the `plugInfo.json` file, since usdGenSchema leaves in t
 
 ``` json
 ...
-    "LibraryPath": "@PLUG_INFO_LIBRARY_PATH@", 
-    "Name": "usdFxquinox", 
-    "ResourcePath": "@PLUG_INFO_RESOURCE_PATH@", 
-    "Root": "@PLUG_INFO_ROOT@", 
+    "LibraryPath": "@PLUG_INFO_LIBRARY_PATH@",
+    "Name": "usdFxquinox",
+    "ResourcePath": "@PLUG_INFO_RESOURCE_PATH@",
+    "Root": "@PLUG_INFO_ROOT@",
     "Type": "resource"
 ...
 ```
@@ -194,8 +193,8 @@ This change only need to be made once, as indicated in `plugInfo.json`:
 
 ## Edit Environment
 
-The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGINPATH_NAME` environment variable.
-In our instance:
+The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGINPATH_NAME` environment variable. In our instance:
+
 ```shell
 set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox;%PXR_PLUGINPATH_NAME%
 ```

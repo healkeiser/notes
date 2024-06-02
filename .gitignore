@@ -12,6 +12,7 @@ coverage.json
 htmlcov
 
 # Project specific
+site
 # docs
 */.obsidian/workspace.json
 */.obsidian/plugins/obsidian-languagetool-plugin

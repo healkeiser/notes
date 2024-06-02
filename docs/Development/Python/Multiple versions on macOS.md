@@ -1,6 +1,6 @@
 ---
 title: Multiple Versions on macOS
-icon: simple/macos
+icon: material/apple
 slug: multiple-versions-on-macos
 publish: false
 ---
