@@ -15,14 +15,14 @@ sticker: lucide//home
 <div id="top"></div>
 <div align="center">
   <a href="https://github.com/healkeiser/notes">
-    <img src="docs/_attachments/notes_logo.svg" alt="VFX Notes" width="128" >
+    <img src="docs/_attachments/notes_logo.svg" alt="Notes" width="128" >
   </a>
   <p align="center">
     <br/>
   </p>
 </div>
 
-## VFX notes
+## Notes
 
 This documentation is built with [MkDocs](https://www.mkdocs.org/) and the [MkDocs Publisher](https://mkusz.github.io/mkdocs-publisher/) plugin, since I'm using [Obsidian](https://obsidian.md/) to take the notes. You can clone the repository and open it as an Obsidian Vault if you prefer reading it locally!
 
