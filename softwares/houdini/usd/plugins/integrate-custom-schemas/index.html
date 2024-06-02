@@ -664,7 +664,11 @@
         </a>
        </h4>
        <p>
-        The error node contains the following code on the
+        The
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/error.html">
+         Error
+        </a>
+        node contains the following code on the
         <strong>
          Report this Error
         </strong>
@@ -767,10 +771,33 @@
           error
          </strong>
          , which will effectively set the HDA in an error-state and fail its cooking.
+        </p>
+        <p>
+         For example,
          <strong>
           Render Settings
          </strong>
-         just throws a warning.
+         just throws a warning when you're overriding an existing primitive.
+        </p>
+       </div>
+       <div class="admonition warning">
+        <p class="admonition-title">
+         Warning
+        </p>
+        <p>
+         Don't forget to add the error node path inside your HDA
+         <strong>
+          Type Properties
+         </strong>
+         &gt;
+         <strong>
+          Node
+         </strong>
+         &gt;
+         <strong>
+          Message Nodes
+         </strong>
+         so the error gets displayed directly onto the HDA.
         </p>
        </div>
        <h4 id="primitive">
@@ -779,11 +806,23 @@
         </a>
        </h4>
        <p>
-        This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive
+        This is the node that creates the primitive itself. On this node you’ll choose the
         <strong>
-         type
+         primitive type
         </strong>
-        (if applicable) and primitive specifier.
+        ,
+        <strong>
+         primitive kind
+        </strong>
+        ,
+        <strong>
+         parent primitive type
+        </strong>
+        (if applicable) and
+        <strong>
+         primitive specifier
+        </strong>
+        .
        </p>
        <p>
         To apply your custom schema, select
@@ -818,9 +857,9 @@
          not
         </strong>
         create the primitive and bypass the node, immediately cooking the
-        <strong>
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
          Edit Properties from Node
-        </strong>
+        </a>
         . Here’s the Python expression driving it, set on this node
         <strong>
          Activation
@@ -891,9 +930,9 @@
         </p>
         <p>
          You can simply drag and drop the
-         <strong>
+         <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
           Edit Properties from Node
-         </strong>
+         </a>
          node onto the
          <strong>
           Type Properties
@@ -910,9 +949,9 @@
        </h2>
        <p>
         In order for the
-        <strong>
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
          Edit Properties from Node
-        </strong>
+        </a>
         node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA
         <strong>
          Type Properties
@@ -934,9 +973,9 @@
        </p>
        <p>
         They will be automatically read by the
-        <strong>
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
          Edit Properties from Node
-        </strong>
+        </a>
         node!
        </p>
        <h2 id="add-an-edit-alias">
@@ -1207,17 +1246,12 @@
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/3Nd4p8emvV.png/">
          <img alt="None" src="../../../../../_attachments/3Nd4p8emvV.png"/>
         </a>
+        In this case, the icon is
+        <code>
+         SCENEGRAPH_primtype_fxquinoxcontextinfo.svg
+        </code>
+        .
        </p>
-       <details class="example">
-        <summary>
-         Icon Name
-        </summary>
-        <p>
-         <code>
-          SCENEGRAPH_primtype_fxquinoxcontextinfo.svg
-         </code>
-        </p>
-       </details>
        <aside class="md-source-file">
         <span class="md-source-file__fact">
          <span class="md-icon" title="Last update">
