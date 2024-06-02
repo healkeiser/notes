@@ -112,6 +112,5 @@ plugins:
   - pub-blog
   - pub-obsidian
   - pub-social
-  - pub-meta:
-      dir_meta_file: README.md
+  - pub-meta
   - pub-minifier
