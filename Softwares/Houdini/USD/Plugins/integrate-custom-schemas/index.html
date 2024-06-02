@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Valentin Beaumont" name="author"/>
+  <link href="../custom-schemas/" rel="prev"/>
+  <link href="../../../../../images/obisidian_logo.svg" rel="icon"/>
+  <meta content="mkdocs-1.6.0, mkdocs-material-9.5.22" name="generator"/>
+  <title>
+   Integrate Custom Schemas - VFX Notes
+  </title>
+  <link href="../../../../../assets/stylesheets/main.732c4fb1.min.css" rel="stylesheet"/>
+  <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+  <style>
+   :root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}
+  </style>
+  <link href="../../../../../stylesheets/extra.css" rel="stylesheet"/>
+  <link href="../../../../../assets/stylesheets/blog.min.css" rel="stylesheet"/>
+  <link href="../../../../../assets/stylesheets/blog.min.css.map" rel="stylesheet"/>
+  <link href="../../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
+  <link href="../../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
+  <script>
+   __md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}
+  </script>
+ </head>
+ <body data-md-color-accent="blue" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+  <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+  <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+  <label class="md-overlay" for="__drawer">
+  </label>
+  <div data-md-component="skip">
+   <a class="md-skip" href="#native-node">
+    Skip to content
+   </a>
+  </div>
+  <div data-md-component="announce">
+  </div>
+  <header class="md-header" data-md-component="header">
+   <nav aria-label="Header" class="md-header__inner md-grid">
+    <a aria-label="VFX Notes" class="md-header__button md-logo" data-md-component="logo" href="https://healkeiser.github.io/vfx_notes" title="VFX Notes">
+     <img alt="logo" src="../../../../../images/obisidian_logo.svg"/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+     <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z">
+      </path>
+     </svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+     <div class="md-header__ellipsis">
+      <div class="md-header__topic">
+       <span class="md-ellipsis">
+        VFX Notes
+       </span>
+      </div>
+      <div class="md-header__topic" data-md-component="header-topic">
+       <span class="md-ellipsis">
+        Integrate Custom Schemas
+       </span>
+      </div>
+     </div>
+    </div>
+    <form class="md-header__option" data-md-component="palette">
+     <input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+     <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+      <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z">
+       </path>
+      </svg>
+     </label>
+     <input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+     <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+      <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z">
+       </path>
+      </svg>
+     </label>
+    </form>
+    <script>
+     var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}
+    </script>
+    <label class="md-header__button md-icon" for="__search">
+     <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+      </path>
+     </svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+     <label class="md-search__overlay" for="__search">
+     </label>
+     <div class="md-search__inner" role="search">
+      <form class="md-search__form" name="search">
+       <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+       <label class="md-search__icon md-icon" for="__search">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+         </path>
+        </svg>
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
+         </path>
+        </svg>
+       </label>
+       <nav aria-label="Search" class="md-search__options">
+        <a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z">
+          </path>
+         </svg>
+        </a>
+        <button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+         </svg>
+        </button>
+       </nav>
+       <div class="md-search__suggest" data-md-component="search-suggest">
+       </div>
+      </form>
+      <div class="md-search__output">
+       <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+         <div class="md-search-result__meta">
+          Initializing search
+         </div>
+         <ol class="md-search-result__list" role="presentation">
+         </ol>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="md-header__source">
+     <a class="md-source" data-md-component="source" href="https://github.com/healkeiser/vfx_notes" title="Go to repository">
+      <div class="md-source__icon md-icon">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z">
+        </path>
+       </svg>
+      </div>
+      <div class="md-source__repository">
+       healkeiser/vfx_notes
+      </div>
+     </a>
+    </div>
+   </nav>
+  </header>
+  <div class="md-container" data-md-component="container">
+   <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+    <div class="md-grid">
+     <ul class="md-tabs__list">
+      <li class="md-tabs__item md-tabs__item--active">
+       <a class="md-tabs__link" href="../custom-schemas/">
+        Softwares
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+   <main class="md-main" data-md-component="main">
+    <div class="md-main__inner md-grid">
+     <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+       <div class="md-sidebar__inner">
+        <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+         <label class="md-nav__title" for="__drawer">
+          <a aria-label="VFX Notes" class="md-nav__button md-logo" data-md-component="logo" href="https://healkeiser.github.io/vfx_notes" title="VFX Notes">
+           <img alt="logo" src="../../../../../images/obisidian_logo.svg"/>
+          </a>
+          VFX Notes
+         </label>
+         <div class="md-nav__source">
+          <a class="md-source" data-md-component="source" href="https://github.com/healkeiser/vfx_notes" title="Go to repository">
+           <div class="md-source__icon md-icon">
+            <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z">
+             </path>
+            </svg>
+           </div>
+           <div class="md-source__repository">
+            healkeiser/vfx_notes
+           </div>
+          </a>
+         </div>
+         <ul class="md-nav__list" data-md-scrollfix="">
+          <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+           <input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            <span class="md-ellipsis">
+             Softwares
+            </span>
+            <span class="md-nav__icon md-icon">
+            </span>
+           </label>
+           <nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+            <label class="md-nav__title" for="__nav_1">
+             <span class="md-nav__icon md-icon">
+             </span>
+             Softwares
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix="">
+             <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+              <input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+              <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="">
+               <span class="md-ellipsis">
+                Houdini
+               </span>
+               <span class="md-nav__icon md-icon">
+               </span>
+              </label>
+              <nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+               <label class="md-nav__title" for="__nav_1_1">
+                <span class="md-nav__icon md-icon">
+                </span>
+                Houdini
+               </label>
+               <ul class="md-nav__list" data-md-scrollfix="">
+                <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+                 <input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_1" type="checkbox"/>
+                 <label class="md-nav__link" for="__nav_1_1_1" id="__nav_1_1_1_label" tabindex="0">
+                  <span class="md-ellipsis">
+                   USD
+                  </span>
+                  <span class="md-nav__icon md-icon">
+                  </span>
+                 </label>
+                 <nav aria-expanded="true" aria-labelledby="__nav_1_1_1_label" class="md-nav" data-md-level="3">
+                  <label class="md-nav__title" for="__nav_1_1_1">
+                   <span class="md-nav__icon md-icon">
+                   </span>
+                   USD
+                  </label>
+                  <ul class="md-nav__list" data-md-scrollfix="">
+                   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+                    <input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_1_1" type="checkbox"/>
+                    <label class="md-nav__link" for="__nav_1_1_1_1" id="__nav_1_1_1_1_label" tabindex="0">
+                     <span class="md-ellipsis">
+                      Plugins
+                     </span>
+                     <span class="md-nav__icon md-icon">
+                     </span>
+                    </label>
+                    <nav aria-expanded="true" aria-labelledby="__nav_1_1_1_1_label" class="md-nav" data-md-level="4">
+                     <label class="md-nav__title" for="__nav_1_1_1_1">
+                      <span class="md-nav__icon md-icon">
+                      </span>
+                      Plugins
+                     </label>
+                     <ul class="md-nav__list" data-md-scrollfix="">
+                      <li class="md-nav__item">
+                       <a class="md-nav__link" href="../custom-schemas/">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
+                         </path>
+                        </svg>
+                        <span class="md-ellipsis">
+                         Custom Schemas
+                        </span>
+                       </a>
+                      </li>
+                      <li class="md-nav__item md-nav__item--active">
+                       <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+                       <label class="md-nav__link md-nav__link--active" for="__toc">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
+                         </path>
+                        </svg>
+                        <span class="md-ellipsis">
+                         Integrate Custom Schemas
+                        </span>
+                        <span class="md-nav__icon md-icon">
+                        </span>
+                       </label>
+                       <a class="md-nav__link md-nav__link--active" href="./">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
+                         </path>
+                        </svg>
+                        <span class="md-ellipsis">
+                         Integrate Custom Schemas
+                        </span>
+                       </a>
+                       <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+                        <label class="md-nav__title" for="__toc">
+                         <span class="md-nav__icon md-icon">
+                         </span>
+                         Table of contents
+                        </label>
+                        <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#native-node">
+                           <span class="md-ellipsis">
+                            Native Node
+                           </span>
+                          </a>
+                         </li>
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#custom-node-hda">
+                           <span class="md-ellipsis">
+                            Custom Node (HDA)
+                           </span>
+                          </a>
+                         </li>
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#internal-nodes">
+                           <span class="md-ellipsis">
+                            Internal Nodes
+                           </span>
+                          </a>
+                          <nav aria-label="Internal Nodes" class="md-nav">
+                           <ul class="md-nav__list">
+                            <li class="md-nav__item">
+                             <a class="md-nav__link" href="#error">
+                              <span class="md-ellipsis">
+                               Error
+                              </span>
+                             </a>
+                            </li>
+                            <li class="md-nav__item">
+                             <a class="md-nav__link" href="#primitive">
+                              <span class="md-ellipsis">
+                               Primitive
+                              </span>
+                             </a>
+                            </li>
+                            <li class="md-nav__item">
+                             <a class="md-nav__link" href="#edit-properties-from-node">
+                              <span class="md-ellipsis">
+                               Edit Properties from Node
+                              </span>
+                             </a>
+                            </li>
+                           </ul>
+                          </nav>
+                         </li>
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#create-usd-attributes">
+                           <span class="md-ellipsis">
+                            Create USD Attributes
+                           </span>
+                          </a>
+                         </li>
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#add-an-alias">
+                           <span class="md-ellipsis">
+                            Add an Alias
+                           </span>
+                          </a>
+                         </li>
+                        </ul>
+                       </nav>
+                      </li>
+                     </ul>
+                    </nav>
+                   </li>
+                  </ul>
+                 </nav>
+                </li>
+               </ul>
+              </nav>
+             </li>
+            </ul>
+           </nav>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+     <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+       <div class="md-sidebar__inner">
+        <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+         <label class="md-nav__title" for="__toc">
+          <span class="md-nav__icon md-icon">
+          </span>
+          Table of contents
+         </label>
+         <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#native-node">
+            <span class="md-ellipsis">
+             Native Node
+            </span>
+           </a>
+          </li>
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#custom-node-hda">
+            <span class="md-ellipsis">
+             Custom Node (HDA)
+            </span>
+           </a>
+          </li>
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#internal-nodes">
+            <span class="md-ellipsis">
+             Internal Nodes
+            </span>
+           </a>
+           <nav aria-label="Internal Nodes" class="md-nav">
+            <ul class="md-nav__list">
+             <li class="md-nav__item">
+              <a class="md-nav__link" href="#error">
+               <span class="md-ellipsis">
+                Error
+               </span>
+              </a>
+             </li>
+             <li class="md-nav__item">
+              <a class="md-nav__link" href="#primitive">
+               <span class="md-ellipsis">
+                Primitive
+               </span>
+              </a>
+             </li>
+             <li class="md-nav__item">
+              <a class="md-nav__link" href="#edit-properties-from-node">
+               <span class="md-ellipsis">
+                Edit Properties from Node
+               </span>
+              </a>
+             </li>
+            </ul>
+           </nav>
+          </li>
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#create-usd-attributes">
+            <span class="md-ellipsis">
+             Create USD Attributes
+            </span>
+           </a>
+          </li>
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#add-an-alias">
+            <span class="md-ellipsis">
+             Add an Alias
+            </span>
+           </a>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+     <div class="md-content" data-md-component="content">
+      <article class="md-content__inner md-typeset">
+       <a class="md-content__button md-icon" href="https://github.com/healkeiser/vfx_notes/edit/main/docs/Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md" title="Edit this page">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z">
+         </path>
+        </svg>
+       </a>
+       <a class="md-content__button md-icon" href="https://github.com/healkeiser/vfx_notes/raw/main/docs/Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md" title="View source of this page">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z">
+         </path>
+        </svg>
+       </a>
+       <h1>
+        Integrate Custom Schemas
+       </h1>
+       <p>
+        <em>
+         How to integrate a custom USD schema like a native Houdini primitive node.
+        </em>
+       </p>
+       <h2 id="native-node">
+        Native Node
+       </h2>
+       <p>
+        Let’s take a look at the native
+        <strong>
+         Render Settings
+        </strong>
+        primitive node:
+       </p>
+       <p>
+        <img alt="DViGtQ2cWB.png" loading="lazy" src="../../../../../_attachments/DViGtQ2cWB.png"/>
+       </p>
+       <p>
+        It contains a couple of important elements:
+       </p>
+       <ul>
+        <li>
+         A frame range sampling (useful to get rid of time dependencies)
+        </li>
+        <li>
+         The
+         <strong>
+          Action
+         </strong>
+         menu, to either
+         <strong>
+          Create
+         </strong>
+         or
+         <strong>
+          Edit
+         </strong>
+         the primitive
+        </li>
+        <li>
+         The
+         <strong>
+          Initialize Parameters
+         </strong>
+         init menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in
+         <strong>
+          Edit
+         </strong>
+         mode)
+        </li>
+        <li>
+         The
+         <strong>
+          Create Primitives
+         </strong>
+         menu, which allows you to control how and where the primitive will be created (if in
+         <strong>
+          Create
+         </strong>
+         mode)
+        </li>
+       </ul>
+       <h2 id="custom-node-hda">
+        Custom Node (HDA)
+       </h2>
+       <p>
+        In order to emulate all those, we can create an HDA with the following structure:
+       </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         <strong>
+          Primitive Path
+         </strong>
+         is a locked parameter: You might want to add an
+         <strong>
+          OnCreated
+         </strong>
+         callback to lock it in order to force artists to only use pipeline defined primitive paths.
+        </p>
+       </div>
+       <p>
+        <img alt="zHNp9aWjDm.png" loading="lazy" src="../../../../../_attachments/zHNp9aWjDm.png"/>
+       </p>
+       <p>
+        <img alt="houdini_X60V05qBjV.png" loading="lazy" src="../../../../../_attachments/houdini_X60V05qBjV.png"/>
+       </p>
+       <h2 id="internal-nodes">
+        Internal Nodes
+       </h2>
+       <h3 id="error">
+        Error
+       </h3>
+       <p>
+        The error node contains the following code:
+       </p>
+       <div class="highlight">
+        <pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">node</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">inputs</span><span class="p">()</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">if</span> <span class="n">inputs</span><span class="p">:</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">prim</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">evalParm</span><span class="p">(</span><span class="s2">"../primpattern"</span><span class="p">)</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">stage</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stage</span><span class="p">()</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">stage</span><span class="o">.</span><span class="n">GetPrimAtPath</span><span class="p">(</span><span class="n">prim</span><span class="p">)</span><span class="o">.</span><span class="n">IsValid</span><span class="p">()</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">return</span> <span class="mi">0</span>
+</code></pre>
+       </div>
+       <p>
+        And will return this error to the user:
+       </p>
+       <p>
+        An existing Fxquinox Context Info prim has been found at
+        <code>
+         chs("../primpattern")
+        </code>
+        . You can only have one in your current scene. For selective edits, use a Fxquinox Context Info Edit instead.
+       </p>
+       <p>
+        The error gets displayed only if another primitive
+        <strong>
+         with the same path
+        </strong>
+        is found, and you’re about to override it by
+        <strong>
+         creating
+        </strong>
+        a new one
+        <strong>
+         on the
+        </strong>
+        <strong>
+         same path
+        </strong>
+        .
+       </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         You can set the message verbosity (
+         <strong>
+          error
+         </strong>
+         ,
+         <strong>
+          warning
+         </strong>
+         ,
+         <strong>
+          info
+         </strong>
+         ) directly onto the node. In specific this instance, we don’t want to allow the creation of multiple
+         <strong>
+          Fxqionox Context Info
+         </strong>
+         primitives, so it’s set on error, which will effectively set the HDA in an error-state and fail its cooking.
+        </p>
+       </div>
+       <h3 id="primitive">
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html">
+         Primitive
+        </a>
+       </h3>
+       <p>
+        This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive type (if applicable) and primitive specifier.
+       </p>
+       <p>
+        To apply your custom schema, select
+        <strong>
+         Primitive Type
+        </strong>
+        to your schema class. In this instance, FxquinoxContextInfo.
+       </p>
+       <p>
+        This node is also tied to the
+        <strong>
+         Action
+        </strong>
+        menu. If the mode is set to
+        <strong>
+         Create
+        </strong>
+        , it will enable the node, effectively creating a new primitive. Is it is set to
+        <strong>
+         Edit,
+        </strong>
+        of
+        <strong>
+         Force Edit
+        </strong>
+        it will
+        <strong>
+         not
+        </strong>
+        create the primitive and bypass the node, immediately cooking the
+        <strong>
+         Edit Properties from Node
+        </strong>
+        . Here’s the Python expression driving it, set on this node
+        <strong>
+         Activation
+        </strong>
+        parameter (Accessible through Right-click &gt; LOP Action &gt; Create Activation Parameter):
+       </p>
+       <div class="highlight">
+        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">if</span> <span class="n">create_prims</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">create_prims</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">return</span> <span class="mi">0</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">return</span> <span class="mi">1</span>
+</code></pre>
+       </div>
+       <h3 id="edit-properties-from-node">
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
+         Edit Properties from Node
+        </a>
+       </h3>
+       <p>
+        This node is where the magic happens. It’s pretty much the same as the
+        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editproperties.html">
+         Edit Properties
+        </a>
+        node, with a nice change:
+       </p>
+       <div class="admonition quote">
+        <p class="admonition-title">
+         Instead of adding spare parameters to this node, you must direct it to another node from which it reads parameters that correspond to attributes on prims in the scene graph tree. When you edit these parameters on the other node, this node authors equivalent changes to the equivalent USD attributes.
+        </p>
+       </div>
+       <p>
+        That allows us to add the properties on the HDA itself: they will always be read from this parent HDA and added accordingly.
+       </p>
+       <p>
+        This node is also linked to the
+        <strong>
+         frame range sampling
+        </strong>
+        ,
+        <strong>
+         Action
+        </strong>
+        menu, the
+        <strong>
+         Initialize Parameters
+        </strong>
+        init menu. It’s the one that allows us to switch from
+        <strong>
+         Create
+        </strong>
+        to
+        <strong>
+         Edit
+        </strong>
+        just like a native node!
+       </p>
+       <h2 id="create-usd-attributes">
+        Create USD Attributes
+       </h2>
+       <p>
+        In order for the
+        <strong>
+         Edit Properties from Node
+        </strong>
+        node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA
+        <strong>
+         Type Properties
+        </strong>
+        , and inside the
+        <strong>
+         Parameters tab
+        </strong>
+        navigate to the
+        <strong>
+         From USD
+        </strong>
+        tab. You can now filter the schema you want and add all its attributes to your parameters.
+       </p>
+       <p>
+        <img alt="ZksJ49B28q.png" loading="lazy" src="../../../../../_attachments/ZksJ49B28q.png"/>
+       </p>
+       <p>
+        They will be automatically read by the
+        <strong>
+         Edit Properties from Node
+        </strong>
+        node!
+       </p>
+       <h2 id="add-an-alias">
+        Add an Alias
+       </h2>
+       <p>
+        On most of the native nodes, you’ll get two options: the node, and the node edit.
+       </p>
+       <p>
+        <img alt="TLcLb9mGWC.png" loading="lazy" src="../../../../../_attachments/TLcLb9mGWC.png"/>
+       </p>
+       <p>
+        Under the hood, this is a simple tool alias, which sets the
+        <strong>
+         Action
+        </strong>
+        menu to
+        <strong>
+         Edit
+        </strong>
+        , and runs
+        <code>
+         loputils.setAllControlParameters(node, 'none')
+        </code>
+        to set all USD parameters to None.
+       </p>
+       <p>
+        Here’s how it’s done for
+        <strong>
+         Render Settings
+        </strong>
+        :
+       </p>
+       <p>
+        <img alt="houdini_0w1hgRxb5M.png" loading="lazy" src="../../../../../_attachments/houdini_0w1hgRxb5M.png"/>
+       </p>
+       <p>
+        <img alt="houdini_ODFY580WFB.png" loading="lazy" src="../../../../../_attachments/houdini_ODFY580WFB.png"/>
+       </p>
+       <p>
+        On our custom HDA, we can click on
+        <strong>
+         Create New
+        </strong>
+        and copy-paste the values of
+        <strong>
+         Render Settings
+        </strong>
+        in the
+        <strong>
+         Options
+        </strong>
+        tab. For the
+        <strong>
+         Script
+        </strong>
+        tab, we need some adjustments:
+       </p>
+       <div class="highlight">
+        <pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">loptoolutils</span><span class="o">,</span> <span class="nn">loputils</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">node</span> <span class="o">=</span> <span class="n">loptoolutils</span><span class="o">.</span><span class="n">genericTool</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"::"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'_edit1'</span><span class="p">)</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'createprims'</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'primpattern'</span><span class="p">)</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">loputils</span><span class="o">.</span><span class="n">setAllControlParameters</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">'none'</span><span class="p">)</span>
+</code></pre>
+       </div>
+       <p>
+        As you can see, we need to split the name:
+        <code>
+         $HDA_NAME
+        </code>
+        will return
+        <code>
+         jf::jfcontextinfo
+        </code>
+        , and
+        <code>
+         :
+        </code>
+        is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the
+        <code>
+         edit_1
+        </code>
+        part to it.
+       </p>
+       <p>
+        <img alt="houdini_Y3xCYIrgLk.png" loading="lazy" src="../../../../../_attachments/houdini_Y3xCYIrgLk.png"/>
+       </p>
+       <p>
+        <img alt="houdini_Lk1cldxtXE.png" loading="lazy" src="../../../../../_attachments/houdini_Lk1cldxtXE.png"/>
+       </p>
+       <p>
+        You can now try to drop the node, and should be welcomed by your HDA and its Edit variant:
+       </p>
+       <p>
+        <img alt="bhslDwCmk8.png" loading="lazy" src="../../../../../_attachments/bhslDwCmk8.png"/>
+       </p>
+       <p>
+        That’s about it!
+       </p>
+      </article>
+     </div>
+     <script>
+      var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}
+     </script>
+     <script>
+      var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))
+     </script>
+    </div>
+    <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+     <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z">
+      </path>
+     </svg>
+     Back to top
+    </button>
+   </main>
+   <footer class="md-footer">
+    <nav aria-label="Footer" class="md-footer__inner md-grid">
+     <a aria-label="Previous: Custom Schemas" class="md-footer__link md-footer__link--prev" href="../custom-schemas/">
+      <div class="md-footer__button md-icon">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
+        </path>
+       </svg>
+      </div>
+      <div class="md-footer__title">
+       <span class="md-footer__direction">
+        Previous
+       </span>
+       <div class="md-ellipsis">
+        Custom Schemas
+       </div>
+      </div>
+     </a>
+    </nav>
+    <div class="md-footer-meta md-typeset">
+     <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+       <div class="md-copyright__highlight">
+        Copyright © 2021 - 2024 Valentin Beaumont
+       </div>
+       Made with
+       <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+        Material for MkDocs
+       </a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <div class="md-dialog" data-md-component="dialog">
+   <div class="md-dialog__inner md-typeset">
+   </div>
+  </div>
+  <div class="md-progress" data-md-component="progress" role="progressbar">
+  </div>
+  <script id="__config" type="application/json">
+   {"base": "../../../../..", "features": ["announce.dismiss", "navigation.expand", "navigation.tabs", "navigation.footer", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.tooltips", "content.tabs.link", "content.action.edit", "content.action.view", "content.code.copy", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}
+  </script>
+  <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js">
+  </script>
+ </body>
+</html>
