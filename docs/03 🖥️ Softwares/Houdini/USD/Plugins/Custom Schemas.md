@@ -40,7 +40,7 @@ Which corresponds to:
 
 Let’s now edit our `schema.usda` file. This will contain the **IsA schemas** or **API schemas** you want to create.
 
-``` c++
+``` c++ title="schema.usda"
 #usda 1.0
 (
     subLayers = [
@@ -119,7 +119,7 @@ Once you’re happy with your new schema, we now need to run **usdGenSchema.** T
 
 I made this batch script to run it on Windows:
 
-``` shell
+``` shell title=".run_usdGenSchema.bat"
 @echo off
 
 REM Set paths to Houdini programs, and the USD file
@@ -152,18 +152,18 @@ pause
 
 Let the tool run. Once it’s done, you should have 2 new files:
 
-```
+``` hl_lines="5 6"
 .
 └── 📁 usdFxquinox/
     ├── 📁 resources/
 	│   └── 📄 schema.usda
-    ├── 📄 generatedSchema.usda  🟢
-    └── 📄 plugInfo.json         🟢
+    ├── 📄 generatedSchema.usda    🟢
+    └── 📄 plugInfo.json           🟢
 ```
 
 You’ll need to modify the `plugInfo.json` file, since usdGenSchema leaves in the cmake `@...@` string replacements:
 
-``` json
+``` json title="plugInfo.json" hl_lines="2 4 5"
 ...
     "LibraryPath": "@PLUG_INFO_LIBRARY_PATH@",
     "Name": "usdFxquinox",
@@ -175,7 +175,7 @@ You’ll need to modify the `plugInfo.json` file, since usdGenSchema leaves in t
 
 To:
 
-``` json
+``` json title="plugInfo.json" hl_lines="2 4 5"
 ...
 	"LibraryPath": "",
 	"Name": "usdFxquinox",
