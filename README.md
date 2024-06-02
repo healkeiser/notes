@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/healkeiser/cloud_vfx_server">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Obsidian_software_logo.svg" alt="Logo" width="50" >
+    <img src="https://raw.githubusercontent.com/healkeiser/notes/main/docs/_attachments/notes_logo.svg" alt="Logo" width="50" >
   </a>
 
   <h3 align="center">Notes</h3>
