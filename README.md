@@ -26,6 +26,7 @@
 ## Table of Contents
 <!--ts-->
    * [About](#about)
+   * [Static Website](#static-website)
 <!--te-->
 
 
