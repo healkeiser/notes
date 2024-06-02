@@ -66,11 +66,11 @@ if another primitive **with the same path** is found, and you’re about to over
 > `hda_label` is a spare parameter created on the Error node with the value `Fxquinox Context Info`. This is added so you can quickly change it and use this HDA as a template.
 
 > [!note] 
-> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In specific this instance, we don’t want to allow the creation of multiple **Fxqionox Context Info** primitives, so it’s set on error, which will effectively set the HDA in an error-state and fail its cooking.
+> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking. **Render Settings** just throws a warning.
 
 ### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
 
-This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive type (if applicable) and primitive specifier.
+This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive **type** (if applicable) and primitive specifier.
 
 To apply your custom schema, select **Primitive Type** to your schema class. In this instance, **FxquinoxContextInfo**.
 
@@ -85,14 +85,15 @@ return 0 if create_prims in (0, 2) else 1
 
 This node is where the magic happens. It’s pretty much the same as the [Edit Properties](https://www.sidefx.com/docs/houdini/nodes/lop/editproperties.html) node, with a nice change:
 
-> [!quote] Instead of adding spare parameters to this node, you must direct it to another node from which it reads parameters that correspond to attributes on prims in the scene graph tree. When you edit these parameters on the other node, this node authors equivalent changes to the equivalent USD attributes.
+> [!quote] 
+> Instead of adding spare parameters to this node, you must direct it to another node from which it reads parameters that correspond to attributes on prims in the scene graph tree. When you edit these parameters on the other node, this node authors equivalent changes to the equivalent USD attributes.
 
 That allows us to add the properties on the HDA itself: they will always be read from it and added accordingly.
 
-This node is also linked to the **Frame Range Sampling** menu, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node.
+This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node.
 
 > [!note] 
-> You can simply drag and drop the **Edit Properties from Node** node onto the Type Properties of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
+> You can simply drag and drop the **Edit Properties from Node** node onto the **Type Properties** window of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
 
 ## Create USD Attributes
 
