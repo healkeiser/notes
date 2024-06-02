@@ -27,7 +27,7 @@ sticker: lucide//home
 This documentation is built with [MkDocs](https://www.mkdocs.org/) and the [MkDocs Publisher](https://mkusz.github.io/mkdocs-publisher/) plugin, since I'm using [Obsidian](https://obsidian.md/) to take the notes. You can clone the repository and open it as an Obsidian Vault if you prefer reading it locally!
 
 > [!warning]
-> Some stuff might get displayed incorrectly in Obsidian.
+> Some stuff might get displayed incorrectly in Obsidian, such as HTML tags.
 
 > [!warning]
 > You might notice a lot of `README.md` files, please ignore those - they're here to indicate attributes on directories for MkDocs Publisher.

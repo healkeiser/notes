@@ -7,6 +7,9 @@ publish: true
 
 _How to integrate a custom USD schema like a native Houdini primitive node._
 
+> [!note]
+> You can find the **Fxquinox Context Info** HDA on [GitHub](https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.context_info.hda).
+
 ## Native Node
 
 Let’s take a look at the native **Render Settings** primitive node:
@@ -67,7 +70,8 @@ To apply your custom schema, select **Primitive Type** to your schema class. In 
 This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the **Edit Properties from Node**. Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through Right-click > LOP Action > Create Activation Parameter):
 
 ``` python
-create_prims = hou.pwd().parent().parm("createprims").eval() return 0 if create_prims in (0, 2) else 1
+create_prims = hou.pwd().parent().parm("createprims").eval() 
+return 0 if create_prims in (0, 2) else 1
 ```
 
 ### [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html)

@@ -1,5 +1,6 @@
 ---
 title: Houdini
+icon: simple/houdini
 slug: houdini
 categories:
   - softwares

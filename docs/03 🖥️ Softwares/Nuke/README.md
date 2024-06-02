@@ -1,5 +1,6 @@
 ---
 title: Nuke
+icon: simple/nuke
 slug: nuke
 categories:
   - softwares

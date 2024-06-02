@@ -11,6 +11,9 @@ _How-to create a USD custom schema._
 > - [https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html](https://lucascheller.github.io/VFX-UsdSurvivalGuide/core/plugins/schemas.html)
 > - [https://openusd.org/release/tut_generating_new_schema.html](https://openusd.org/release/tut_generating_new_schema.html)
 
+> [!note]
+> You can find the **usdFxquinox** plugin on [GitHub](https://github.com/healkeiser/fxquinox/tree/main/plugins/usd/usdFxquinox).
+
 The easiest way to create a custom schema is to create what’s called a codeless schema (uncompiled version). This will create a new schema **but won’t provide the C++/Python bindings** from the freshly created schema class.
 
 ## Directory Structure
@@ -198,3 +201,7 @@ The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGIN
 ```shell
 set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox;%PXR_PLUGINPATH_NAME%
 ```
+
+## Custom Icons
+
+You can add an icon in the `$HOUDINI_PATH` following this naming convention: `SCENEGRAPH_primtype_<custom schema class>.svg`, E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`  to be applied inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive. 
