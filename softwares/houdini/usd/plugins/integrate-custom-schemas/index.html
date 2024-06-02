@@ -371,9 +371,9 @@
                           </a>
                          </li>
                          <li class="md-nav__item">
-                          <a class="md-nav__link" href="#add-an-alias">
+                          <a class="md-nav__link" href="#add-an-edit-alias">
                            <span class="md-ellipsis">
-                            Add an Alias
+                            Add an Edit Alias
                            </span>
                           </a>
                          </li>
@@ -468,9 +468,9 @@
            </a>
           </li>
           <li class="md-nav__item">
-           <a class="md-nav__link" href="#add-an-alias">
+           <a class="md-nav__link" href="#add-an-edit-alias">
             <span class="md-ellipsis">
-             Add an Alias
+             Add an Edit Alias
             </span>
            </a>
           </li>
@@ -608,11 +608,11 @@
          <code>
           primpattern
          </code>
-         , so it can run the callback set on
+         , so the callback set on
          <strong>
           Initialize Parameters
          </strong>
-         .
+         can run.
         </p>
        </div>
        <h2 id="custom-node-hda">
@@ -918,15 +918,31 @@
         </strong>
         node!
        </p>
-       <h2 id="add-an-alias">
-        Add an Alias
+       <h2 id="add-an-edit-alias">
+        Add an
+        <strong>
+         Edit
+        </strong>
+        Alias
        </h2>
        <p>
-        On most of the native nodes, you’ll get two options: the node, and the node
+        On most of the native nodes creating a primitive, you’ll get two options: the node, and the node
         <strong>
          edit
         </strong>
-        .
+        . Here's what gets displayed when pressing
+        <code>
+         TAB
+        </code>
+        inside the
+        <strong>
+         Network View
+        </strong>
+        to drop a
+        <strong>
+         Render Settings
+        </strong>
+        node:
        </p>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/TLcLb9mGWC.png/">
@@ -934,7 +950,15 @@
         </a>
        </p>
        <p>
-        Under the hood, this is a simple tool alias, which sets the
+        You have the option to use a regular
+        <strong>
+         Render Settings
+        </strong>
+        , or a
+        <strong>
+         Render Settings Edit
+        </strong>
+        . Under the hood, this is a simple tool alias, which sets the
         <strong>
          Action
         </strong>
@@ -942,18 +966,45 @@
         <strong>
          Edit
         </strong>
-        , and runs
+        , and sets all USD parameters to
         <code>
-         loputils.setAllControlParameters(node, 'none')
+         none
         </code>
-        to set all USD parameters to None.
+        , effectively
+        <strong>
+         bypassing
+        </strong>
+        any values that could have been added on the node parameters.
        </p>
        <p>
         Here’s how it’s done for
         <strong>
          Render Settings
         </strong>
-        :
+        (navigate to
+        <strong>
+         Render Settings
+        </strong>
+        &gt;
+        <strong>
+         Type Properties
+        </strong>
+        &gt;
+        <strong>
+         Interactive
+        </strong>
+        &gt;
+        <strong>
+         Shelf Tools
+        </strong>
+        )
+       </p>
+       <p>
+        Inside the
+        <strong>
+         Options
+        </strong>
+        tab:
        </p>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_0w1hgRxb5M.png/">
@@ -961,20 +1012,55 @@
         </a>
        </p>
        <p>
+        And inside the
+        <strong>
+         Script
+        </strong>
+        tab:
+       </p>
+       <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_ODFY580WFB.png/">
          <img alt="houdini_ODFY580WFB.png" loading="lazy" src="../../../../../_attachments/houdini_ODFY580WFB.png"/>
         </a>
        </p>
        <p>
-        On our custom HDA, we can click on
+        On our custom HDA
+        <strong>
+         Type Properties
+        </strong>
+        window, inside the
+        <strong>
+         Interactive
+        </strong>
+        &gt;
+        <strong>
+         Shelf Tools
+        </strong>
+        tab, we can click on
         <strong>
          Create New
         </strong>
-        and copy-paste the values of
+        and navigate to the
+        <strong>
+         Options
+        </strong>
+        tab. Copy-paste the values of the
         <strong>
          Render Settings
         </strong>
-        in the
+        &gt;
+        <strong>
+         Type Properties
+        </strong>
+        &gt;
+        <strong>
+         Interactive
+        </strong>
+        &gt;
+        <strong>
+         Shelf Tools
+        </strong>
+        &gt;
         <strong>
          Options
         </strong>
@@ -1003,7 +1089,7 @@
         </code>
         will return
         <code>
-         jf::jfcontextinfo
+         fxquinox::contextinfo
         </code>
         , and
         <code>
@@ -1015,10 +1101,44 @@
         </code>
         part to it.
        </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         Note
+        </p>
+        <p>
+         This is only applicable if your HDA has an
+         <strong>
+          author
+         </strong>
+         ,
+         <strong>
+          branch
+         </strong>
+         or
+         <strong>
+          version
+         </strong>
+         namespace.
+        </p>
+       </div>
+       <p>
+        This is what you should end up with inside the
+        <strong>
+         Options
+        </strong>
+        tab:
+       </p>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Y3xCYIrgLk.png/">
          <img alt="houdini_Y3xCYIrgLk.png" loading="lazy" src="../../../../../_attachments/houdini_Y3xCYIrgLk.png"/>
         </a>
+       </p>
+       <p>
+        And inside the
+        <strong>
+         Script
+        </strong>
+        tab:
        </p>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Lk1cldxtXE.png/">
@@ -1026,7 +1146,15 @@
         </a>
        </p>
        <p>
-        You can now try to drop the node, and should be welcomed by your HDA and its Edit variant:
+        You can now try to press
+        <code>
+         TAB
+        </code>
+        inside your
+        <strong>
+         Network View
+        </strong>
+        to drop the node, and should be welcomed by your HDA and its Edit variant:
        </p>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/bhslDwCmk8.png/">
