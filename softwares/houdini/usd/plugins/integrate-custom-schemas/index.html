@@ -539,6 +539,13 @@
         <li>
          The
          <strong>
+          Primitive Path
+         </strong>
+         parm
+        </li>
+        <li>
+         The
+         <strong>
           Action
          </strong>
          menu, to either
@@ -574,6 +581,30 @@
          mode)
         </li>
        </ul>
+       <div class="admonition warning">
+        <p class="admonition-title">
+         Warning
+        </p>
+        <p>
+         The
+         <strong>
+          Primitive Path
+         </strong>
+         parm internal name should be
+         <code>
+          primpattern
+         </code>
+         , so it can run the
+         <code>
+          __import__('loputils').initializeParameters(kwargs['node'], kwargs['script_value'])
+         </code>
+         callback set on
+         <strong>
+          Initialize Parameters
+         </strong>
+         .
+        </p>
+       </div>
        <h2 id="custom-node-hda">
         Custom Node (HDA)
        </h2>
