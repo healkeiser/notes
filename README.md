@@ -4,12 +4,9 @@
 
 
 <div align="center">
-  <a href="https://github.com/healkeiser/cloud_vfx_server">
 
   ![Logo](https://raw.githubusercontent.com/healkeiser/notes/main/docs/_attachments/notes_logo_dark.svg#gh-light-mode-only)
   ![Logo](https://raw.githubusercontent.com/healkeiser/notes/main/docs/_attachments/notes_logo_light.svg#gh-dark-mode-only)
-
-  </a>
 
   <h3 align="center">Notes</h3>
 
@@ -19,6 +16,7 @@
     <br />
     <br />
   </p>
+
 </div>
 
 
