@@ -3,6 +3,6 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "_attachments",
   "newLinkFormat": "relative",
-  "trashOption": "local",
+  "trashOption": "system",
   "useMarkdownLinks": true
 }
