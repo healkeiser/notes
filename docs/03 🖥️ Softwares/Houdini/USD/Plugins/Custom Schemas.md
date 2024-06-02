@@ -40,7 +40,7 @@ Which corresponds to:
 
 Let’s now edit our `schema.usda` file. This will contain the **IsA schemas** or **API schemas** you want to create.
 
-``` C++
+``` c++
 #usda 1.0
 (
     subLayers = [
@@ -111,8 +111,6 @@ class FxquinoxContextInfo "FxquinoxContextInfo" (
         doc = """The current hostname (machine name)."""
     )
 }
-
-
 ```
 
 ## Run usdGenSchema
