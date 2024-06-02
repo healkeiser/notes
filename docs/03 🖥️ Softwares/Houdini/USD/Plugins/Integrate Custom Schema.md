@@ -139,10 +139,10 @@ You can now try to drop the node, and should be welcomed by your HDA and its Edi
 
 ## Custom Icon
 
-You can add an icon in the `$HOUDINI_PATH` following this naming convention:
+You can add an icon in the `$HOUDINI_PATH` following this naming convention: `SCENEGRAPH_primtype_<custom schema class>.svg`
 
-  - `SCENEGRAPH_primtype_<custom schema class>.svg`
-  - E.g. `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
+> [!example]- Icon Name 
+> `SCENEGRAPH_primtype_fxquinoxcontextinfo.svg`
 
 To be displayed inside the Houdini **Scene Graph Tree** every time you apply your custom schema to a primitive:
 
