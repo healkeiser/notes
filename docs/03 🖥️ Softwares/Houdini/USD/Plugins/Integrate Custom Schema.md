@@ -19,9 +19,13 @@ Let’s take a look at the native **Render Settings** primitive node:
 It contains a couple of important elements:
 
 - A **Frame Range Sampling** menu (useful to get rid of time dependencies)
+- The **Primitive Path** parm
 - The **Action** menu, to either **Create** or **Edit** the primitive
 - The **Initialize Parameters** menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in **Edit** mode)
 - The **Create Primitives** menu, which allows you to control how and where the primitive will be created (if in **Create** mode)
+
+> [!warning] 
+> The **Primitive Path** parm internal name should be `primpattern`, so it can run the `__import__('loputils').initializeParameters(kwargs['node'], kwargs['script_value'])` callback set on **Initialize Parameters**.
 
 ## Custom Node (HDA)
 
