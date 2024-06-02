@@ -58,7 +58,6 @@ return 0
 
 It will return this error to the user:
 
-> [!quote]
 > An existing `chs("hda_label")` prim has been found at `chs("../primpattern")`. You can only have one in your current scene. For selective edits, use a `chs("hda_label")` Edit instead.
 
 if another primitive **with the same path** is found, and you’re about to override it by **creating** a new one **on the** **same path**.
