@@ -377,6 +377,13 @@
                            </span>
                           </a>
                          </li>
+                         <li class="md-nav__item">
+                          <a class="md-nav__link" href="#custom-icon">
+                           <span class="md-ellipsis">
+                            Custom Icon
+                           </span>
+                          </a>
+                         </li>
                         </ul>
                        </nav>
                       </li>
@@ -464,6 +471,13 @@
            <a class="md-nav__link" href="#add-an-alias">
             <span class="md-ellipsis">
              Add an Alias
+            </span>
+           </a>
+          </li>
+          <li class="md-nav__item">
+           <a class="md-nav__link" href="#custom-icon">
+            <span class="md-ellipsis">
+             Custom Icon
             </span>
            </a>
           </li>
@@ -594,11 +608,7 @@
          <code>
           primpattern
          </code>
-         , so it can run the
-         <code>
-          __import__('loputils').initializeParameters(kwargs['node'], kwargs['script_value'])
-         </code>
-         callback set on
+         , so it can run the callback set on
          <strong>
           Initialize Parameters
          </strong>
@@ -611,18 +621,22 @@
        <p>
         In order to emulate all those, we can create an HDA with the following structure:
        </p>
-       <div class="admonition note">
-        <p class="admonition-title">
+       <details class="tip">
+        <summary>
+         Lock Primitive Path
+        </summary>
+        <p>
+         Here,
          <strong>
           Primitive Path
          </strong>
-         is a locked parameter: You might want to add an
+         is a locked parameter: you might want to add an
          <strong>
           OnCreated
          </strong>
-         callback to lock it (or make invisible) in order to force artists to only use pipeline defined primitive paths.
+         callback to lock it (or simply make the parm invisible) in order to force artists to only use pipeline defined primitive paths.
         </p>
-       </div>
+       </details>
        <p>
         <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/zHNp9aWjDm.png/">
          <img alt="zHNp9aWjDm.png" loading="lazy" src="../../../../../_attachments/zHNp9aWjDm.png"/>
@@ -990,8 +1004,40 @@
          <img alt="bhslDwCmk8.png" loading="lazy" src="../../../../../_attachments/bhslDwCmk8.png"/>
         </a>
        </p>
+       <h2 id="custom-icon">
+        Custom Icon
+       </h2>
        <p>
-        That’s about it!
+        You can add an icon in the
+        <code>
+         $HOUDINI_PATH
+        </code>
+        following this naming convention:
+       </p>
+       <ul>
+        <li>
+         <code>
+          SCENEGRAPH_primtype_&lt;custom schema class&gt;.svg
+         </code>
+        </li>
+        <li>
+         E.g.
+         <code>
+          SCENEGRAPH_primtype_fxquinoxcontextinfo.svg
+         </code>
+        </li>
+       </ul>
+       <p>
+        To be displayed inside the Houdini
+        <strong>
+         Scene Graph Tree
+        </strong>
+        every time you apply your custom schema to a primitive:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/3Nd4p8emvV.png/">
+         <img alt="None" src="../../../../../_attachments/3Nd4p8emvV.png"/>
+        </a>
        </p>
        <aside class="md-source-file">
         <span class="md-source-file__fact">
