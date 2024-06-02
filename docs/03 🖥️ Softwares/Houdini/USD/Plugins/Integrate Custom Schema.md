@@ -42,9 +42,9 @@ In order to emulate all those, we can create an HDA with the following structure
 
 ### [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html)
 
-The error node contains the following code:
+The error node contains the following code on the **Report this Error** parm:
 
-``` python
+``` python title="Error/enable"
 node = hou.pwd()
 inputs = node.inputs()
 
@@ -58,6 +58,7 @@ return 0
 
 It will return this error to the user:
 
+> [!quote]
 > An existing `chs("hda_label")` prim has been found at `chs("../primpattern")`. You can only have one in your current scene. For selective edits, use a `chs("hda_label")` Edit instead.
 
 if another primitive **with the same path** is found, and you’re about to override it by **creating** a new one **on the** **same path**.
@@ -76,7 +77,7 @@ To apply your custom schema, select **Primitive Type** to your schema class. In 
 
 This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the **Edit Properties from Node**. Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through a node Right-click > **LOP Action** > **Create Activation Parameter**):
 
-``` python
+``` python title="Primitive/lop_activation"
 create_prims = hou.pwd().parent().parm("createprims").eval()
 return 0 if create_prims in (0, 2) else 1
 ```
@@ -125,7 +126,7 @@ On our custom HDA **Type Properties** window, inside the **Interactive** > **She
 
 For the **Script** tab, we need some adjustments:
 
-``` python
+``` python title="HDA/Type Properties/Interactive/Shelf Tools/Script"
 import loptoolutils, loputils
 
 node = loptoolutils.genericTool(kwargs, '$HDA_NAME', '$HDA_NAME'.split("::")[1] + '_edit1')
