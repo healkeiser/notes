@@ -480,6 +480,22 @@
          How to integrate a custom USD schema like a native Houdini primitive node.
         </em>
        </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         Note
+        </p>
+        <p>
+         You can find the
+         <strong>
+          Fxquinox Context Info
+         </strong>
+         HDA on
+         <a href="https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.context_info.hda">
+          GitHub
+         </a>
+         .
+        </p>
+       </div>
        <h2 id="native-node">
         Native Node
        </h2>
@@ -706,7 +722,8 @@
         parameter (You can create it through Right-click &gt; LOP Action &gt; Create Activation Parameter):
        </p>
        <div class="highlight">
-        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">create_prims</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
+        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> 
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">create_prims</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
 </code></pre>
        </div>
        <h3 id="edit-properties-from-node">
