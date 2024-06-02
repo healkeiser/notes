@@ -15,7 +15,7 @@ sticker: lucide//home
 <div id="top"></div>
 <div align="center">
   <a href="https://github.com/healkeiser/vfx_notes">
-    <img src="docs/_attachments/obisidian_logo.svg" alt="VFX Notes" width="128" >
+    <img src="docs/_attachments/vfx_notes_logo.svg" alt="VFX Notes" width="128" >
   </a>
   <p align="center">
     <br/>
@@ -30,7 +30,7 @@ This documentation is built with [MkDocs](https://www.mkdocs.org/) and the [MkDo
 > Some stuff might get displayed incorrectly in Obsidian.
 
 > [!warning]
-> You might notice a lot of `README.md` files, please ignore those - they're here to indicate attributes on directories for MkDocs Publisher. 
+> You might notice a lot of `README.md` files, please ignore those - they're here to indicate attributes on directories for MkDocs Publisher.
 
 > [!note]
 > If you spot any issue or have any recommendations, don't hesitate to send me an [email](mailto:valentin.onze@gmail.com).

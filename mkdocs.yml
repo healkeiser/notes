@@ -22,8 +22,8 @@ extra_css:
 theme:
   name: material
   language: en
-  favicon: _attachments/obisidian_logo.svg
-  logo: _attachments/obisidian_logo.svg
+  favicon: _attachments/vfx_notes_logo.svg
+  logo: _attachments/vfx_notes_logo.svg
   icon:
     repo: material/github
   features:
