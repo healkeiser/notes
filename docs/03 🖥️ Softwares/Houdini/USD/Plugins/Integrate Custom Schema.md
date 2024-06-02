@@ -38,9 +38,9 @@ In order to emulate all those, we can create an HDA with the following structure
 
 ![[../../../../_attachments/houdini_X60V05qBjV.png]]
 
-## Internal Nodes
+### Internal Nodes
 
-### [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html)
+#### [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html)
 
 The error node contains the following code on the **Report this Error** parm:
 
@@ -69,7 +69,7 @@ if another primitive **with the same path** is found, and you’re about to over
 > [!note]
 > You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking. **Render Settings** just throws a warning.
 
-### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
+#### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
 
 This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive **type** (if applicable) and primitive specifier.
 
@@ -82,7 +82,7 @@ create_prims = hou.pwd().parent().parm("createprims").eval()
 return 0 if create_prims in (0, 2) else 1
 ```
 
-### [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html)
+#### [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html)
 
 This node is where the magic happens. It’s pretty much the same as the [Edit Properties](https://www.sidefx.com/docs/houdini/nodes/lop/editproperties.html) node, with a nice change:
 
