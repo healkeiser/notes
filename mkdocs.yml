@@ -14,9 +14,6 @@ edit_uri: edit/main/docs/
 
 ###### Custom ##################################################################
 
-extra:
-  homepage: https://healkeiser.github.io/vfx_notes
-
 extra_css:
   - stylesheets/extra.css
 
@@ -25,8 +22,8 @@ extra_css:
 theme:
   name: material
   language: en
-  favicon: images/obisidian_logo.svg
-  logo: images/obisidian_logo.svg
+  favicon: _attachments/obisidian_logo.svg
+  logo: _attachments/obisidian_logo.svg
   icon:
     repo: material/github
   features:
@@ -98,19 +95,16 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      options:
-        custom_icons:
-          - docs/overrides/.icons
 
 plugins:
   - search
-  - git-authors
-  - git-revision-date-localized:
-      enable_creation_date: true
-  - git-committers:
-      repository: healkeiser/vfx_notes
-      branch: main
-      # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
+  # - git-authors
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  # - git-committers:
+  #     repository: healkeiser/vfx_notes
+  #     branch: main
+  #     # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
   - pub-debugger:
       console_log:
         enabled: false
@@ -120,5 +114,3 @@ plugins:
   - pub-meta:
       dir_meta_file: README.md
   - pub-minifier
-###### Navigation ##############################################################
-

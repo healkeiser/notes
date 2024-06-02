@@ -3,5 +3,7 @@
   "cssTheme": "",
   "theme": "obsidian",
   "monospaceFontFamily": "MonoLisa",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [
+    "center_images"
+  ]
 }

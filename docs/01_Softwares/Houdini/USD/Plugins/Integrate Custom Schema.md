@@ -24,7 +24,7 @@ It contains a couple of important elements:
 
 In order to emulate all those, we can create an HDA with the following structure:
 
-> [!note] **Primitive Path** is a locked parameter: You might want to add an **OnCreated** callback to lock it in order to force artists to only use pipeline defined primitive paths.
+> [!note] **Primitive Path** is a locked parameter: You might want to add an **OnCreated** callback to lock it (or make invisible) in order to force artists to only use pipeline defined primitive paths.
 
 ![[../../../../_attachments/zHNp9aWjDm.png]]
 
@@ -32,23 +32,27 @@ In order to emulate all those, we can create an HDA with the following structure
 
 ## Internal Nodes
 
-### Error
+### [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html)
 
 The error node contains the following code:
 
 ``` python
 node = hou.pwd()
 inputs = node.inputs()
-if inputs:
+
+if inputs and node.parent().parm("createprims").eval() == 1:
     prim = node.evalParm("../primpattern")
     stage = inputs[0].stage()
-    return stage.GetPrimAtPath(prim).IsValid()
+    return int(stage.GetPrimAtPath(prim).IsValid())
+
 return 0
 ```
 
 And will return this error to the user:
 
-An existing Fxquinox Context Info prim has been found at `chs("../primpattern")`. You can only have one in your current scene. For selective edits, use a Fxquinox Context Info Edit instead.
+> An existing `chs("hda_label")` prim has been found at `chs("../primpattern")`. You can only have one in your current scene. For selective edits, use a `chs("hda_label")` Edit instead.
+
+Where `hda_label` is a spare parameter with the value `Fxquinox Context Info`.
 
 The error gets displayed only if another primitive **with the same path** is found, and you’re about to override it by **creating** a new one **on the** **same path**.
 
@@ -58,15 +62,12 @@ The error gets displayed only if another primitive **with the same path** is fou
 
 This is the node that creates the primitive itself. On this node you’ll choose the primitive type, primitive kind, parent primitive type (if applicable) and primitive specifier.
 
-To apply your custom schema, select **Primitive Type** to your schema class. In this instance, FxquinoxContextInfo.
+To apply your custom schema, select **Primitive Type** to your schema class. In this instance, **FxquinoxContextInfo**.
 
-This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit,** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the **Edit Properties from Node**. Here’s the Python expression driving it, set on this node **Activation** parameter (Accessible through Right-click > LOP Action > Create Activation Parameter):
+This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the **Edit Properties from Node**. Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through Right-click > LOP Action > Create Activation Parameter):
 
 ``` python
-create_prims = hou.pwd().parent().parm("createprims").eval()
-if create_prims == 0 or create_prims == 2:
-    return 0
-return 1
+create_prims = hou.pwd().parent().parm("createprims").eval() return 0 if create_prims in (0, 2) else 1
 ```
 
 ### [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html)
