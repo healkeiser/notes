@@ -42,7 +42,7 @@ theme:
       USD: material/layers-triple
       development: material/code-tags
       houdini: simple/houdini
-      plugin: plugin
+      plugin: material/toy-brick
       maya: simple/autodeskmaya
       nuke: simple/nuke
       macOS: material/apple
