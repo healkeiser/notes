@@ -119,7 +119,7 @@ markdown_extensions:
 plugins:
   - search
   - tags:
-      tags_file: 05 🏷️ Tags.md
+      tags_file: 05 Tags.md
   - glightbox
   - git-authors
   - git-revision-date-localized:
