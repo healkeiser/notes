@@ -39,7 +39,7 @@ theme:
     repo: material/github
     tag:
       usd: material/layers-triple
-      development: fontawesome/solid-code
+      development: material/code-tags
       houdini: simple/houdini
       maya: simple/autodeskmaya
       nuke: simple/nuke
