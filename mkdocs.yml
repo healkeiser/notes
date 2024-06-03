@@ -19,7 +19,7 @@ extra_css:
 
 extra:
   tags:
-    USD: USD
+    usd: usd
     development: development
     houdini: houdini
     plugin: plugin
@@ -39,7 +39,7 @@ theme:
   icon:
     repo: material/github
     tag:
-      USD: material/layers-triple
+      usd: material/layers-triple
       development: material/code-tags
       houdini: simple/houdini
       plugin: material/toy-brick

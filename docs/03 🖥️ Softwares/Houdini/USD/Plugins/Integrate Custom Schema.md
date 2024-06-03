@@ -4,7 +4,7 @@ icon: material/toy-brick
 slug: integrate-custom-schemas
 tags:
   - houdini
-  - USD
+  - usd
   - plugin
 publish: true
 ---
