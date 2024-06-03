@@ -66,8 +66,8 @@ if another primitive **with the same path** is found, and you’re about to over
 > `hda_label` is a spare parameter created on the Error node with the value `Fxquinox Context Info`. This is added so you can quickly change it and use this HDA as a template.
 
 > [!note]
-> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking. 
-> 
+> You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking.
+>
 > For example, **Render Settings** just throws a warning when you're overriding an existing primitive.
 
 > [!warning]
@@ -139,7 +139,7 @@ node.parm('primpattern').lock(False)
 loputils.setAllControlParameters(node, 'none')
 ```
 
-As you can see, we need to split the name: `$HDA_NAME` will return `fxquinox::contextinfo`, and `:` is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the `edit_1` part to it. 
+As you can see, we need to split the name: `$HDA_NAME` will return `fxquinox::contextinfo`, and `:` is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the `edit_1` part to it.
 
 > [!note]
 > This is only applicable if your HDA has an **author**, **branch** or **version** namespace.

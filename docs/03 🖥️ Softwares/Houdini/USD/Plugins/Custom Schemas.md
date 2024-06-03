@@ -1,5 +1,7 @@
 ---
 title: Custom Schemas
+description: How-to create a USD custom schema
+image: _attachments/social_card.png
 icon: material/toy-brick
 slug: custom-schemas
 publish: true
@@ -157,8 +159,8 @@ Let the tool run. Once it’s done, you should have 2 new files:
 └── 📁 usdFxquinox/
     ├── 📁 resources/
 	│   └── 📄 schema.usda
-    ├── 📄 generatedSchema.usda    🟢
-    └── 📄 plugInfo.json           🟢
+    ├── 📄 generatedSchema.usda
+    └── 📄 plugInfo.json
 ```
 
 You’ll need to modify the `plugInfo.json` file, since usdGenSchema leaves in the cmake `@...@` string replacements:

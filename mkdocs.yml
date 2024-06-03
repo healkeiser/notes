@@ -111,6 +111,9 @@ plugins:
         enabled: false
   - pub-blog
   - pub-obsidian
-  - pub-social
+  - pub-social:
+      twitter:
+        enabled: true
+        author: "@valentinbeaumon"
   - pub-meta
   - pub-minifier
