@@ -17,6 +17,17 @@ edit_uri: edit/main/docs/
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  tags:
+    usd: usd
+    development: development
+    houdini: houdini
+    maya: maya
+    nuke: nuke
+    macOS: macOS
+    windows: windows
+    home: home
+
 ###### Theme ###################################################################
 
 theme:
@@ -26,6 +37,15 @@ theme:
   logo: _attachments/notes_logo_dark.svg
   icon:
     repo: material/github
+    tag:
+      usd: fontawesome/solid-layer-group
+      development: fontawesome/solid-code
+      houdini: simple/houdini
+      maya: simple/autodeskmaya
+      nuke: simple/nuke
+      macOS: material/apple
+      windows: material/microsoft-windows
+      home: material/home
   features:
     - announce.dismiss
     - navigation.expand
@@ -98,14 +118,15 @@ markdown_extensions:
 
 plugins:
   - search
+  - tags:
+      tags_file: 05 🏷️ Tags.md
+  - glightbox
   - git-authors
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
       repository: healkeiser/notes
       branch: main
-      # token: !!python/object/apply:os.getenv ["GITHUB_API_KEY"]
-  - glightbox
   - pub-debugger:
       console_log:
         enabled: false
