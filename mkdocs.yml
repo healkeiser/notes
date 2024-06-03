@@ -19,7 +19,7 @@ extra_css:
 
 extra:
   tags:
-    usd: usd
+    USD: USD
     development: development
     houdini: houdini
     maya: maya
@@ -38,7 +38,7 @@ theme:
   icon:
     repo: material/github
     tag:
-      usd: material/layers-triple
+      USD: material/layers-triple
       development: material/code-tags
       houdini: simple/houdini
       maya: simple/autodeskmaya
