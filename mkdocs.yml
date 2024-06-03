@@ -38,7 +38,7 @@ theme:
   icon:
     repo: material/github
     tag:
-      usd: fontawesome/solid-layer-group
+      usd: material/layers-triple
       development: fontawesome/solid-code
       houdini: simple/houdini
       maya: simple/autodeskmaya
