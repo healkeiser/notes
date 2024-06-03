@@ -2,7 +2,7 @@
 title: Multiple Versions on Windows
 icon: material/microsoft-windows
 slug: multiple-versions-on-windows
-categories:
+tags:
   - development
   - macOS
 publish: false

@@ -2,6 +2,8 @@
 title: Scanned Directories
 icon: material/folder
 slug: scanned-directories
+tags:
+  - houdini
 publish: false
 ---
 

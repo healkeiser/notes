@@ -2,6 +2,10 @@
 title: Integrate Custom Schemas
 icon: material/toy-brick
 slug: integrate-custom-schemas
+tags:
+  - houdini
+  - USD
+  - plugin
 publish: true
 ---
 

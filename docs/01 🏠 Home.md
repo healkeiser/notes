@@ -2,7 +2,7 @@
 title: Home
 slug: .
 publish: true
-categories:
+tags:
   - start
 hide:
   - toc

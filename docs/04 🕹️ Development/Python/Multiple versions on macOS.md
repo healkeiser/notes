@@ -2,7 +2,7 @@
 title: Multiple Versions on macOS
 icon: material/apple
 slug: multiple-versions-on-macos
-categories:
+tags:
   - development
   - macOS
 publish: false
