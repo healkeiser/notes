@@ -3,11 +3,10 @@ title: Home
 slug: .
 publish: true
 tags:
-  - start
+  - home
 hide:
   - toc
   - navigation
-sticker: lucide//home
 ---
 
 # Home

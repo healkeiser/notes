@@ -22,6 +22,7 @@ extra:
     USD: USD
     development: development
     houdini: houdini
+    plugin: plugin
     maya: maya
     nuke: nuke
     macOS: macOS
@@ -41,6 +42,7 @@ theme:
       USD: material/layers-triple
       development: material/code-tags
       houdini: simple/houdini
+      plugin: plugin
       maya: simple/autodeskmaya
       nuke: simple/nuke
       macOS: material/apple
