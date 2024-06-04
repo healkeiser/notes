@@ -528,7 +528,8 @@
         <pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>.
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>└── 📁 usdFxquinox/
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    └── 📁 resources/
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>        └── 📄 schema.usda
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>        └── 📁 usdFxquinox/
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>            └── 📄schema.usda
 </code></pre>
        </div>
        <p>
@@ -538,7 +539,8 @@
         <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>.
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>└── 📁 &lt;plugin name&gt;/
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    └── 📁 resources/
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        └── 📄 schema.usda
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        └── 📁 &lt;plugin name&gt;/
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>            └── 📄 schema.usda
 </code></pre>
        </div>
        <h2 id="edit-schemausda">
@@ -588,7 +590,7 @@
 <a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"""Holder for fxquinox-specific context information."""</span>
 <a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="n">inherits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;/</span><span class="n">Typed</span><span class="o">&gt;</span>
 <a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="n">customData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"FxquinoxContextInfo"</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"ContextInfo"</span>
 <a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="p">}</span>
 <a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="p">)</span>
 <a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">{</span>
@@ -662,7 +664,7 @@
 <a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">set</span><span class="w"> </span><span class="nv">USD_PLUGIN_NAME</span><span class="o">=</span>usdFxquinox
 <a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nb">set</span><span class="w"> </span><span class="nv">HYTHON_PATH</span><span class="o">=</span><span class="s2">"C:\Program Files\Side Effects Software\Houdini %HOUDINI_VERSION%\bin\hython.exe"</span>
 <a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">set</span><span class="w"> </span><span class="nv">USDGENSCHEMA_PATH</span><span class="o">=</span><span class="s2">"C:\Program Files\Side Effects Software\Houdini %HOUDINI_VERSION%\bin\usdGenSchema"</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nb">set</span><span class="w"> </span><span class="nv">SCHEMA_PATH</span><span class="o">=</span>%~dp0resources<span class="se">\s</span>chema.usda
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nb">set</span><span class="w"> </span><span class="nv">SCHEMA_PATH</span><span class="o">=</span>%~dp0%USD_PLUGIN_NAME%<span class="se">\s</span>chema.usda
 <a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nb">set</span><span class="w"> </span><span class="nv">DESTINATION_PATH</span><span class="o">=</span>%~dp0
 <a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
 <a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="nb">echo</span><span class="w"> </span>Running<span class="w"> </span>usdGenSchema<span class="w"> </span><span class="k">for</span><span class="w"> </span>%USD_PLUGIN_NAME%:
@@ -705,7 +707,7 @@
          </code>
          is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder:
          <code>
-          usdFxquinox/.run_usdGenSchema.bat
+          usdFxquinox/_run_usdGenSchema.bat
          </code>
         </p>
        </div>
@@ -716,9 +718,10 @@
         <pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>.
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>└── 📁 usdFxquinox/
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    ├── 📁 resources/
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    │   └── 📄 schema.usda
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll">    ├── 📄 generatedSchema.usda
-</span><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll">    └── 📄 plugInfo.json
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    │   └── 📁 usdFxquinox/
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    │       └── 📄 schema.usda
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="hll">    ├── 📄 generatedSchema.usda
+</span><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll">    └── 📄 plugInfo.json
 </span></code></pre>
        </div>
        <p>
@@ -788,7 +791,7 @@
         environment variable. In our instance:
        </p>
        <div class="highlight">
-        <pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">set</span><span class="w"> </span><span class="nv">PXR_PLUGINPATH_NAME</span><span class="o">=</span>%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox<span class="p">;</span>%PXR_PLUGINPATH_NAME%
+        <pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">set</span><span class="w"> </span><span class="nv">PXR_PLUGINPATH_NAME</span><span class="o">=</span>%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox/resources<span class="p">;</span>%PXR_PLUGINPATH_NAME%
 </code></pre>
        </div>
        <aside class="md-source-file">
@@ -800,7 +803,7 @@
           </svg>
          </span>
          <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">
-          June 3, 2024
+          June 4, 2024
          </span>
         </span>
         <span class="md-source-file__fact">
