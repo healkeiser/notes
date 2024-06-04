@@ -121,7 +121,7 @@ class FxquinoxContextInfo "FxquinoxContextInfo" (
 }
 ```
 
-## Run usdGenSchema
+## Run **usdGenSchema**
 
 Once you’re happy with your new schema, we now need to run **usdGenSchema.** The easiest way is to run the one shipping with your DCC compiled USD.
 
@@ -156,7 +156,7 @@ pause
 > Think about changing your `HOUDINI_VERSION` and `USD_PLUGIN_NAME` accordingly.
 
 > [!warning]
-> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder: `usdFxquinox/_run_usdGenSchema.bat`
+> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder: `usdFxquinox/resources/_run_usdGenSchema.bat`
 
 Let the tool run. Once it’s done, you should have 2 new files:
 
@@ -170,7 +170,7 @@ Let the tool run. Once it’s done, you should have 2 new files:
     └── 📄 plugInfo.json
 ```
 
-You’ll need to modify the `plugInfo.json` file, since usdGenSchema leaves in the cmake `@...@` string replacements:
+You’ll need to modify the `plugInfo.json` file, since **usdGenSchema** leaves in the cmake `@...@` string replacements:
 
 ``` json title="plugInfo.json" hl_lines="2 4 5"
 ...
@@ -188,8 +188,8 @@ To:
 ...
 	"LibraryPath": "",
 	"Name": "usdFxquinox",
-	"ResourcePath": ".",
-	"Root": ".",
+	"ResourcePath": "resources",
+	"Root": "..",
 	"Type": "resource"
 ...
 ```
