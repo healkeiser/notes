@@ -12,7 +12,7 @@ publish: true
 _How to integrate a custom USD schema like a native Houdini primitive node._
 
 > [!note]
-> You can find the **Fxquinox Context Info** HDA on [GitHub](https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.context_info.hda).
+> You can find the **Fxquinox Context Info** HDA on [GitHub](https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.context_info.hda), or start from the **Fxquinox Primitive Template** HDA [there](https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.primitive_template.hda).
 
 ## Native Node
 
