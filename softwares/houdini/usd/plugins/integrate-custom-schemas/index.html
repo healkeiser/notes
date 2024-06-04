@@ -357,13 +357,6 @@
                                 </a>
                                </li>
                                <li class="md-nav__item">
-                                <a class="md-nav__link" href="#primitive">
-                                 <span class="md-ellipsis">
-                                  Primitive
-                                 </span>
-                                </a>
-                               </li>
-                               <li class="md-nav__item">
                                 <a class="md-nav__link" href="#edit-properties-from-node">
                                  <span class="md-ellipsis">
                                   Edit Properties from Node
@@ -461,13 +454,6 @@
                  <a class="md-nav__link" href="#error">
                   <span class="md-ellipsis">
                    Error
-                  </span>
-                 </a>
-                </li>
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#primitive">
-                  <span class="md-ellipsis">
-                   Primitive
                   </span>
                  </a>
                 </li>
@@ -678,8 +664,8 @@
         </a>
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_X60V05qBjV.png/">
-         <img alt="houdini_X60V05qBjV.png" loading="lazy" src="../../../../../_attachments/houdini_X60V05qBjV.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_X3l1a6GZMR.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_X3l1a6GZMR.png"/>
         </a>
        </p>
        <h3 id="internal-nodes">
@@ -824,88 +810,6 @@
          so the error gets displayed directly onto the HDA.
         </p>
        </div>
-       <h4 id="primitive">
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html">
-         Primitive
-        </a>
-       </h4>
-       <p>
-        This is the node that creates the primitive itself. On this node you’ll choose the
-        <strong>
-         primitive type
-        </strong>
-        ,
-        <strong>
-         primitive kind
-        </strong>
-        ,
-        <strong>
-         parent primitive type
-        </strong>
-        (if applicable) and
-        <strong>
-         primitive specifier
-        </strong>
-        .
-       </p>
-       <p>
-        To apply your custom schema, select
-        <strong>
-         Primitive Type
-        </strong>
-        to your schema class. In this instance,
-        <strong>
-         FxquinoxContextInfo
-        </strong>
-        .
-       </p>
-       <p>
-        This node is also tied to the
-        <strong>
-         Action
-        </strong>
-        menu. If the mode is set to
-        <strong>
-         Create
-        </strong>
-        , it will enable the node, effectively creating a new primitive. Is it is set to
-        <strong>
-         Edit
-        </strong>
-        of
-        <strong>
-         Force Edit
-        </strong>
-        it will
-        <strong>
-         not
-        </strong>
-        create the primitive and bypass the node, immediately cooking the
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-         Edit Properties from Node
-        </a>
-        . Here’s the Python expression driving it, set on this node
-        <strong>
-         Activation
-        </strong>
-        parameter (You can create it through a node Right-click &gt;
-        <strong>
-         LOP Action
-        </strong>
-        &gt;
-        <strong>
-         Create Activation Parameter
-        </strong>
-        ):
-       </p>
-       <div class="highlight">
-        <span class="filename">
-         Primitive &gt; lop_activation
-        </span>
-        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">create_prims</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">create_prims</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
-</code></pre>
-       </div>
        <h4 id="edit-properties-from-node">
         <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
          Edit Properties from Node
@@ -948,6 +852,34 @@
         </strong>
         menu. It’s the one that allows our HDA to behave just like a native node.
        </p>
+       <div class="admonition tip">
+        <p class="admonition-title">
+         Tip
+        </p>
+        <p>
+         Basically, promote all parms of this node to your HDA except:
+         <strong>
+          Parameters from Node
+         </strong>
+         ,
+         <strong>
+          Parameters
+         </strong>
+         ,
+         <strong>
+          Prim Local
+         </strong>
+         ,
+         <strong>
+          Prim Path Local
+         </strong>
+         ,
+         <strong>
+          Prim Count Local
+         </strong>
+         .
+        </p>
+       </div>
        <div class="admonition note">
         <p class="admonition-title">
          Note
@@ -966,6 +898,34 @@
           all
          </strong>
          its parameters onto your HDA, then simply delete the ones you don't need.
+        </p>
+       </div>
+       <div class="admonition warning">
+        <p class="admonition-title">
+         Warning
+        </p>
+        <p>
+         Don't forget to add the
+         <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
+          Edit Properties from Node
+         </a>
+         node path inside your HDA
+         <strong>
+          Type Properties
+         </strong>
+         &gt;
+         <strong>
+          Node
+         </strong>
+         &gt;
+         <strong>
+          Message Nodes
+         </strong>
+         so an error gets displayed if the HDA is in
+         <strong>
+          Edit
+         </strong>
+         mode and it can't find the primitive to edit.
         </p>
        </div>
        <h2 id="promote-usd-attributes">
@@ -1161,12 +1121,12 @@
         <span class="filename">
          HDA &gt; Type Properties &gt; Interactive &gt; Shelf Tools &gt; Script
         </span>
-        <pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">loptoolutils</span><span class="o">,</span> <span class="nn">loputils</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">node</span> <span class="o">=</span> <span class="n">loptoolutils</span><span class="o">.</span><span class="n">genericTool</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"::"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'_edit1'</span><span class="p">)</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'createprims'</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'primpattern'</span><span class="p">)</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">loputils</span><span class="o">.</span><span class="n">setAllControlParameters</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">'none'</span><span class="p">)</span>
+        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">loptoolutils</span><span class="o">,</span> <span class="nn">loputils</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">node</span> <span class="o">=</span> <span class="n">loptoolutils</span><span class="o">.</span><span class="n">genericTool</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"::"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'_edit1'</span><span class="p">)</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'createprims'</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'primpattern'</span><span class="p">)</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">loputils</span><span class="o">.</span><span class="n">setAllControlParameters</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">'none'</span><span class="p">)</span>
 </code></pre>
        </div>
        <p>
@@ -1285,7 +1245,7 @@
           </svg>
          </span>
          <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">
-          June 3, 2024
+          June 4, 2024
          </span>
         </span>
         <span class="md-source-file__fact">
