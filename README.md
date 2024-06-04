@@ -1,6 +1,8 @@
 <p align="left">
   <img src="https://img.shields.io/badge/-Obsidian-403a83?style=for-the-badge&logo=obsidian" alt="Obsidian"/></a>
+  <img src="https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white" alt="MkDocs Material"/></a>
 </p>
+
 
 
 <div align="center">
