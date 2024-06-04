@@ -30,7 +30,8 @@ Let’s start by creating a directory and a `schema.usda` file:
 .
 └── 📁 usdFxquinox/
     └── 📁 resources/
-	    └── 📄 schema.usda
+        └── 📁 usdFxquinox/
+            └── 📄schema.usda
 ```
 
 Which corresponds to:
@@ -39,7 +40,8 @@ Which corresponds to:
 .
 └── 📁 <plugin name>/
     └── 📁 resources/
-	    └── 📄 schema.usda
+        └── 📁 <plugin name>/
+            └── 📄 schema.usda
 ```
 
 ## Edit `schema.usda`
@@ -69,7 +71,7 @@ class FxquinoxContextInfo "FxquinoxContextInfo" (
     doc = """Holder for fxquinox-specific context information."""
     inherits = </Typed>
     customData = {
-        string className = "FxquinoxContextInfo"
+        string className = "ContextInfo"
         }
     )
 {
@@ -133,7 +135,7 @@ set HOUDINI_VERSION=20.0.547
 set USD_PLUGIN_NAME=usdFxquinox
 set HYTHON_PATH="C:\Program Files\Side Effects Software\Houdini %HOUDINI_VERSION%\bin\hython.exe"
 set USDGENSCHEMA_PATH="C:\Program Files\Side Effects Software\Houdini %HOUDINI_VERSION%\bin\usdGenSchema"
-set SCHEMA_PATH=%~dp0resources\schema.usda
+set SCHEMA_PATH=%~dp0%USD_PLUGIN_NAME%\schema.usda
 set DESTINATION_PATH=%~dp0
 
 echo Running usdGenSchema for %USD_PLUGIN_NAME%:
@@ -154,15 +156,16 @@ pause
 > Think about changing your `HOUDINI_VERSION` and `USD_PLUGIN_NAME` accordingly.
 
 > [!warning]
-> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder: `usdFxquinox/.run_usdGenSchema.bat`
+> `%~dp0` is the Batch variable that expands to the current directory. Only use it if your .bat file is placed under the plugin folder: `usdFxquinox/_run_usdGenSchema.bat`
 
 Let the tool run. Once it’s done, you should have 2 new files:
 
-``` hl_lines="5 6"
+``` hl_lines="6 7"
 .
 └── 📁 usdFxquinox/
     ├── 📁 resources/
-	│   └── 📄 schema.usda
+    │   └── 📁 usdFxquinox/
+    │       └── 📄 schema.usda
     ├── 📄 generatedSchema.usda
     └── 📄 plugInfo.json
 ```
@@ -203,6 +206,6 @@ This change only need to be made once, as indicated in `plugInfo.json`:
 The last step is to add the folder containing `plugInfo.json` to the `PXR_PLUGINPATH_NAME` environment variable. In our instance:
 
 ```shell
-set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox;%PXR_PLUGINPATH_NAME%
+set PXR_PLUGINPATH_NAME=%SERVER_ROOT%/Projects/Code/fxquinox/plugins/usd/usdFxquinox/resources;%PXR_PLUGINPATH_NAME%
 ```
 
