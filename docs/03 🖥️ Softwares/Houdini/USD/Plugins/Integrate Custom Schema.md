@@ -40,7 +40,7 @@ In order to emulate all those, we can create an HDA with the following structure
 
 ![[../../../../_attachments/zHNp9aWjDm.png]]
 
-![[../../../../_attachments/houdini_X60V05qBjV.png]]
+![](../../../../_attachments/houdini_X3l1a6GZMR.png)
 
 ### Internal Nodes
 
@@ -77,19 +77,6 @@ if another primitive **with the same path** is found, and you’re about to over
 > [!warning]
 > Don't forget to add the error node path inside your HDA **Type Properties** > **Node**  > **Message Nodes** so the error gets displayed directly onto the HDA.
 
-#### [Primitive](https://www.sidefx.com/docs/houdini/nodes/lop/primitive.html)
-
-This is the node that creates the primitive itself. On this node you’ll choose the **primitive type**, **primitive kind**, **parent primitive type** (if applicable) and **primitive specifier**.
-
-To apply your custom schema, select **Primitive Type** to your schema class. In this instance, **FxquinoxContextInfo**.
-
-This node is also tied to the **Action** menu. If the mode is set to **Create**, it will enable the node, effectively creating a new primitive. Is it is set to **Edit** of **Force Edit** it will **not** create the primitive and bypass the node, immediately cooking the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html). Here’s the Python expression driving it, set on this node **Activation** parameter (You can create it through a node Right-click > **LOP Action** > **Create Activation Parameter**):
-
-``` python title="Primitive > lop_activation"
-create_prims = hou.pwd().parent().parm("createprims").eval()
-return 0 if create_prims in (0, 2) else 1
-```
-
 #### [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html)
 
 This node is where the magic happens. It’s pretty much the same as the [Edit Properties](https://www.sidefx.com/docs/houdini/nodes/lop/editproperties.html) node, with a nice change:
@@ -99,11 +86,16 @@ This node is where the magic happens. It’s pretty much the same as the [Edit P
 
 That allows us to add the properties on the HDA itself: they will always be read from it and added accordingly.
 
-This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node.
+This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node. 
+
+> [!tip]
+> Basically, promote all parms of this node to your HDA except: **Parameters from Node**,  **Parameters**, **Prim Local**, **Prim Path Local**, **Prim Count Local**.
 
 > [!note]
 > You can simply drag and drop the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node onto the **Type Properties** window of your HDA to automatically promote **all** its parameters onto your HDA, then simply delete the ones you don't need.
 
+> [!warning]
+> Don't forget to add the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node path inside your HDA **Type Properties** > **Node**  > **Message Nodes** so an error gets displayed if the HDA is in **Edit** mode and it can't find the primitive to edit.
 ## Promote USD Attributes
 
 In order for the [Edit Properties from Node](https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html) node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA **Type Properties**, and inside the **Parameters** tab navigate to the **From USD** tab. You can now filter the schema you want and add all its attributes to your parameters.
