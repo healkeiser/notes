@@ -23,13 +23,14 @@ Let’s take a look at the native **Render Settings** primitive node:
 It contains a couple of important elements:
 
 - A **Frame Range Sampling** menu (useful to get rid of time dependencies)
-- The **Primitive Path** parm
+- The **Primitive Path** parm (if in **Create** Mode)
+- The **Primitives** parm (if in **Edit** mode)
 - The **Action** menu, to either **Create** or **Edit** the primitive
 - The **Initialize Parameters** menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in **Edit** mode)
 - The **Create Primitives** menu, which allows you to control how and where the primitive will be created (if in **Create** mode)
 
 > [!warning]
-> The **Primitive Path** parm internal name should be `primpattern`, so the callback set on **Initialize Parameters** can run.
+> The **Primitive Path** only appears in **Create** mode, whereas the **Primitives** one appears only in **Edit** mode. If you push your HDA and requires to use one or the other depending on the selected mode, you can create an invisible parm called `prim` and feed it a Python expression to retrieve the path(s) from the right parm according to the mode you chose.
 
 ## Custom Node (HDA)
 
@@ -50,24 +51,31 @@ The [Error](https://www.sidefx.com/docs/houdini/nodes/lop/error.html) node conta
 
 ``` python title="Error > enable"
 node = hou.pwd()
+node_parent = node.parent()
 inputs = node.inputs()
-
-if inputs and node.parent().parm("createprims").eval() == 1:
-    prim = node.evalParm("../primpattern")
+if inputs and node_parent.evalParm("createprims") == 1:
+    prim = node_parent.evalParm("primpath")
     stage = inputs[0].stage()
     return int(stage.GetPrimAtPath(prim).IsValid())
-
 return 0
 ```
 
 It will return this error to the user:
 
-> An existing `chs("hda_label")` prim has been found at `chs("../primpattern")`. You can only have one in your current scene. For selective edits, use a `chs("hda_label")` Edit instead.
+> An existing \`chs("hda_label")\` prim has been found at \`chs("../primpath")\`. You can only have one in your current scene. For selective edits, use a \`chs("hda_label")\` Edit instead.
 
 if another primitive **with the same path** is found, and you’re about to override it by **creating** a new one **on the** **same path**.
 
-> [!tip]- HDA Label
-> `hda_label` is a spare parameter created on the Error node with the value `Fxquinox Context Info`. This is added so you can quickly change it and use this HDA as a template.
+`hda_label` is a spare parameter created on the **Error** node with a Python expression returning the value `Fxquinox Context Info`:
+
+```python title="Error > HDA Label"
+parent_node = hou.pwd().parent()
+parent_type = parent_node.type()
+parent_hda_definition = parent_type.definition()
+author = parent_type.nameComponents()[1].title()
+description = parent_hda_definition.description()
+return f"{author} {description}"
+```
 
 > [!note]
 > You can set the message verbosity (**error**, **warning**, **info**) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple **Fxquinox Context Info** primitives, so it’s set on **error**, which will effectively set the HDA in an error-state and fail its cooking.
@@ -86,7 +94,7 @@ This node is where the magic happens. It’s pretty much the same as the [Edit P
 
 That allows us to add the properties on the HDA itself: they will always be read from it and added accordingly.
 
-This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node. 
+This node is also linked to the **Frame Range Sampling** menu, **Primitive Path** parm, **Primitives** parm, **Action** menu, and the **Initialize Parameters** menu. It’s the one that allows our HDA to behave just like a native node. 
 
 > [!tip]
 > Basically, promote all parms of this node to your HDA except: **Parameters from Node**,  **Parameters**, **Prim Local**, **Prim Path Local**, **Prim Count Local**.
@@ -131,7 +139,6 @@ import loptoolutils, loputils
 
 node = loptoolutils.genericTool(kwargs, '$HDA_NAME', '$HDA_NAME'.split("::")[1] + '_edit1')
 node.parm('createprims').set('off')
-node.parm('primpattern').lock(False)
 loputils.setAllControlParameters(node, 'none')
 ```
 
