@@ -16,6 +16,8 @@
     Personal collection of notes, tips and miscellaneous information
     <br />
     <br />
+    <a href="https://healkeiser.github.io/notes"><strong>Static Website</strong></a>
+    <br />
     <br />
   </p>
 
@@ -40,4 +42,4 @@ Personal collection of notes, tips and miscellaneous information.
 
 <!-- STATIC WEBSITE -->
 ## Static Website
-You can access the notes just [there](https://healkeiser.github.io/notes/).
+You can access the notes just [there](https://healkeiser.github.io/notes).
