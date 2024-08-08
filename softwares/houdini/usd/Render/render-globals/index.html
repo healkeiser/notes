@@ -4,12 +4,12 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
   <meta content="Valentin Beaumont" name="author"/>
-  <link href="../custom-schemas/" rel="prev"/>
-  <link href="../../Render/render-globals/" rel="next"/>
+  <link href="../../plugins/integrate-custom-schemas/" rel="prev"/>
+  <link href="../../../../../tags/" rel="next"/>
   <link href="../../../../../_attachments/notes_logo_dark.svg" rel="icon"/>
   <meta content="mkdocs-1.6.0, mkdocs-material-9.5.22" name="generator"/>
   <title>
-   Integrate Custom Schemas - Notes
+   Render Globals - Notes
   </title>
   <link href="../../../../../assets/stylesheets/main.732c4fb1.min.css" rel="stylesheet"/>
   <link href="../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -50,7 +50,7 @@
   <label class="md-overlay" for="__drawer">
   </label>
   <div data-md-component="skip">
-   <a class="md-skip" href="#native-node">
+   <a class="md-skip" href="#goal">
     Skip to content
    </a>
   </div>
@@ -76,7 +76,7 @@
       </div>
       <div class="md-header__topic" data-md-component="header-topic">
        <span class="md-ellipsis">
-        Integrate Custom Schemas
+        Render Globals
        </span>
       </div>
      </div>
@@ -177,7 +177,7 @@
        </a>
       </li>
       <li class="md-tabs__item md-tabs__item--active">
-       <a class="md-tabs__link" href="../custom-schemas/">
+       <a class="md-tabs__link" href="../../plugins/custom-schemas/">
         Softwares
        </a>
       </li>
@@ -270,8 +270,8 @@
                    USD
                   </label>
                   <ul class="md-nav__list" data-md-scrollfix="">
-                   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-                    <input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_1" type="checkbox"/>
+                   <li class="md-nav__item md-nav__item--nested">
+                    <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1_1_1" type="checkbox"/>
                     <label class="md-nav__link" for="__nav_2_1_1_1" id="__nav_2_1_1_1_label" tabindex="0">
                      <span class="md-ellipsis">
                       Plugins
@@ -279,7 +279,7 @@
                      <span class="md-nav__icon md-icon">
                      </span>
                     </label>
-                    <nav aria-expanded="true" aria-labelledby="__nav_2_1_1_1_label" class="md-nav" data-md-level="4">
+                    <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_1_label" class="md-nav" data-md-level="4">
                      <label class="md-nav__title" for="__nav_2_1_1_1">
                       <span class="md-nav__icon md-icon">
                       </span>
@@ -287,7 +287,7 @@
                      </label>
                      <ul class="md-nav__list" data-md-scrollfix="">
                       <li class="md-nav__item">
-                       <a class="md-nav__link" href="../custom-schemas/">
+                       <a class="md-nav__link" href="../../plugins/custom-schemas/">
                         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                          <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
                          </path>
@@ -297,26 +297,56 @@
                         </span>
                        </a>
                       </li>
-                      <li class="md-nav__item md-nav__item--active">
-                       <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-                       <label class="md-nav__link md-nav__link--active" for="__toc">
+                      <li class="md-nav__item">
+                       <a class="md-nav__link" href="../../plugins/integrate-custom-schemas/">
                         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                          <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
                          </path>
                         </svg>
                         <span class="md-ellipsis">
                          Integrate Custom Schemas
+                        </span>
+                       </a>
+                      </li>
+                     </ul>
+                    </nav>
+                   </li>
+                   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+                    <input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1_2" type="checkbox"/>
+                    <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
+                     <span class="md-ellipsis">
+                      Render
+                     </span>
+                     <span class="md-nav__icon md-icon">
+                     </span>
+                    </label>
+                    <nav aria-expanded="true" aria-labelledby="__nav_2_1_1_2_label" class="md-nav" data-md-level="4">
+                     <label class="md-nav__title" for="__nav_2_1_1_2">
+                      <span class="md-nav__icon md-icon">
+                      </span>
+                      Render
+                     </label>
+                     <ul class="md-nav__list" data-md-scrollfix="">
+                      <li class="md-nav__item md-nav__item--active">
+                       <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+                       <label class="md-nav__link md-nav__link--active" for="__toc">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M23 15h-2v2h2v-2m0-4h-2v2h2v-2m0 8h-2v2c1 0 2-1 2-2M15 3h-2v2h2V3m8 4h-2v2h2V7m-2-4v2h2c0-1-1-2-2-2M3 21h8v-6H1v4a2 2 0 0 0 2 2M3 7H1v2h2V7m12 12h-2v2h2v-2m4-16h-2v2h2V3m0 16h-2v2h2v-2M3 3C2 3 1 4 1 5h2V3m0 8H1v2h2v-2m8-8H9v2h2V3M7 3H5v2h2V3Z">
+                         </path>
+                        </svg>
+                        <span class="md-ellipsis">
+                         Render Globals
                         </span>
                         <span class="md-nav__icon md-icon">
                         </span>
                        </label>
                        <a class="md-nav__link md-nav__link--active" href="./">
                         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                         <path d="M19 6V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1h-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H3v14h18V6Z">
+                         <path d="M23 15h-2v2h2v-2m0-4h-2v2h2v-2m0 8h-2v2c1 0 2-1 2-2M15 3h-2v2h2V3m8 4h-2v2h2V7m-2-4v2h2c0-1-1-2-2-2M3 21h8v-6H1v4a2 2 0 0 0 2 2M3 7H1v2h2V7m12 12h-2v2h2v-2m4-16h-2v2h2V3m0 16h-2v2h2v-2M3 3C2 3 1 4 1 5h2V3m0 8H1v2h2v-2m8-8H9v2h2V3M7 3H5v2h2V3Z">
                          </path>
                         </svg>
                         <span class="md-ellipsis">
-                         Integrate Custom Schemas
+                         Render Globals
                         </span>
                        </a>
                        <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -327,101 +357,53 @@
                         </label>
                         <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
                          <li class="md-nav__item">
-                          <a class="md-nav__link" href="#native-node">
+                          <a class="md-nav__link" href="#goal">
                            <span class="md-ellipsis">
-                            Native Node
+                            Goal
                            </span>
                           </a>
                          </li>
                          <li class="md-nav__item">
-                          <a class="md-nav__link" href="#custom-node-hda">
+                          <a class="md-nav__link" href="#setup">
                            <span class="md-ellipsis">
-                            Custom Node (HDA)
+                            Setup
                            </span>
                           </a>
-                          <nav aria-label="Custom Node (HDA)" class="md-nav">
+                          <nav aria-label="Setup" class="md-nav">
                            <ul class="md-nav__list">
                             <li class="md-nav__item">
-                             <a class="md-nav__link" href="#internal-nodes">
+                             <a class="md-nav__link" href="#aovs">
                               <span class="md-ellipsis">
-                               Internal Nodes
+                               AOVs
                               </span>
                              </a>
-                             <nav aria-label="Internal Nodes" class="md-nav">
-                              <ul class="md-nav__list">
-                               <li class="md-nav__item">
-                                <a class="md-nav__link" href="#error">
-                                 <span class="md-ellipsis">
-                                  Error
-                                 </span>
-                                </a>
-                               </li>
-                               <li class="md-nav__item">
-                                <a class="md-nav__link" href="#edit-properties-from-node">
-                                 <span class="md-ellipsis">
-                                  Edit Properties from Node
-                                 </span>
-                                </a>
-                               </li>
-                              </ul>
-                             </nav>
+                            </li>
+                            <li class="md-nav__item">
+                             <a class="md-nav__link" href="#base">
+                              <span class="md-ellipsis">
+                               Base
+                              </span>
+                             </a>
+                            </li>
+                            <li class="md-nav__item">
+                             <a class="md-nav__link" href="#variants">
+                              <span class="md-ellipsis">
+                               Variants
+                              </span>
+                             </a>
                             </li>
                            </ul>
                           </nav>
                          </li>
                          <li class="md-nav__item">
-                          <a class="md-nav__link" href="#promote-usd-attributes">
+                          <a class="md-nav__link" href="#final">
                            <span class="md-ellipsis">
-                            Promote USD Attributes
-                           </span>
-                          </a>
-                         </li>
-                         <li class="md-nav__item">
-                          <a class="md-nav__link" href="#add-an-edit-alias">
-                           <span class="md-ellipsis">
-                            Add an Edit Alias
-                           </span>
-                          </a>
-                         </li>
-                         <li class="md-nav__item">
-                          <a class="md-nav__link" href="#custom-icon">
-                           <span class="md-ellipsis">
-                            Custom Icon
+                            Final
                            </span>
                           </a>
                          </li>
                         </ul>
                        </nav>
-                      </li>
-                     </ul>
-                    </nav>
-                   </li>
-                   <li class="md-nav__item md-nav__item--nested">
-                    <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1_1_2" type="checkbox"/>
-                    <label class="md-nav__link" for="__nav_2_1_1_2" id="__nav_2_1_1_2_label" tabindex="0">
-                     <span class="md-ellipsis">
-                      Render
-                     </span>
-                     <span class="md-nav__icon md-icon">
-                     </span>
-                    </label>
-                    <nav aria-expanded="false" aria-labelledby="__nav_2_1_1_2_label" class="md-nav" data-md-level="4">
-                     <label class="md-nav__title" for="__nav_2_1_1_2">
-                      <span class="md-nav__icon md-icon">
-                      </span>
-                      Render
-                     </label>
-                     <ul class="md-nav__list" data-md-scrollfix="">
-                      <li class="md-nav__item">
-                       <a class="md-nav__link" href="../../Render/render-globals/">
-                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                         <path d="M23 15h-2v2h2v-2m0-4h-2v2h2v-2m0 8h-2v2c1 0 2-1 2-2M15 3h-2v2h2V3m8 4h-2v2h2V7m-2-4v2h2c0-1-1-2-2-2M3 21h8v-6H1v4a2 2 0 0 0 2 2M3 7H1v2h2V7m12 12h-2v2h2v-2m4-16h-2v2h2V3m0 16h-2v2h2v-2M3 3C2 3 1 4 1 5h2V3m0 8H1v2h2v-2m8-8H9v2h2V3M7 3H5v2h2V3Z">
-                         </path>
-                        </svg>
-                        <span class="md-ellipsis">
-                         Render Globals
-                        </span>
-                       </a>
                       </li>
                      </ul>
                     </nav>
@@ -458,66 +440,48 @@
          </label>
          <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
           <li class="md-nav__item">
-           <a class="md-nav__link" href="#native-node">
+           <a class="md-nav__link" href="#goal">
             <span class="md-ellipsis">
-             Native Node
+             Goal
             </span>
            </a>
           </li>
           <li class="md-nav__item">
-           <a class="md-nav__link" href="#custom-node-hda">
+           <a class="md-nav__link" href="#setup">
             <span class="md-ellipsis">
-             Custom Node (HDA)
+             Setup
             </span>
            </a>
-           <nav aria-label="Custom Node (HDA)" class="md-nav">
+           <nav aria-label="Setup" class="md-nav">
             <ul class="md-nav__list">
              <li class="md-nav__item">
-              <a class="md-nav__link" href="#internal-nodes">
+              <a class="md-nav__link" href="#aovs">
                <span class="md-ellipsis">
-                Internal Nodes
+                AOVs
                </span>
               </a>
-              <nav aria-label="Internal Nodes" class="md-nav">
-               <ul class="md-nav__list">
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#error">
-                  <span class="md-ellipsis">
-                   Error
-                  </span>
-                 </a>
-                </li>
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#edit-properties-from-node">
-                  <span class="md-ellipsis">
-                   Edit Properties from Node
-                  </span>
-                 </a>
-                </li>
-               </ul>
-              </nav>
+             </li>
+             <li class="md-nav__item">
+              <a class="md-nav__link" href="#base">
+               <span class="md-ellipsis">
+                Base
+               </span>
+              </a>
+             </li>
+             <li class="md-nav__item">
+              <a class="md-nav__link" href="#variants">
+               <span class="md-ellipsis">
+                Variants
+               </span>
+              </a>
              </li>
             </ul>
            </nav>
           </li>
           <li class="md-nav__item">
-           <a class="md-nav__link" href="#promote-usd-attributes">
+           <a class="md-nav__link" href="#final">
             <span class="md-ellipsis">
-             Promote USD Attributes
-            </span>
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="#add-an-edit-alias">
-            <span class="md-ellipsis">
-             Add an Edit Alias
-            </span>
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="#custom-icon">
-            <span class="md-ellipsis">
-             Custom Icon
+             Final
             </span>
            </a>
           </li>
@@ -535,412 +499,258 @@
         <a class="md-tag md-tag-icon md-tag--usd" href="../../../../../tags/#usd">
          usd
         </a>
-        <a class="md-tag md-tag-icon md-tag--plugin" href="../../../../../tags/#plugin">
-         plugin
+        <a class="md-tag md-tag-icon" href="../../../../../tags/#render">
+         render
         </a>
        </nav>
-       <a class="md-content__button md-icon" href="https://github.com/healkeiser/notes/edit/main/docs/03 🖥️ Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md" title="Edit this page">
+       <a class="md-content__button md-icon" href="https://github.com/healkeiser/notes/edit/main/docs/03 🖥️ Softwares/Houdini/USD/Render/Render Globals.md" title="Edit this page">
         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
          <path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z">
          </path>
         </svg>
        </a>
-       <a class="md-content__button md-icon" href="https://github.com/healkeiser/notes/raw/main/docs/03 🖥️ Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md" title="View source of this page">
+       <a class="md-content__button md-icon" href="https://github.com/healkeiser/notes/raw/main/docs/03 🖥️ Softwares/Houdini/USD/Render/Render Globals.md" title="View source of this page">
         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
          <path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z">
          </path>
         </svg>
        </a>
        <h1>
-        Integrate Custom Schemas
+        Render Globals
        </h1>
        <p>
         <em>
-         How to integrate a custom USD schema like a native Houdini primitive node.
+         How to create render globals in USD, to use throughout a production.
         </em>
+       </p>
+       <h2 id="goal">
+        Goal
+       </h2>
+       <p>
+        In a production environment, you might want to give artists a base of render settings they can use pretty much anywhere. In Solaris, we can take advantage of the variant system, and publish a set of variants applied on the
+        <code>
+         /Render
+        </code>
+        primitive to dictate which variant (preset) will be used.
+       </p>
+       <p>
+        Ideally, you'd publish different global presets against a specific pipeline step: one for lookdev, one for lighting, etc.
        </p>
        <div class="admonition note">
         <p class="admonition-title">
          Note
         </p>
         <p>
-         You can find the
-         <strong>
-          Fxquinox Context Info
-         </strong>
-         HDA on
-         <a href="https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.context_info.hda">
-          GitHub
-         </a>
-         , or start from the
-         <strong>
-          Fxquinox Primitive Template
-         </strong>
-         HDA
-         <a href="https://github.com/healkeiser/fxquinox/blob/main/plugins/houdini/otls/lop_fxquinox.primitive_template.hda">
-          there
-         </a>
-         .
+         Even with publishing different globals against their own pipeline step, they could still inherit from the same "master" global which could contain show resolution, aspect ratio, render engine, etc.
         </p>
        </div>
-       <h2 id="native-node">
-        Native Node
+       <p>
+        We could also have have multiple RenderSettings pointing to multiple RenderProducts, but I like the idea of having a standardized primitive for a specific task.
+       </p>
+       <h2 id="setup">
+        Setup
        </h2>
        <p>
-        Let’s take a look at the native
+        In Solaris, the setup would look like this:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Y3wS1c5Cwr.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_Y3wS1c5Cwr.png"/>
+        </a>
+        You can see there are two "main" variant branches:
         <strong>
-         Render Settings
+         beauty
         </strong>
-        primitive node:
+        and
+        <strong>
+         technical
+        </strong>
+        . This is a personal production choice, where a technical pass would contain the same renderable objects as the beauty pass, but without lighting, a very low sample count and what's defined as technical AOVs:
+        <strong>
+         depth
+        </strong>
+        ,
+        <strong>
+         P
+        </strong>
+        ,
+        <strong>
+         N
+        </strong>
+        , etc.
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/DViGtQ2cWB.png/">
-         <img alt="DViGtQ2cWB.png" loading="lazy" src="../../../../../_attachments/DViGtQ2cWB.png"/>
-        </a>
+        Let's now dive into deeper into each section of the above graph:
        </p>
-       <p>
-        It contains a couple of important elements:
-       </p>
-       <ul>
-        <li>
-         A
-         <strong>
-          Frame Range Sampling
-         </strong>
-         menu (useful to get rid of time dependencies)
-        </li>
-        <li>
-         The
-         <strong>
-          Primitive Path
-         </strong>
-         parm (if in
-         <strong>
-          Create
-         </strong>
-         Mode)
-        </li>
-        <li>
-         The
-         <strong>
-          Primitives
-         </strong>
-         parm (if in
-         <strong>
-          Edit
-         </strong>
-         mode)
-        </li>
-        <li>
-         The
-         <strong>
-          Action
-         </strong>
-         menu, to either
-         <strong>
-          Create
-         </strong>
-         or
-         <strong>
-          Edit
-         </strong>
-         the primitive
-        </li>
-        <li>
-         The
-         <strong>
-          Initialize Parameters
-         </strong>
-         menu, which lets you batch control the USD parms or retrieve another primitive attribute values (if in
-         <strong>
-          Edit
-         </strong>
-         mode)
-        </li>
-        <li>
-         The
-         <strong>
-          Create Primitives
-         </strong>
-         menu, which allows you to control how and where the primitive will be created (if in
-         <strong>
-          Create
-         </strong>
-         mode)
-        </li>
-       </ul>
-       <div class="admonition warning">
-        <p class="admonition-title">
-         Warning
-        </p>
-        <p>
-         The
-         <strong>
-          Primitive Path
-         </strong>
-         only appears in
-         <strong>
-          Create
-         </strong>
-         mode, whereas the
-         <strong>
-          Primitives
-         </strong>
-         one appears only in
-         <strong>
-          Edit
-         </strong>
-         mode. If you push your HDA and requires to use one or the other depending on the selected mode, you can create an invisible parm called
-         <code>
-          prim
-         </code>
-         and feed it a Python expression to retrieve the path(s) from the right parm according to the mode you chose.
-        </p>
-       </div>
-       <h2 id="custom-node-hda">
-        Custom Node (HDA)
-       </h2>
-       <p>
-        In order to emulate all those, we can create an HDA with the following structure:
-       </p>
-       <details class="tip">
-        <summary>
-         Lock Primitive Path
-        </summary>
-        <p>
-         Here,
-         <strong>
-          Primitive Path
-         </strong>
-         is a locked parameter: you might want to add an
-         <strong>
-          OnCreated
-         </strong>
-         callback to lock it (or simply make the parm invisible) in order to force artists to only use pipeline defined primitive paths.
-        </p>
-       </details>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/zHNp9aWjDm.png/">
-         <img alt="zHNp9aWjDm.png" loading="lazy" src="../../../../../_attachments/zHNp9aWjDm.png"/>
-        </a>
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_X3l1a6GZMR.png/">
-         <img alt="None" src="../../../../../_attachments/houdini_X3l1a6GZMR.png"/>
-        </a>
-       </p>
-       <h3 id="internal-nodes">
-        Internal Nodes
+       <h3 id="aovs">
+        AOVs
        </h3>
-       <h4 id="error">
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/error.html">
-         Error
-        </a>
-       </h4>
        <p>
-        The
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/error.html">
-         Error
-        </a>
-        node contains the following code on the
-        <strong>
-         Report this Error
-        </strong>
-        parm:
+        Here's the AOV part of the setup, where we define our RenderVar primitives:
        </p>
-       <div class="highlight">
-        <span class="filename">
-         Error &gt; enable
-        </span>
-        <pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">node</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">node_parent</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">inputs</span><span class="p">()</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">if</span> <span class="n">inputs</span> <span class="ow">and</span> <span class="n">node_parent</span><span class="o">.</span><span class="n">evalParm</span><span class="p">(</span><span class="s2">"createprims"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">prim</span> <span class="o">=</span> <span class="n">node_parent</span><span class="o">.</span><span class="n">evalParm</span><span class="p">(</span><span class="s2">"primpath"</span><span class="p">)</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">stage</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stage</span><span class="p">()</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">stage</span><span class="o">.</span><span class="n">GetPrimAtPath</span><span class="p">(</span><span class="n">prim</span><span class="p">)</span><span class="o">.</span><span class="n">IsValid</span><span class="p">())</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="k">return</span> <span class="mi">0</span>
-</code></pre>
-       </div>
        <p>
-        It will return this error to the user:
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_kTjFauu0IH.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_kTjFauu0IH.png"/>
+        </a>
        </p>
-       <blockquote>
-        <p>
-         An existing `chs("hda_label")` prim has been found at `chs("../primpath")`. You can only have one in your current scene. For selective edits, use a `chs("hda_label")` Edit instead.
-        </p>
-       </blockquote>
        <p>
-        if another primitive
+        Each Karma Standard Render Vars define AOVs for both the
         <strong>
-         with the same path
+         beauty
         </strong>
-        is found, and you’re about to override it by
+        and
         <strong>
-         creating
+         technical
         </strong>
-        a new one
+        branch. The trick is found in the
         <strong>
-         on the
+         Configure Primitive
         </strong>
+        and
         <strong>
-         same path
+         Edit Properties
+        </strong>
+        nodes: We select the freshy created AOVs, and we apply a
+        <a href="../../plugins/custom-schemas/" id="37de0a17b609b6a1e1c6bcab9f544f71">
+         custom API schema
+        </a>
+        to them. This adds a new set of attributes on the primitives, in this instance a
+        <strong>
+         beacon:renderVarType
+        </strong>
+        token, which can be set on
+        <strong>
+         beauty
+        </strong>
+        ,
+        <strong>
+         technical
+        </strong>
+        ,
+        <strong>
+         light
+        </strong>
+        ,
+        <strong>
+         crypto
+        </strong>
+        and
+        <strong>
+         extra
         </strong>
         .
        </p>
-       <p>
-        <code>
-         hda_label
-        </code>
-        is a spare parameter created on the
-        <strong>
-         Error
-        </strong>
-        node with a Python expression returning the value
-        <code>
-         Fxquinox Context Info
-        </code>
-        :
-       </p>
-       <div class="highlight">
-        <span class="filename">
-         Error &gt; HDA Label
-        </span>
-        <pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">parent_node</span> <span class="o">=</span> <span class="n">hou</span><span class="o">.</span><span class="n">pwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">parent_type</span> <span class="o">=</span> <span class="n">parent_node</span><span class="o">.</span><span class="n">type</span><span class="p">()</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">parent_hda_definition</span> <span class="o">=</span> <span class="n">parent_type</span><span class="o">.</span><span class="n">definition</span><span class="p">()</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">author</span> <span class="o">=</span> <span class="n">parent_type</span><span class="o">.</span><span class="n">nameComponents</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">description</span> <span class="o">=</span> <span class="n">parent_hda_definition</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span>
-</code></pre>
+       <div class="admonition question">
+        <p class="admonition-title">
+         Question
+        </p>
+        <p>
+         Why the hell do we do this? Well, appplying an extra attribute to the RenderVar primitives allows you to group them neatly. In Houdini, you can then use a primitive pattern to only select the ones you want:
+         <code>
+          /Render/Products/Vars/* &amp; %type(RenderVar) &amp; {usd_attrib(0, @primpath, "beacon:renderVarType") == "beauty"}
+         </code>
+         will only iterate over the RenderVars you have defined as
+         <strong>
+          beauty
+         </strong>
+         AOVs.
+        </p>
        </div>
        <div class="admonition note">
         <p class="admonition-title">
          Note
         </p>
         <p>
-         You can set the message verbosity (
+         You don't need to add a custom API schema, a simple
          <strong>
-          error
+          Edit Properties
          </strong>
-         ,
-         <strong>
-          warning
-         </strong>
-         ,
-         <strong>
-          info
-         </strong>
-         ) directly onto the node. In this specific instance, we don’t want to allow the creation of multiple
-         <strong>
-          Fxquinox Context Info
-         </strong>
-         primitives, so it’s set on
-         <strong>
-          error
-         </strong>
-         , which will effectively set the HDA in an error-state and fail its cooking.
-        </p>
-        <p>
-         For example,
-         <strong>
-          Render Settings
-         </strong>
-         just throws a warning when you're overriding an existing primitive.
-        </p>
-       </div>
-       <div class="admonition warning">
-        <p class="admonition-title">
-         Warning
-        </p>
-        <p>
-         Don't forget to add the error node path inside your HDA
-         <strong>
-          Type Properties
-         </strong>
-         &gt;
-         <strong>
-          Node
-         </strong>
-         &gt;
-         <strong>
-          Message Nodes
-         </strong>
-         so the error gets displayed directly onto the HDA.
-        </p>
-       </div>
-       <h4 id="edit-properties-from-node">
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-         Edit Properties from Node
-        </a>
-       </h4>
-       <p>
-        This node is where the magic happens. It’s pretty much the same as the
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editproperties.html">
-         Edit Properties
-        </a>
-        node, with a nice change:
-       </p>
-       <div class="admonition quote">
-        <p class="admonition-title">
-         Quote
-        </p>
-        <p>
-         Instead of adding spare parameters to this node, you must direct it to another node from which it reads parameters that correspond to attributes on prims in the scene graph tree. When you edit these parameters on the other node, this node authors equivalent changes to the equivalent USD attributes.
+         on which you add a token parameter will be enough. I created the API schema since it's faster to re-use and less prone to human error.
         </p>
        </div>
        <p>
-        That allows us to add the properties on the HDA itself: they will always be read from it and added accordingly.
+        Here's what the node parameters look like for the
+        <strong>
+         technical
+        </strong>
+        side:
        </p>
        <p>
-        This node is also linked to the
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_CZaD48TUIz.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_CZaD48TUIz.png"/>
+        </a>
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_DAKE2LFwfN.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_DAKE2LFwfN.png"/>
+        </a>
+       </p>
+       <h3 id="base">
+        Base
+       </h3>
+       <p>
+        We can now define our main RenderProduct and RenderSettings:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_9wYiAGMLSr.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_9wYiAGMLSr.png"/>
+        </a>
+       </p>
+       <p>
+        You'll define here the main settings, from which we'll then branch out for our variants: resolution, samples, etc.
+       </p>
+       <div class="admonition note">
+        <p class="admonition-title">
+         Note
+        </p>
+        <p>
+         Notice how add all RenderVars to the RenderProduct? You can do it or not, it doesn't really matter as we'll refine the AOV selection for each variant.
+        </p>
+       </div>
+       <h3 id="variants">
+        Variants
+       </h3>
+       <p>
+        Here comes the heavy part: setting up the variants for each render preset we want.
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_EbHPOnuVH5.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_EbHPOnuVH5.png"/>
+        </a>
+       </p>
+       <p>
+        We'll be working from the
         <strong>
-         Frame Range Sampling
+         beauty
         </strong>
-        menu,
+        branch for the following.
+       </p>
+       <p>
+        Let's start by the
         <strong>
-         Primitive Path
+         Configure Primitive
         </strong>
-        parm,
+        nodes: each takes the AOVs
         <strong>
-         Primitives
+         that we don't want
         </strong>
-        parm,
-        <strong>
-         Action
-        </strong>
-        menu, and the
-        <strong>
-         Initialize Parameters
-        </strong>
-        menu. It’s the one that allows our HDA to behave just like a native node.
+        in a branch, and deactivate them. This is a neat way to have a visual feedback when looking at the Scene Graph Tree that some AOVs will be added to the RenderProduct, and others won't:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_pz44VAdT28.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_pz44VAdT28.png"/>
+        </a>
        </p>
        <div class="admonition tip">
         <p class="admonition-title">
          Tip
         </p>
         <p>
-         Basically, promote all parms of this node to your HDA except:
-         <strong>
-          Parameters from Node
-         </strong>
-         ,
-         <strong>
-          Parameters
-         </strong>
-         ,
-         <strong>
-          Prim Local
-         </strong>
-         ,
-         <strong>
-          Prim Path Local
-         </strong>
-         ,
-         <strong>
-          Prim Count Local
-         </strong>
-         .
+         Deactivating primitives also gives you the ability to filter them later on using a primitive pattern:
+         <code>
+          /Render/Products/Vars/** &amp; {usd_isactive(0, @primpath)}
+         </code>
+         will only iterate over activated RenderVar primitives.
         </p>
        </div>
        <div class="admonition note">
@@ -948,356 +758,159 @@
          Note
         </p>
         <p>
-         You can simply drag and drop the
-         <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-          Edit Properties from Node
-         </a>
-         node onto the
+         You can also enable the
          <strong>
-          Type Properties
+          Hide Primitive In Scene Graph
          </strong>
-         window of your HDA to automatically promote
-         <strong>
-          all
-         </strong>
-         its parameters onto your HDA, then simply delete the ones you don't need.
+         tree to hide them altogether.
         </p>
        </div>
-       <div class="admonition warning">
+       <p>
+        We then edit the RenderProduct primitive added in the
+        <a href="#Base">
+         base
+        </a>
+        section with a
+        <strong>
+         Render Product Edit
+        </strong>
+        node, adding only the AOVs we want for the selected branch:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_v2HyT8QQq6.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_v2HyT8QQq6.png"/>
+        </a>
+       </p>
+       <div class="admonition tip">
         <p class="admonition-title">
-         Warning
+         Tip
         </p>
         <p>
-         Don't forget to add the
-         <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-          Edit Properties from Node
-         </a>
-         node path inside your HDA
+         You'll notice that we have some sort of a repetition in the primitive pattern:
+         <code>
+          /Render/Products/Vars/Beauty /Render/Products/Vars/**
+         </code>
+         . Since RenderVars are added by alphabetical order, you want the
          <strong>
-          Type Properties
+          Beauty
          </strong>
-         &gt;
+         to come first, and not something like
          <strong>
-          Node
-         </strong>
-         &gt;
-         <strong>
-          Message Nodes
-         </strong>
-         so an error gets displayed if the HDA is in
-         <strong>
-          Edit
-         </strong>
-         mode and it can't find the primitive to edit.
-        </p>
-       </div>
-       <h2 id="promote-usd-attributes">
-        Promote USD Attributes
-       </h2>
-       <p>
-        In order for the
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-         Edit Properties from Node
-        </a>
-        node to work, we need to bring the USD schema attributes to the HDA interface. With a custom schema, this gets very easy. Open the HDA
-        <strong>
-         Type Properties
-        </strong>
-        , and inside the
-        <strong>
-         Parameters
-        </strong>
-        tab navigate to the
-        <strong>
-         From USD
-        </strong>
-        tab. You can now filter the schema you want and add all its attributes to your parameters.
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/ZksJ49B28q.png/">
-         <img alt="ZksJ49B28q.png" loading="lazy" src="../../../../../_attachments/ZksJ49B28q.png"/>
-        </a>
-       </p>
-       <p>
-        They will be automatically read by the
-        <a href="https://www.sidefx.com/docs/houdini/nodes/lop/editpropertiesfromnode.html">
-         Edit Properties from Node
-        </a>
-        node!
-       </p>
-       <h2 id="add-an-edit-alias">
-        Add an
-        <strong>
-         Edit
-        </strong>
-        Alias
-       </h2>
-       <p>
-        On most of the native nodes creating a primitive, you’ll get two options: the node, and the node
-        <strong>
-         edit
-        </strong>
-        . Here's what gets displayed when pressing
-        <code>
-         TAB
-        </code>
-        inside the
-        <strong>
-         Network View
-        </strong>
-        to drop a
-        <strong>
-         Render Settings
-        </strong>
-        node:
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/TLcLb9mGWC.png/">
-         <img alt="TLcLb9mGWC.png" loading="lazy" src="../../../../../_attachments/TLcLb9mGWC.png"/>
-        </a>
-       </p>
-       <p>
-        You have the option to use a regular
-        <strong>
-         Render Settings
-        </strong>
-        , or a
-        <strong>
-         Render Settings Edit
-        </strong>
-        . Under the hood, this is a simple tool alias, which sets the
-        <strong>
-         Action
-        </strong>
-        menu to
-        <strong>
-         Edit
-        </strong>
-        , and sets all USD parameters to
-        <code>
-         none
-        </code>
-        , effectively
-        <strong>
-         bypassing
-        </strong>
-        any values that could have been added on the node parameters.
-       </p>
-       <p>
-        Here’s how it’s done for
-        <strong>
-         Render Settings
-        </strong>
-        (navigate to
-        <strong>
-         Render Settings
-        </strong>
-        &gt;
-        <strong>
-         Type Properties
-        </strong>
-        &gt;
-        <strong>
-         Interactive
-        </strong>
-        &gt;
-        <strong>
-         Shelf Tools
-        </strong>
-        )
-       </p>
-       <p>
-        Inside the
-        <strong>
-         Options
-        </strong>
-        tab:
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_0w1hgRxb5M.png/">
-         <img alt="houdini_0w1hgRxb5M.png" loading="lazy" src="../../../../../_attachments/houdini_0w1hgRxb5M.png"/>
-        </a>
-       </p>
-       <p>
-        And inside the
-        <strong>
-         Script
-        </strong>
-        tab:
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_ODFY580WFB.png/">
-         <img alt="houdini_ODFY580WFB.png" loading="lazy" src="../../../../../_attachments/houdini_ODFY580WFB.png"/>
-        </a>
-       </p>
-       <p>
-        On our custom HDA
-        <strong>
-         Type Properties
-        </strong>
-        window, inside the
-        <strong>
-         Interactive
-        </strong>
-        &gt;
-        <strong>
-         Shelf Tools
-        </strong>
-        tab, we can click on
-        <strong>
-         Create New
-        </strong>
-        and navigate to the
-        <strong>
-         Options
-        </strong>
-        tab. Copy-paste the values of the
-        <strong>
-         Render Settings
-        </strong>
-        &gt;
-        <strong>
-         Type Properties
-        </strong>
-        &gt;
-        <strong>
-         Interactive
-        </strong>
-        &gt;
-        <strong>
-         Shelf Tools
-        </strong>
-        &gt;
-        <strong>
-         Options
-        </strong>
-        tab.
-       </p>
-       <p>
-        For the
-        <strong>
-         Script
-        </strong>
-        tab, we need some adjustments:
-       </p>
-       <div class="highlight">
-        <span class="filename">
-         HDA &gt; Type Properties &gt; Interactive &gt; Shelf Tools &gt; Script
-        </span>
-        <pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">loptoolutils</span><span class="o">,</span> <span class="nn">loputils</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">node</span> <span class="o">=</span> <span class="n">loptoolutils</span><span class="o">.</span><span class="n">genericTool</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="p">,</span> <span class="s1">'$HDA_NAME'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"::"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'_edit1'</span><span class="p">)</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">node</span><span class="o">.</span><span class="n">parm</span><span class="p">(</span><span class="s1">'createprims'</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">loputils</span><span class="o">.</span><span class="n">setAllControlParameters</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">'none'</span><span class="p">)</span>
-</code></pre>
-       </div>
-       <p>
-        As you can see, we need to split the name:
-        <code>
-         $HDA_NAME
-        </code>
-        will return
-        <code>
-         fxquinox::contextinfo
-        </code>
-        , and
-        <code>
-         :
-        </code>
-        is an unauthorized character for a Houdini node name. We simply isolate the second name component, and add the
-        <code>
-         edit_1
-        </code>
-        part to it.
-       </p>
-       <div class="admonition note">
-        <p class="admonition-title">
-         Note
-        </p>
-        <p>
-         This is only applicable if your HDA has an
-         <strong>
-          author
-         </strong>
-         ,
-         <strong>
-          branch
+          Albedo
          </strong>
          or
          <strong>
-          version
+          AO
          </strong>
-         namespace.
+         . Otherwise, the Scene Viewer will show the wrong AOV first when switching to another Hydra delegate than Houdini GL (or VK).
         </p>
        </div>
        <p>
-        This is what you should end up with inside the
+        We can now create our
         <strong>
-         Options
+         Render Settings Edit
         </strong>
-        tab:
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Y3xCYIrgLk.png/">
-         <img alt="houdini_Y3xCYIrgLk.png" loading="lazy" src="../../../../../_attachments/houdini_Y3xCYIrgLk.png"/>
-        </a>
-       </p>
-       <p>
-        And inside the
+        , and start editing the render engine settings based on the presets you want. In my setup, I have
         <strong>
-         Script
+         BTY_high
         </strong>
-        tab:
-       </p>
-       <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_Lk1cldxtXE.png/">
-         <img alt="houdini_Lk1cldxtXE.png" loading="lazy" src="../../../../../_attachments/houdini_Lk1cldxtXE.png"/>
-        </a>
-       </p>
-       <p>
-        You can now try to press
-        <code>
-         TAB
-        </code>
-        inside your
+        ,
         <strong>
-         Network View
+         BTY_mid
         </strong>
-        to drop the node, and should be welcomed by your HDA and its Edit variant:
+        and
+        <strong>
+         BTY_low
+        </strong>
+        . You can see that each of them are connected to the previous one, that is not mandatory: I'm doing it so I can simply divide the attribute values of the
+        <strong>
+         high
+        </strong>
+        variant into the lower-quality ones.
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/bhslDwCmk8.png/">
-         <img alt="bhslDwCmk8.png" loading="lazy" src="../../../../../_attachments/bhslDwCmk8.png"/>
-        </a>
+        Once you have your presets saved, simply plug them inside the
+        <strong>
+         Add Variant
+        </strong>
+        second input, set the variant set and variant names, and voila!
        </p>
-       <h2 id="custom-icon">
-        Custom Icon
+       <h2 id="final">
+        Final
        </h2>
        <p>
-        You can add an icon in the
+        If everything went well, the
         <code>
-         $HOUDINI_PATH
+         /Render
         </code>
-        following this naming convention:
-        <code>
-         SCENEGRAPH_primtype_&lt;custom schema class&gt;.svg
-        </code>
-        , to be displayed inside the Houdini
-        <strong>
-         Scene Graph Tree
-        </strong>
-        every time you apply your custom schema to a primitive:
+        primitive now comes with a bunch of new variants (it should be green in the Scene Graph Tree).
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/3Nd4p8emvV.png/">
-         <img alt="None" src="../../../../../_attachments/3Nd4p8emvV.png"/>
-        </a>
-        In this case, the icon is
-        <code>
-         SCENEGRAPH_primtype_fxquinoxcontextinfo.svg
-        </code>
-        .
+        To check that everything worked, drop a new
+        <strong>
+         Set Variant
+        </strong>
+        node and flick through your variants. Here's the
+        <strong>
+         BTY_high
+        </strong>
+        variant:
        </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_NNlMeOUbAa%25201.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_NNlMeOUbAa%25201.png"/>
+        </a>
+       </p>
+       <p>
+        And the
+        <strong>
+         UTL_high
+        </strong>
+        one:
+       </p>
+       <p>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_43rZx63Jll.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_43rZx63Jll.png"/>
+        </a>
+       </p>
+       <p>
+        Notice how the RenderVars primitives get disabled based on the the variant choice? That's a good sign that your variants are ready. You should also check your RenderSettings and RenderProduct primitive attributes to see if everything went well.
+       </p>
+       <p>
+        Once you're done, simply export the graph as a USD file, and use import it back as a Sublayer.
+       </p>
+       <div class="admonition tip">
+        <p class="admonition-title">
+         Tip
+        </p>
+        <p>
+         You might want to add the USD sublayer fairly high in the graph, so you can edit its properties: if you use it in a shot environment, you will maybe need to specify a camera using a
+         <strong>
+          Render Settings Edit
+         </strong>
+         node, which will need to point to an existing RenderSettings primitive.
+        </p>
+       </div>
+       <div class="admonition quote">
+        <p class="admonition-title">
+         Resources
+        </p>
+        <p>
+         The asset used in the above screenshots is
+         <a href="https://www.artstation.com/artwork/o2L6ZB">
+          Golden Knight
+         </a>
+         from
+         <a href="https://www.artstation.com/francislamoureux">
+          Francis Lamoureux
+         </a>
+         , downloaded on
+         <a href="https://sketchfab.com/3d-models/golden-knight-06555f9ebaa640d8a50f356ffb67e8c9">
+          Sketchfab
+         </a>
+         .
+        </p>
+       </div>
        <aside class="md-source-file">
         <span class="md-source-file__fact">
          <span class="md-icon" title="Last update">
@@ -1307,7 +920,7 @@
           </svg>
          </span>
          <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">
-          June 11, 2024
+          August 8, 2024
          </span>
         </span>
         <span class="md-source-file__fact">
@@ -1318,7 +931,7 @@
           </svg>
          </span>
          <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">
-          June 2, 2024
+          August 8, 2024
          </span>
         </span>
         <span class="md-source-file__fact">
@@ -1354,7 +967,7 @@
    </main>
    <footer class="md-footer">
     <nav aria-label="Footer" class="md-footer__inner md-grid">
-     <a aria-label="Previous: Custom Schemas" class="md-footer__link md-footer__link--prev" href="../custom-schemas/">
+     <a aria-label="Previous: Integrate Custom Schemas" class="md-footer__link md-footer__link--prev" href="../../plugins/integrate-custom-schemas/">
       <div class="md-footer__button md-icon">
        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z">
@@ -1366,17 +979,17 @@
         Previous
        </span>
        <div class="md-ellipsis">
-        Custom Schemas
+        Integrate Custom Schemas
        </div>
       </div>
      </a>
-     <a aria-label="Next: Render Globals" class="md-footer__link md-footer__link--next" href="../../Render/render-globals/">
+     <a aria-label="Next: Tags" class="md-footer__link md-footer__link--next" href="../../../../../tags/">
       <div class="md-footer__title">
        <span class="md-footer__direction">
         Next
        </span>
        <div class="md-ellipsis">
-        Render Globals
+        Tags
        </div>
       </div>
       <div class="md-footer__button md-icon">
