@@ -527,7 +527,7 @@
         Goal
        </h2>
        <p>
-        In a production environment, you might want to give artists a base of render settings they can use pretty much anywhere. In Solaris, we can take advantage of the variant system, and publish a set of variants applied on the
+        In a production environment, you might want to give artists a base of render settings they can use pretty much anywhere. In Solaris, we can take advantage of the variant system, and author a set of variants applied on the
         <code>
          /Render
         </code>
@@ -545,7 +545,7 @@
         </p>
        </div>
        <p>
-        We could also have have multiple RenderSettings pointing to multiple RenderProducts, but I like the idea of having a standardized primitive for a specific task.
+        We could also have have multiple RenderSettings pointing to multiple RenderProducts, but I like the idea of having a single standardized primitive which always resides in the same location: it just makes your life easier.
        </p>
        <h2 id="setup">
         Setup
@@ -594,7 +594,11 @@
         </a>
        </p>
        <p>
-        Each Karma Standard Render Vars define AOVs for both the
+        Each
+        <strong>
+         Karma Standard Render Vars
+        </strong>
+        node define RenderVars for both the
         <strong>
          beauty
         </strong>
@@ -610,14 +614,14 @@
         <strong>
          Edit Properties
         </strong>
-        nodes: We select the freshy created AOVs, and we apply a
+        nodes: We select the freshy created RenderVar primitives, and we apply a
         <a href="../../plugins/custom-schemas/" id="37de0a17b609b6a1e1c6bcab9f544f71">
          custom API schema
         </a>
         to them. This adds a new set of attributes on the primitives, in this instance a
-        <strong>
+        <code>
          beacon:renderVarType
-        </strong>
+        </code>
         token, which can be set on
         <strong>
          beauty
@@ -802,7 +806,7 @@
          <strong>
           AO
          </strong>
-         . Otherwise, the Scene Viewer will show the wrong AOV first when switching to another Hydra delegate than Houdini GL (or VK).
+         . Otherwise, the Scene Viewer will show the wrong RenderVar first when switching to another Hydra delegate than Houdini GL (or VK).
         </p>
        </div>
        <p>
@@ -857,8 +861,8 @@
         variant:
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_NNlMeOUbAa%25201.png/">
-         <img alt="None" src="../../../../../_attachments/houdini_NNlMeOUbAa%25201.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_RPPTvjOhYD.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_RPPTvjOhYD.png"/>
         </a>
        </p>
        <p>
@@ -869,8 +873,8 @@
         one:
        </p>
        <p>
-        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_43rZx63Jll.png/">
-         <img alt="None" src="../../../../../_attachments/houdini_43rZx63Jll.png"/>
+        <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../../_attachments/houdini_jgQKiFIcNY.png/">
+         <img alt="None" src="../../../../../_attachments/houdini_jgQKiFIcNY.png"/>
         </a>
        </p>
        <p>
