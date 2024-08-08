@@ -48,6 +48,7 @@ theme:
       macOS: material/apple
       windows: material/microsoft-windows
       home: material/home
+      render: material/image-size-select-small
   features:
     - announce.dismiss
     - navigation.expand
