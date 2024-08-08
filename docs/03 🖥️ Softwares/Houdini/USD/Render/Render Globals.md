@@ -44,6 +44,11 @@ Each **Karma Standard Render Vars** node define RenderVars for both the **beauty
 > [!note]
 > You don't need to add a custom API schema, a simple **Edit Properties** on which you add a token parameter will be enough. I created the API schema since it's faster to re-use and less prone to human error.
 
+> [!tip] Alternative
+> An even simpler way to do is to group the RenderVar primitives under a new Scope primitive for each "group". Note that this might require more work in the long run as some render engines have automations and are expecting to find RenderVars under `/Render/Product/Vars`.
+> 
+> ![](../../../../_attachments/houdini_87nLy7P0JA.png)
+
 Here's what the node parameters look like for the **technical** side:
 
 ![](../../../../_attachments/houdini_CZaD48TUIz.png)
