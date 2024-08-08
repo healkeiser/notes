@@ -13,14 +13,14 @@ _How to create render globals in USD, to use throughout a production._
 
 ## Goal
 
-In a production environment, you might want to give artists a base of render settings they can use pretty much anywhere. In Solaris, we can take advantage of the variant system, and publish a set of variants applied on the `/Render` primitive to dictate which variant (preset) will be used.
+In a production environment, you might want to give artists a base of render settings they can use pretty much anywhere. In Solaris, we can take advantage of the variant system, and author a set of variants applied on the `/Render` primitive to dictate which variant (preset) will be used.
 
 Ideally, you'd publish different global presets against a specific pipeline step: one for lookdev, one for lighting, etc. 
 
 > [!note]
 > Even with publishing different globals against their own pipeline step, they could still inherit from the same "master" global which could contain show resolution, aspect ratio, render engine, etc.
 
-We could also have have multiple RenderSettings pointing to multiple RenderProducts, but I like the idea of having a standardized primitive for a specific task.
+We could also have have multiple RenderSettings pointing to multiple RenderProducts, but I like the idea of having a single standardized primitive which always resides in the same location: it just makes your life easier.
 
 ## Setup
 
@@ -36,7 +36,7 @@ Here's the AOV part of the setup, where we define our RenderVar primitives:
 
 ![](../../../../_attachments/houdini_kTjFauu0IH.png)
 
-Each Karma Standard Render Vars define AOVs for both the **beauty** and **technical** branch. The trick is found in the **Configure Primitive** and **Edit Properties** nodes: We select the freshy created AOVs, and we apply a [custom API schema](../Plugins/Custom%20Schemas.md) to them. This adds a new set of attributes on the primitives, in this instance a **beacon:renderVarType** token, which can be set on **beauty**, **technical**, **light**, **crypto** and **extra**.
+Each **Karma Standard Render Vars** node define RenderVars for both the **beauty** and **technical** branch. The trick is found in the **Configure Primitive** and **Edit Properties** nodes: We select the freshy created RenderVar primitives, and we apply a [custom API schema](../Plugins/Custom%20Schemas.md) to them. This adds a new set of attributes on the primitives, in this instance a `beacon:renderVarType` token, which can be set on **beauty**, **technical**, **light**, **crypto** and **extra**.
 
 > [!question]
 > Why the hell do we do this? Well, appplying an extra attribute to the RenderVar primitives allows you to group them neatly. In Houdini, you can then use a primitive pattern to only select the ones you want: `/Render/Products/Vars/* & %type(RenderVar) & {usd_attrib(0, @primpath, "beacon:renderVarType") == "beauty"}` will only iterate over the RenderVars you have defined as **beauty** AOVs.
@@ -84,7 +84,7 @@ We then edit the RenderProduct primitive added in the [base](#Base) section with
 ![](../../../../_attachments/houdini_v2HyT8QQq6.png)
 
 > [!tip]
-> You'll notice that we have some sort of a repetition in the primitive pattern: `/Render/Products/Vars/Beauty /Render/Products/Vars/**`. Since RenderVars are added by alphabetical order, you want the **Beauty** to come first, and not something like **Albedo** or **AO**. Otherwise, the Scene Viewer will show the wrong AOV first when switching to another Hydra delegate than Houdini GL (or VK).
+> You'll notice that we have some sort of a repetition in the primitive pattern: `/Render/Products/Vars/Beauty /Render/Products/Vars/**`. Since RenderVars are added by alphabetical order, you want the **Beauty** to come first, and not something like **Albedo** or **AO**. Otherwise, the Scene Viewer will show the wrong RenderVar first when switching to another Hydra delegate than Houdini GL (or VK).
 
 We can now create our **Render Settings Edit**, and start editing the render engine settings based on the presets you want. In my setup, I have **BTY_high**, **BTY_mid** and **BTY_low**. You can see that each of them are connected to the previous one, that is not mandatory: I'm doing it so I can simply divide the attribute values of the **high** variant into the lower-quality ones.
 
@@ -96,11 +96,11 @@ If everything went well, the `/Render` primitive now comes with a bunch of new v
 
 To check that everything worked, drop a new **Set Variant** node and flick through your variants. Here's the **BTY_high** variant:
 
-![](../../../../_attachments/houdini_NNlMeOUbAa%201.png)
+![](../../../../_attachments/houdini_RPPTvjOhYD.png)
 
 And the **UTL_high** one:
 
-![](../../../../_attachments/houdini_43rZx63Jll.png)
+![](../../../../_attachments/houdini_jgQKiFIcNY.png)
 
 Notice how the RenderVars primitives get disabled based on the the variant choice? That's a good sign that your variants are ready. You should also check your RenderSettings and RenderProduct primitive attributes to see if everything went well.
 
