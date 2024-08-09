@@ -10,13 +10,13 @@ publish: false
 
 ## Web Service
 
- <font color=87CEFA><b>CMD</b></font>
+ <font color=4287ff><b>CMD</b></font>
  
 ``` shell
 "%DEADLINE_PATH%\deadlinewebservice.exe"
 ```
 
- <font color=87CEFA><b>PowerShell</b></font>
+ <font color=4287ff><b>PowerShell</b></font>
  
 ```powershell
 & "$env:DEADLINE_PATH\deadlinewebservice.exe"
@@ -24,13 +24,13 @@ publish: false
 
 Change the listening port with the flag `-port`:
 
-<font color=87CEFA><b>CMD</b></font>
+<font color=4287ff><b>CMD</b></font>
 
 ```shell
 "%DEADLINE_PATH%\deadlinewebservice.exe" -port 8082
 ```
 
-<font color=87CEFA><b>PowerShell</b></font>
+<font color=4287ff><b>PowerShell</b></font>
 
 ``` powershell
 & "$env:DEADLINE_PATH\deadlinewebservice.exe" - port 8082

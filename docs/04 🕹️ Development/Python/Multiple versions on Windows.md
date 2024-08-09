@@ -15,25 +15,25 @@ _How to manage multiple Python versions on a Windows system._
 
 We can manage multiple Python versions on a system using [pyenv for Windows](https://github.com/pyenv-win/pyenv-win), which brings the same capabilities than on an Unix system. See [[Multiple versions on macOS]].
 
-List the available Python installations
+<font color=4287ff><b>List the available Python installations</b></font>
 
 ```shell 
 pyenv install --list
 ```
 
-Install a Python version
+<font color=4287ff><b>Install a Python version</b></font>
 
 ```shell
 pyenv install 3.9.13
 ```
 
-Set the global Python version
+<font color=4287ff><b>Set the global Python version</b></font>
 
 ```shell
 pyenv global 3.9.13
 ```
 
-Set the Python version only for the current shell
+<font color=4287ff><b>Set the Python version only for the current shell </b></font>
 
 ```shell
 pyenv shell 3.9.13
@@ -42,63 +42,17 @@ pyenv shell 3.9.13
 ---
 
 > [!error] Deprecated
-> The following methods are deprecated in favor of [pyenv](#Using%20Pyenv%20for%20Windows).
+> The following method is deprecated in favor of [pyenv](#Using%20Pyenv%20for%20Windows).
 
 ## How-to
 
-If you want to handle multiple versions, here's an example on how to use PIP to install the `mkdocs` plugin `exclude` for Python 3.7 and 3.9.
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python37\python.exe -m pip install mkdocs-exclude
-```
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python39\python.exe -m pip install mkdocs-exclude
-```
-
-> [!note] Note
->  All you have to do is call the right `.exe` matching the right Python version.
->  The `&` is used to expand the environment variable `$USERNAME` in PowerShell.
-
-### To Copy-paste
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python27\python.exe
-```
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python37\python.exe
-```
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python39\python.exe
-```
-
-```powershell
-& %LOCALAPPDATA%\programs\python\python311\python.exe
-```
-
-## Alternative Method
-
-We can also define some batch scripts in a given directory. In the case we're using [Cloud VFX Server](https://github.com/healkeiser/cloud_vfx_server), we can rely on `$ENVIRONMENT_ROOT` (`C:\Users\valen\OneDrive\.config\environment`).
+We can define some batch scripts in a given directory. In the case we're using [Cloud VFX Server](https://github.com/healkeiser/cloud_vfx_server), we can rely on `$ENVIRONMENT_ROOT` (which expand to `C:\Users\valen\OneDrive\.config\environment` in my case).
 
 In `$ENVIRONMENT_ROOT`, create a `python` folder: `C:\Users\valen\OneDrive\.config\environment\python`.
 
 You can now create a batch script for each version of python you want to use in this folder:
 
-### `python39`
-
-```batch
-@ECHO OFF
-setlocal
-set "PYTHONHOME=%LOCALAPPDATA%\programs\python\python39"
-set "PYTHONPATH=%PYTHONHOME%\lib;%PYTHONPATH%"
-"%PYTHONHOME%\python.exe" %*
-endlocal
-```
-
-> [!note] Note
->  We might be able to leverage other variables such as `$USERPROFILE` or `$APPDATA`.
+ `python39.bat`
 
 ```batch
 @ECHO OFF
