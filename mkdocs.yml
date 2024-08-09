@@ -28,6 +28,7 @@ extra:
     macOS: macOS
     windows: windows
     home: home
+    render: render
 
 ###### Theme ###################################################################
 
