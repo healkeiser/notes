@@ -43,10 +43,35 @@ Here's the RenderVars part of the setup, where we define our RenderVar primitive
 ![](../../../../_attachments/houdini_kTjFauu0IH.png)
 
 Each **Karma Standard Render Vars** node defines RenderVars for both the **beauty** and **technical** branches.
+
 The trick is in the **Configure Primitive** and **Edit Properties** nodes: We select the newly created RenderVar primitives and apply a [custom API schema](../Plugins/Custom%20Schemas.md) to them. This adds a new set of attributes to the primitives, in my case a single `beacon:renderVarType` token, which can be set to **beauty**, **technical**, **light**, **crypto**, or **extra**.
 
 > [!question] Why do we do this? 
 > Adding an extra attribute to the RenderVar primitives allows you to group them neatly. In Houdini, you can then use a primitive pattern to select only the ones you want: `/Render/Products/Vars/** & %type(RenderVar) & {usd_attrib(0, @primpath, "beacon:renderVarType") == "beauty"}` will only iterate over the RenderVars you have defined as **beauty** RenderVars.
+> 
+> > [!example]- `schema.usda`
+> > ``` C
+> > class "BeaconRenderVarAPI" (
+> >      customData = {
+> >          string[] apiSchemaCanOnlyApplyTo = ["RenderVar"]
+> >          string className = "RenderVarAPI"
+> >      }
+> >      inherits = </APISchemaBase>
+> >  )
+> >  {
+> >      token beacon:renderVarType (
+> >          doc = """Indicates the type of the RenderVar.
+> >  
+> >          - "beauty": Beauty AOVs, used to build the beauty pass back in a compositing software.
+> >          - "technical":  Technical AOVs, usually used on utility passes.
+> >          - "light":  AOVs generated through LPEs (Light Path Expression).
+> >          - "crypto":  AOVs for CryptoMatte.
+> >          - "extra": Additional debugging and miscelleanous AOVs.
+> >          """
+> >          allowedTokens = ["beauty", "technical", "light", "crypto", "extra"]
+> >      )
+> >  }
+> >  ```
 
 > [!note]
 > You don't need to add a custom API schema; a simple **Edit Properties** node where you add a token parameter will suffice. I created the API schema since it's faster to reuse and less prone to human error.
@@ -131,7 +156,7 @@ Once you're done, export the graph as a USD file and import it back as a Sublaye
 > [!tip]
 > You might want to add the USD sublayer fairly high in the graph so you can edit its properties. If you use it in a shot environment, you may need to specify a camera using a **Render Settings Edit** node, which will need to point to an existing RenderSettings primitive.
 
-> [!question] 
+> [!question] Primitive Patterns
 > You might notice I'm using `**` in some primitive patterns throughout this guide, even though a simple `*` would suffice. This is a precaution in case an artist creates the RenderVars within another nested primitive under the `/Render/Products/Vars` primitive.
 >
 > This pattern isn’t resource-intensive, as only RenderVar primitives are expected to reside in that location.

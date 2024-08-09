@@ -7,6 +7,8 @@ tags:
 publish: false
 ---
 
+_Houdini scanned directories, files and what they actually do._
+
 ## About
 
 Houdini will scan different directories/files on start-up, if the said directories/files are added to the `$HOUDINI_PATH` prior to start-up. In order to do so, you can use `$HSITE` or `$HPREF` for example.

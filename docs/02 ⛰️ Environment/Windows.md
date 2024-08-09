@@ -5,7 +5,8 @@ slug: windows
 publish: false
 ---
 
-Using [Cloud VFX Server](https://github.com/healkeiser/cloud_vfx_server).
+> [!question] Base
+> Using [Cloud VFX Server](https://github.com/healkeiser/cloud_vfx_server).
 
 > [!note] Note
 >  **OneDrive** seems to be the most stable solution so far.

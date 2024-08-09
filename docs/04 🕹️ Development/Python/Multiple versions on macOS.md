@@ -5,9 +5,12 @@ slug: multiple-versions-on-macos
 tags:
   - development
   - macOS
+  - python
 publish: false
 ---
 
+_How to manage multiple Python versions on a macOS system._
+
 ## How-to
 
-To install Python on macOS, we'll go through with [pyenv](https://github.com/pyenv/pyenv).
+We'll use the same method as Windows, [pyenv](https://github.com/pyenv/pyenv). Refer to the [Windows](Multiple%20versions%20on%20Windows.md) guide.
