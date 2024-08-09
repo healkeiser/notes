@@ -48,30 +48,30 @@ The trick is in the **Configure Primitive** and **Edit Properties** nodes: We se
 
 > [!question] Why do we do this? 
 > Adding an extra attribute to the RenderVar primitives allows you to group them neatly. In Houdini, you can then use a primitive pattern to select only the ones you want: `/Render/Products/Vars/** & %type(RenderVar) & {usd_attrib(0, @primpath, "beacon:renderVarType") == "beauty"}` will only iterate over the RenderVars you have defined as **beauty** RenderVars.
+
+> [!example]- `schema.usda`
+> ``` C
+> class "BeaconRenderVarAPI" (
+>     customData = {
+>         string[] apiSchemaCanOnlyApplyTo = ["RenderVar"]
+>         string className = "RenderVarAPI"
+>     }
+>     inherits = </APISchemaBase>
+> )
+> {
+>     token beacon:renderVarType (
+>         doc = """Indicates the type of the RenderVar.
 > 
-> > [!example]- `schema.usda`
-> > ``` C
-> > class "BeaconRenderVarAPI" (
-> >      customData = {
-> >          string[] apiSchemaCanOnlyApplyTo = ["RenderVar"]
-> >          string className = "RenderVarAPI"
-> >      }
-> >      inherits = </APISchemaBase>
-> >  )
-> >  {
-> >      token beacon:renderVarType (
-> >          doc = """Indicates the type of the RenderVar.
-> >  
-> >          - "beauty": Beauty AOVs, used to build the beauty pass back in a compositing software.
-> >          - "technical":  Technical AOVs, usually used on utility passes.
-> >          - "light":  AOVs generated through LPEs (Light Path Expression).
-> >          - "crypto":  AOVs for CryptoMatte.
-> >          - "extra": Additional debugging and miscelleanous AOVs.
-> >          """
-> >          allowedTokens = ["beauty", "technical", "light", "crypto", "extra"]
-> >      )
-> >  }
-> >  ```
+>         - "beauty": Beauty AOVs, used to build the beauty pass back in a compositing software.
+>         - "technical":  Technical AOVs, usually used on utility passes.
+>         - "light":  AOVs generated through LPEs (Light Path Expression).
+>         - "crypto":  AOVs for CryptoMatte.
+>         - "extra": Additional debugging and miscelleanous AOVs.
+>         """
+>         allowedTokens = ["beauty", "technical", "light", "crypto", "extra"]
+>     )
+> }
+> ```
 
 > [!note]
 > You don't need to add a custom API schema; a simple **Edit Properties** node where you add a token parameter will suffice. I created the API schema since it's faster to reuse and less prone to human error.
@@ -143,11 +143,11 @@ If everything went well, the `/Render` primitive should now have several new var
 
 To check that everything worked, drop a new **Set Variant** node and flick through your variants. Here's the **BTY_high** variant:
 
-![](../../../../_attachments/houdini_RPPTvjOhYD.png)
+![`BTY_high` variant](../../../../_attachments/houdini_RPPTvjOhYD.png)
 
 And the **UTL_high** variant:
 
-![](../../../../_attachments/houdini_jgQKiFIcNY.png)
+![`UTL_high` variant](../../../../_attachments/houdini_jgQKiFIcNY.png)
 
 Notice how the RenderVars primitives get disabled based on the variant choice? That's a good sign your variants are ready. You should also check your RenderSettings and RenderProduct attributes to ensure everything went well.
 

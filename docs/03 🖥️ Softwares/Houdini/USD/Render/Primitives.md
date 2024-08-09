@@ -11,6 +11,8 @@ publish: true
 
 _How to use the [UsdRender](https://openusd.org/dev/api/usd_render_page_front.html) primitives in order to output an image._
 
+## Relationship
+
 In USD, all you need to render is a couple of primitives:
 - RenderSettings
 - RenderProduct
