@@ -14,6 +14,7 @@ _How to use the [UsdRender](https://openusd.org/dev/api/usd_render_page_front.ht
 ## Relationship
 
 In USD, all you need to render is a couple of primitives:
+
 - RenderSettings
 - RenderProduct
 - RenderVar
