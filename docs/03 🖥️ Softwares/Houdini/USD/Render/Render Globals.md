@@ -1,5 +1,6 @@
 ---
 title: Render Globals
+description: How to create render globals in USD for use throughout a production
 icon: material/image-size-select-small
 slug: render-globals
 tags:

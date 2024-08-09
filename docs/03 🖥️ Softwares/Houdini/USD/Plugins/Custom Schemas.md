@@ -1,7 +1,6 @@
 ---
 title: Custom Schemas
 description: How-to create a USD custom schema
-image: _attachments/social_card.png
 icon: material/toy-brick
 slug: custom-schemas
 tags:
