@@ -1,0 +1,74 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiFolders",
+      "LiPackage",
+      "LiToyBrick",
+      "FarImages",
+      "SiRender"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false
+  },
+  "Softwares/Deadline": "SiAmazonaws",
+  "Softwares/Houdini": {
+    "iconName": "SiHoudini",
+    "iconColor": "#dd6c31"
+  },
+  "Softwares/Maya": {
+    "iconName": "SiAutodeskmaya",
+    "iconColor": "#3194b7"
+  },
+  "Softwares/Nuke": {
+    "iconName": "SiNuke",
+    "iconColor": "#fdc640"
+  },
+  "Softwares/Houdini/USD": "LiLayers",
+  "Softwares/Houdini/USD/Plugins": "LiToyBrick",
+  "Softwares/Houdini/USD/Render": "SiRender",
+  "Home.md": "LiHome",
+  "Tags.md": "LiTags",
+  "Softwares": "LiComputer",
+  "Pipeline": "LiSettings",
+  "Environment": "LiMountain",
+  "Development": "LiCode",
+  "Environment/Linux.md": "SiLinux",
+  "Environment/macOS.md": "SiApple",
+  "Environment/Windows.md": "FabWindows",
+  "Pipeline/Naming Convention.md": "LiTextCursor",
+  "Development/Environment": "LiMountain",
+  "Development/Python": "SiPython",
+  "Development/Python/Multiple versions on Windows.md": "FabWindows",
+  "Development/Python/Multiple versions on macOS.md": "SiApple",
+  "Softwares/Houdini/USD/Render/Primitives.md": "FasCubes",
+  "Softwares/Houdini/USD/Render/Render Globals.md": "SiRender",
+  "Softwares/Houdini/USD/Render/Render Pass.md": "FarImages",
+  "Softwares/Houdini/USD/Plugins/Custom Kinds.md": "LiToyBrick",
+  "Softwares/Houdini/USD/Plugins/Custom Schemas.md": "LiToyBrick",
+  "Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md": "LiToyBrick",
+  "Softwares/Houdini/Packages.md": "LiPackage",
+  "Softwares/Houdini/Scanned Directories.md": "LiFolders"
+}
