@@ -705,13 +705,11 @@ You could add many more, e.g. a branch for
          RenderVars.
         </p>
        </div>
-       <p>
-        <code>
-         schema.usda
-        </code>
-       </p>
        <div class="highlight">
-        <pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">class</span><span class="w"> </span><span class="s">"BeaconRenderVarAPI"</span><span class="w"> </span><span class="p">(</span>
+        <span class="filename">
+         schema.usda
+        </span>
+        <pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="s">"BeaconRenderVarAPI"</span><span class="w"> </span><span class="p">(</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">customData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="n">string</span><span class="p">[]</span><span class="w"> </span><span class="n">apiSchemaCanOnlyApplyTo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">"RenderVar"</span><span class="p">]</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"RenderVarAPI"</span>
@@ -726,7 +724,7 @@ You could add many more, e.g. a branch for
 <a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s">"technical"</span><span class="o">:</span><span class="w">  </span><span class="n">Technical</span><span class="w"> </span><span class="n">AOVs</span><span class="p">,</span><span class="w"> </span><span class="n">usually</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="n">passes</span><span class="p">.</span>
 <a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s">"light"</span><span class="o">:</span><span class="w">  </span><span class="n">AOVs</span><span class="w"> </span><span class="n">generated</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">LPEs</span><span class="w"> </span><span class="p">(</span><span class="n">Light</span><span class="w"> </span><span class="n">Path</span><span class="w"> </span><span class="n">Expression</span><span class="p">).</span>
 <a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s">"crypto"</span><span class="o">:</span><span class="w">  </span><span class="n">AOVs</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">CryptoMatte</span><span class="p">.</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s">"extra"</span><span class="o">:</span><span class="w"> </span><span class="n">Additional</span><span class="w"> </span><span class="n">debugging</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">miscelleanous</span><span class="w"> </span><span class="n">AOVs</span><span class="p">.</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="s">"extra"</span><span class="o">:</span><span class="w"> </span><span class="n">Additional</span><span class="w"> </span><span class="n">debugging</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">miscelleanous</span><span class="w"> </span><span class="n">AOVs</span><span class="p">.</span>
 <a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="s">"""</span>
 <a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="n">allowedTokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">"beauty"</span><span class="p">,</span><span class="w"> </span><span class="s">"technical"</span><span class="p">,</span><span class="w"> </span><span class="s">"light"</span><span class="p">,</span><span class="w"> </span><span class="s">"crypto"</span><span class="p">,</span><span class="w"> </span><span class="s">"extra"</span><span class="p">]</span>
 <a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="p">)</span>

@@ -1,3 +1,4 @@
+/* Animation for icons */
 @keyframes scale-in-center {
     0% {
         transform: scale(0);
@@ -13,3 +14,10 @@
 .scale-in-center {
     animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both
 }
+
+/* Restore old admonition style */
+/* .md-typeset .admonition,
+.md-typeset details {
+    border-width: 0;
+    border-left-width: 4px;
+} */
