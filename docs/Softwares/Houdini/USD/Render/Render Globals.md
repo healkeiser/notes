@@ -50,9 +50,7 @@ The trick is in the **Configure Primitive** and **Edit Properties** nodes: We se
 > [!question] Why do we do this? 
 > Adding an extra attribute to the RenderVar primitives allows you to group them neatly. In Houdini, you can then use a primitive pattern to select only the ones you want: `/Render/Products/Vars/** & %type(RenderVar) & {usd_attrib(0, @primpath, "beacon:renderVarType") == "beauty"}` will only iterate over the RenderVars you have defined as **beauty** RenderVars.
 
-`schema.usda`
-
-```C
+```c++ title="schema.usda"
 class "BeaconRenderVarAPI" (
     customData = {
         string[] apiSchemaCanOnlyApplyTo = ["RenderVar"]
