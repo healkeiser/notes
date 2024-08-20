@@ -17,6 +17,10 @@ publish: false
 characterFunnyA
 ```
 
+```
+littleToyA
+```
+
 ## Textures
 
 ```
@@ -29,12 +33,12 @@ DIF_chestPlate_4K.1001.1001.exr
 
 ### Valid Types
 
-| Type   | Long Name         |
-| ----:  | ----------------- |
-| `DIF`  | Diffuse           |
-| `RGH`  | Roughness         |
-| `MTL`  | Metalness         |
-| `NML`  | Normal            |
-| `DSP`  | Displacement      |
-| `AO`   | Ambient Occlusion |
+|  Type | Name              |
+| ----: | ----------------- |
+| `DIF` | Diffuse           |
+| `RGH` | Roughness         |
+| `MTL` | Metalness         |
+| `NML` | Normal            |
+| `DSP` | Displacement      |
+|  `AO` | Ambient Occlusion |
 

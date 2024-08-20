@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiRefreshCw",
+      "SiJavascript",
+      "SiPypi",
       "LiFolders",
-      "LiPackage",
-      "LiToyBrick",
-      "FarImages",
-      "SiRender"
+      "LiPackage"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -70,5 +70,8 @@
   "Softwares/Houdini/USD/Plugins/Custom Schemas.md": "LiToyBrick",
   "Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md": "LiToyBrick",
   "Softwares/Houdini/Packages.md": "LiPackage",
-  "Softwares/Houdini/Scanned Directories.md": "LiFolders"
+  "Softwares/Houdini/Scanned Directories.md": "LiFolders",
+  "Development/Python/Distribute Package to PyPi.md": "SiPypi",
+  "Development/JavaScript": "SiJavascript",
+  "Development/JavaScript/Auto Changelog.md": "LiRefreshCw"
 }

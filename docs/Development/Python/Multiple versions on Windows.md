@@ -6,7 +6,7 @@ tags:
   - development
   - windows
   - python
-publish: false
+publish: true
 ---
 
 _How to manage multiple Python versions on a Windows system._

@@ -6,7 +6,7 @@ tags:
   - development
   - macOS
   - python
-publish: false
+publish: true
 ---
 
 _How to manage multiple Python versions on a macOS system._
