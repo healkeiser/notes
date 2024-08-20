@@ -15,7 +15,7 @@ _How to distribute a Python package through PyPI._
 
 Create a `.pypirc` file under `%userprofile%`. Add your API key from PyPi.
 
-```ini title=.pypirc
+``` ini title=".pypirc"
 [distutils]
   index-servers = pypi
 
@@ -27,7 +27,7 @@ Create a `.pypirc` file under `%userprofile%`. Add your API key from PyPi.
 
 Inside your Python package, create a `setup.py` file at the root. This file is taken from the [fxgui](https://github.com/healkeiser/fxgui) package.
 
-```python title=setup.py
+``` python title="setup.py"
 """PyPI setup script."""
 
 # Built-in
@@ -64,35 +64,39 @@ setup(
 )
 ```
 
+> [!warning] 
+> The above script works if you plan on **manually** release the package to PyPI. In the case where you have a GitHub action configured, you need to replace some lines as explained in the [Link Package Version to Git Tag](#Link%20Package%20Version%20to%20Git%20Tag) section.
+
 You can also add a `MANIFEST.in` file, which specify additional files to include in the source distribution (sdist) that are not automatically included by default.
 
-```ini title=MANIFEST.in
+``` ini title="MANIFEST.in"
 recursive-include fxgui *
 global-exclude __pycache__/*
 ```
+
 ## Distribute Package
 
 <font color=4287ff><b>Install <code>twine</code> library</b></font>
 
-```shell
+``` shell
 python -m pip install twine
 ```
 
 <font color=4287ff><b>Build package</b></font>
 
-```shell
+``` shell
 python setup.py sdist bdist_wheel
 ```
 
 <font color=4287ff><b>Upload package</b></font>
 
-```shell
+``` shell
 python -m twine upload dist/* --skip-existing
 ```
 
 <font color=4287ff><b>Build package locally</b></font>
 
-```shell
+``` shell
 python -m pip install -e .
 ```
 
@@ -108,7 +112,7 @@ Go to GitHub and add two repository secrets:
 
 Inside your local repository, Create a `.github/workflows` directory, and add a `publish.yml` inside.
 
-```yaml
+``` yaml title="publish.yml"
 name: Publish Python Package
 
 on:
@@ -153,4 +157,22 @@ git add .
 git commit -m "Initial release"
 git tag v1.0.0
 git push origin v1.0.0
+```
+
+### Link Package Version to Git Tag
+
+You can link the PyPI package version to the Git tag by installing `setuptools_scm`:
+
+``` shell
+python -m pip install setuptools_scm
+```
+
+And modify your `setup.py` accordingly:
+
+``` python title="setup.py"
+setup(
+    name="fxgui",
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
+	...
 ```

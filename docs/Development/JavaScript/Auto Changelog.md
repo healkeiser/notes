@@ -16,13 +16,13 @@ _How to generate an automatic changelog, for example in a [Python package](../Py
 
 Install `auto-changelog` using `npm`.
 
-```shell
+``` shell
 npm install -g auto-changelog
 ```
 
 Create  a `package.json` file at the root of your package.
 
-```json title=package.json
+``` json title="package.json"
 {
   "scripts": {
     "changelog": "auto-changelog -p"
@@ -32,6 +32,6 @@ Create  a `package.json` file at the root of your package.
 
 Let's now assume you have tagged a new release on Git, you can now run the following command to update the `CHANGELOG.md` file:
 
-```shell
+``` shell
 npm run changelog
 ```
