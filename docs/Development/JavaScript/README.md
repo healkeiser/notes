@@ -1,5 +1,6 @@
 ---
 title: JavaScript
+icon: simple/javascript
 slug: javascript
 categories:
   - development

@@ -59,7 +59,6 @@
   "Environment/macOS.md": "SiApple",
   "Environment/Windows.md": "FabWindows",
   "Pipeline/Naming Convention.md": "LiTextCursor",
-  "Development/Environment": "LiMountain",
   "Development/Python": "SiPython",
   "Development/Python/Multiple versions on Windows.md": "FabWindows",
   "Development/Python/Multiple versions on macOS.md": "SiApple",
@@ -71,7 +70,7 @@
   "Softwares/Houdini/USD/Plugins/Integrate Custom Schema.md": "LiToyBrick",
   "Softwares/Houdini/Packages.md": "LiPackage",
   "Softwares/Houdini/Scanned Directories.md": "LiFolders",
-  "Development/Python/Distribute Package to PyPi.md": "SiPypi",
   "Development/JavaScript": "SiJavascript",
-  "Development/JavaScript/Auto Changelog.md": "LiRefreshCw"
+  "Development/JavaScript/Auto Changelog.md": "LiRefreshCw",
+  "Development/Python/Distribute Package to PyPI.md": "SiPypi"
 }

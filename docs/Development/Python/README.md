@@ -1,5 +1,6 @@
 ---
 title: Python
+icon: simple/python
 slug: python
 categories:
   - development
