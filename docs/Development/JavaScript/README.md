@@ -1,8 +1,8 @@
 ---
-title: Python
-slug: python
+title: JavaScript
+slug: javascript
 categories:
   - development
-  - python
+  - javascript
 publish: true
 ---
