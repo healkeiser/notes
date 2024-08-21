@@ -35,3 +35,13 @@ Let's now assume you have tagged a new release on Git, you can now run the follo
 ``` shell
 npm run changelog
 ```
+
+Since a tag is only bound to a **single commit**, the changelog won't keep track of the unreleased commits. In order to add those, you can modify `package.json`:
+
+``` json title="package.json"
+{
+    "scripts": {
+        "changelog": "auto-changelog -p --unreleased"
+    }
+}
+```
